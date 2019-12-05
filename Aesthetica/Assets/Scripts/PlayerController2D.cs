@@ -21,15 +21,15 @@ public class PlayerController2D : MonoBehaviour
     {
         if (InputCapture.horizontalMove != 0 && controller.isGrounded)
         {
-            animator.Play("PlayerRunAnimation");
+            animator.Play("PlayerRun");
         }
         else if(controller.isGrounded)
         {
-            animator.Play("PlayerIdleAnimation");
+            animator.Play("PlayerIdle");
         }
         else
         {
-            animator.Play("PlayerJumpAnimation");
+            animator.Play("PlayerJump");
         }
     }
 
@@ -41,8 +41,6 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controller.GroundCheck();
-
         if (preventRotation)
         {
             controller.PreventRotation();

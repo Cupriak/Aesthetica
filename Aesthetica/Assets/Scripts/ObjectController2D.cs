@@ -14,22 +14,27 @@ public class ObjectController2D : MonoBehaviour
 
     [SerializeField] Collider2D groundCheck;
 
-    /// <summary>
-    /// TO BE DELETED PROBABLY DOESNT WORK CUZ OF COLISIONS READONLY
-    /// </summary>
-    /// <param name="reciver"></param>
-    /// <param name="horizontalSpeed"></param>
-    /// <param name="verticalSpeed"></param>
-    public void TESTAddMove(Rigidbody2D reciver, float horizontalSpeed, float verticalSpeed)
-    {
-        reciver.velocity = new Vector2(reciver.velocity.x + horizontalSpeed, reciver.velocity.y + verticalSpeed);
-        Debug.Log("X = " + reciver.velocity.x.ToString() + "Y = " + reciver.velocity.y.ToString());
-    }
-
     private void Awake()
     {
         isFacingRight = true;
         rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        GroundCheck();
+    }
+
+    private void GroundCheck()
+    {
+        if (Physics2D.IsTouchingLayers(groundCheck, whatIsGround))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
     }
 
     private void facingRightCheck(float horizontalSpeed)
@@ -43,13 +48,6 @@ public class ObjectController2D : MonoBehaviour
             isFacingRight = false;
         }
     }
-
-    //public void Move(float horizontalSpeed, float verticalSpeed)
-    //{
-    //    facingRightCheck(horizontalSpeed);
-
-    //    rb2d.velocity = new Vector2(horizontalSpeed, verticalSpeed);
-    //}
 
     public void MoveHorizontal(float speed)
     {
@@ -66,18 +64,6 @@ public class ObjectController2D : MonoBehaviour
     public void AddMove(float horizontalSpeed, float verticalSpeed)
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x + horizontalSpeed, rb2d.velocity.y + verticalSpeed);
-    }
-
-    public void GroundCheck()
-    {
-        if (Physics2D.IsTouchingLayers(groundCheck, whatIsGround))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
     }
 
     ////START TEST SETPARENTA
