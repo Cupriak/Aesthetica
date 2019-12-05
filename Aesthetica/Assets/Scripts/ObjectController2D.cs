@@ -10,7 +10,7 @@ public class ObjectController2D : MonoBehaviour
     public bool isFacingRight { get; set; }
 
     [SerializeField] LayerMask whatIsGround;
-    [SerializeField] LayerMask whatCanCarryObject;
+    [SerializeField] LayerMask whatCanCarryObject; //what can carry our object if we stomp on it Not finished yet
 
     [SerializeField] Collider2D groundCheck;
 

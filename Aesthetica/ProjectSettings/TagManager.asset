@@ -47,6 +47,9 @@ TagManager:
   - name: AdditionalObjects
     uniqueID: 1943944783
     locked: 0
+  - name: PlatformsAndWalls
+    uniqueID: 1533547993
+    locked: 0
   - name: OtherCharacter
     uniqueID: 2331217293
     locked: 0
