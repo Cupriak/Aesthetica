@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class InputCapture
+public static class InputHelper
 {
     public static float horizontalMove;
     public static float verticalMove;

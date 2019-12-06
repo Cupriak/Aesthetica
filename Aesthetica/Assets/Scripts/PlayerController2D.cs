@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    [SerializeField] ObjectController2D controller;
-
-    Animator animator;
+    [SerializeField] ObjectController2D objectController;
+    [SerializeField] AttributesController attributesController;
 
     [SerializeField] float runSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] bool preventRotation;
+
+    Animator animator;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    private void animate()
+    private void Animate()
     {
-        if (InputCapture.horizontalMove != 0 && controller.isGrounded)
+        if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
         {
             animator.Play("PlayerRun");
         }
-        else if(controller.isGrounded)
+        else if(objectController.IsGrounded)
         {
             animator.Play("PlayerIdle");
         }
@@ -35,22 +36,22 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
-        InputCapture.GetInput();
-        animate();
+        InputHelper.GetInput();
+        Animate();
     }
 
     private void FixedUpdate()
     {
         if (preventRotation)
         {
-            controller.PreventRotation();
+            objectController.PreventRotation();
         }
 
-        controller.MoveHorizontal(InputCapture.horizontalMove * runSpeed);
+        objectController.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
 
-        if(InputCapture.jump)
+        if(InputHelper.jump)
         {
-            controller.Jump(jumpSpeed);
+            objectController.Jump(jumpSpeed);
         }
 
     }

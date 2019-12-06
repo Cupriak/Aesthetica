@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ObjectController2D : MonoBehaviour
 {
-    Rigidbody2D rb2d;
-
-    public bool isGrounded { get; set; }
-    public bool isFacingRight { get; set; }
-
     [SerializeField] LayerMask whatIsGround;
     [SerializeField] LayerMask whatCanCarryObject; //what can carry our object if we stomp on it Not finished yet
 
     [SerializeField] Collider2D groundCheck;
 
+    public bool IsGrounded { get; private set; }
+    public bool IsFacingRight { get; private set; }
+
+    Rigidbody2D rb2d;
+
     private void Awake()
     {
-        isFacingRight = true;
+        IsFacingRight = true;
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -29,29 +29,29 @@ public class ObjectController2D : MonoBehaviour
     {
         if (Physics2D.IsTouchingLayers(groundCheck, whatIsGround))
         {
-            isGrounded = true;
+            IsGrounded = true;
         }
         else
         {
-            isGrounded = false;
+            IsGrounded = false;
         }
     }
 
-    private void facingRightCheck(float horizontalSpeed)
+    private void FacingRightCheck(float horizontalSpeed)
     {
         if (horizontalSpeed > 0)
         {
-            isFacingRight = true;
+            IsFacingRight = true;
         }
         else if (horizontalSpeed < 0)
         {
-            isFacingRight = false;
+            IsFacingRight = false;
         }
     }
 
     public void MoveHorizontal(float speed)
     {
-        facingRightCheck(speed);
+        FacingRightCheck(speed);
 
         rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
     }
@@ -64,6 +64,16 @@ public class ObjectController2D : MonoBehaviour
     public void AddMove(float horizontalSpeed, float verticalSpeed)
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x + horizontalSpeed, rb2d.velocity.y + verticalSpeed);
+    }
+
+    public void Teleport(Vector3 position)
+    {
+        transform.position = position;
+    }
+
+    public void Teleport(float positionX, float positionY, float positionZ)
+    {
+        transform.position = new Vector3(positionX, positionY, positionZ);
     }
 
     ////START TEST SETPARENTA
@@ -86,7 +96,7 @@ public class ObjectController2D : MonoBehaviour
 
     public void Jump(float jumpSpeed)
     {
-        if (isGrounded)
+        if (IsGrounded)
         {
             MoveVertical(jumpSpeed);
         }
@@ -94,7 +104,7 @@ public class ObjectController2D : MonoBehaviour
 
     public void PreventRotation()
     {
-        if (isFacingRight)
+        if (IsFacingRight)
         {
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }

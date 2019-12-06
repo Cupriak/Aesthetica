@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HorizontalMovingPlatformController2D : MonoBehaviour
 {
-    Collider2D collider;
+    Collider2D platformCollider;
 
     [SerializeField] ObjectController2D controller;
 
@@ -15,31 +15,49 @@ public class HorizontalMovingPlatformController2D : MonoBehaviour
 
     [SerializeField] LayerMask whatCanBeTakenByPlatform;
 
-    int movingSide = 1;
+    public int MovingDirection { get; private set; }
 
     private void Awake()
     {
-        collider = GetComponent<Collider2D>();
+        MovingDirection = 1;
+        platformCollider = GetComponent<Collider2D>();
     }
 
     void FixedUpdate ()
     {
-        controller.MoveHorizontal(movingSide * horizontalSpeed);
+        controller.MoveHorizontal(MovingDirection * horizontalSpeed);
+    }
+
+    public void ChangeDirection()
+    {
+        MovingDirection = -MovingDirection;
+    }
+
+    public void ChangeDirection(bool moveRight)
+    {
+        if(moveRight)
+        {
+            MovingDirection = 1;
+        }
+        else
+        {
+            MovingDirection = -1;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //change way of platform
-        if (Physics2D.IsTouching(collider, leftBound) || Physics2D.IsTouching(collider, rightBound))
+        if (Physics2D.IsTouching(platformCollider, leftBound) || Physics2D.IsTouching(platformCollider, rightBound))
         {
-            movingSide = -movingSide;
+            ChangeDirection();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //HERE TRY TO GRAB OBJECTS THAT STOMP ON PLATFORM
-        if(LayerMaskHelper.isLayerInLayerMask(collision.gameObject.layer, whatCanBeTakenByPlatform))
+        if(LayerMaskHelper.IsLayerInLayerMask(collision.gameObject.layer, whatCanBeTakenByPlatform))
         {
 
 
