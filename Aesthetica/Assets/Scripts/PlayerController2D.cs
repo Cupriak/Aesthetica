@@ -11,11 +11,15 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] float jumpSpeed;
     [SerializeField] bool preventRotation;
 
+    [SerializeField] LayerMask whatIsEnemy;
+
     Animator animator;
+    Collider2D playerCollider;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     private void Animate()
@@ -54,5 +58,15 @@ public class PlayerController2D : MonoBehaviour
             objectController.Jump(jumpSpeed);
         }
 
+    }
+
+    //FIX THAT SOME ENEMIES WILL NOT BE TRIGGERS
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
+        {
+            attributesController.GetDamage(1);
+            Debug.Log("HP Left = " + attributesController.Health);
+        }
     }
 }
