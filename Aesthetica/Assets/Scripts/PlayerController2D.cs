@@ -12,16 +12,23 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpSpeed;
     [SerializeField] private bool rotate;
-    public bool canBeControlled;
+
+    [SerializeField] private Timer immortalTimer;
+    [SerializeField] private float immortalTime;
+    [SerializeField] private bool canBeControlled;
+
+    private bool isImmortal;
 
     [SerializeField] private LayerMask whatIsEnemy;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Collider2D playerCollider;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
     }
 
@@ -38,6 +45,19 @@ public class PlayerController2D : MonoBehaviour
         else
         {
             animator.Play("PlayerJump");
+        }
+
+        //Blinking red animation when hurt
+        if(isImmortal)
+        {
+            if (immortalTimer.TimeLeft() % 0.2 < 0.1)
+            {
+                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+            }
+            else
+            {
+                spriteRenderer.color = new Color(255f, 0f, 0f, 255f);
+            }
         }
     }
 
@@ -75,17 +95,45 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        HurtHandler();
+
         MovementControl();
+    }
+
+    private void HurtHandler()
+    {
+        //HURT IMMORTALITY END
+        if (immortalTimer.timeElapsed)
+        {
+            isImmortal = false;
+        }
+
+        if (immortalTimer.TimeLeft() <= immortalTime / 2f)
+        {
+            canBeControlled = true;
+        }
+    }
+
+    private void OnEnemyTouch()
+    {
+        isImmortal = true;
+        attributesController.TakeDamage(1);
+        immortalTimer.StartTimer(immortalTime);
+
+        canBeControlled = false;
+        objectController.MoveVertical(2f);
+        objectController.MoveHorizontal(objectController.IsFacingRight ? -2f : 2f);
+
+        Debug.Log("HP Left = " + attributesController.Health);
     }
 
     //FIX THAT SOME ENEMIES WILL NOT BE TRIGGERS
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //ENEMY DETECTION
-        if (Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
+        if (!isImmortal && Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
         {
-            attributesController.TakeDamage(1);
-            Debug.Log("HP Left = " + attributesController.Health);
+            OnEnemyTouch();
         }
 
         //WATER DETECTON
