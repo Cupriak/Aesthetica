@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 6cd6ed62f06d56545875643acd2cb84d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AngloCelestial
+  fontNames:
+  - AngloCelestial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 54842830e7736c04b85e6b56914520eb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

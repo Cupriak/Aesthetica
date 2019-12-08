@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    [SerializeField] ObjectController2D objectController;
-    [SerializeField] AttributesController attributesController;
+    public ObjectController2D objectController;
+    public AttributesController attributesController;
 
-    [SerializeField] float runSpeed;
-    [SerializeField] float jumpSpeed;
-    [SerializeField] bool preventRotation;
+    [SerializeField] Collider2D groundCheck;
 
-    [SerializeField] LayerMask whatIsEnemy;
+    [SerializeField] private float runSpeed;
+    [SerializeField] private float jumpSpeed;
+    [SerializeField] private bool rotate;
+    public bool canBeControlled;
 
-    Animator animator;
-    Collider2D playerCollider;
+    [SerializeField] private LayerMask whatIsEnemy;
+
+    private Animator animator;
+    private Collider2D playerCollider;
 
     private void Awake()
     {
@@ -28,13 +31,39 @@ public class PlayerController2D : MonoBehaviour
         {
             animator.Play("PlayerRun");
         }
-        else if(objectController.IsGrounded)
+        else if (objectController.IsGrounded)
         {
             animator.Play("PlayerIdle");
         }
         else
         {
             animator.Play("PlayerJump");
+        }
+    }
+
+    private void MovementControl()
+    {
+        if (canBeControlled)
+        {
+            if (rotate)
+            {
+                objectController.Rotate();
+            }
+
+            if (!(InputHelper.horizontalMove == 0 && Physics2D.IsTouchingLayers(groundCheck, LayerMask.GetMask("MovingHorizontalPlatform"))))
+            {
+                objectController.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
+            }
+
+            if (InputHelper.jump)
+            {
+                objectController.Jump(jumpSpeed);
+            }
+
+            if (InputHelper.stop)
+            {
+                objectController.Stop(true, true);
+            }
         }
     }
 
@@ -46,27 +75,32 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (preventRotation)
-        {
-            objectController.PreventRotation();
-        }
-
-        objectController.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
-
-        if(InputHelper.jump)
-        {
-            objectController.Jump(jumpSpeed);
-        }
-
+        MovementControl();
     }
 
     //FIX THAT SOME ENEMIES WILL NOT BE TRIGGERS
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //ENEMY DETECTION
         if (Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
         {
-            attributesController.GetDamage(1);
+            attributesController.TakeDamage(1);
             Debug.Log("HP Left = " + attributesController.Health);
+        }
+
+        //WATER DETECTON
+        if (Physics2D.IsTouchingLayers(playerCollider, LayerMask.GetMask("Water")))
+        {
+            objectController.SetDrag(5f);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //LEAVING WATER
+        if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Water"))
+        {
+            objectController.SetDrag(0f);
         }
     }
 }

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ObjectController2D : MonoBehaviour
 {
-    [SerializeField] LayerMask whatIsGround;
-    [SerializeField] LayerMask whatCanCarryObject; //what can carry our object if we stomp on it Not finished yet
+    [SerializeField] private LayerMask whatIsGround;
 
-    [SerializeField] Collider2D groundCheck;
+    [SerializeField] private Collider2D groundCheck;
 
     public bool IsGrounded { get; private set; }
     public bool IsFacingRight { get; private set; }
 
-    Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
 
     private void Awake()
     {
@@ -49,6 +48,14 @@ public class ObjectController2D : MonoBehaviour
         }
     }
 
+    public void Stop(bool horizontal, bool vertical)
+    {
+        float multiplierX = horizontal ? 0 : 1;
+        float miltiplierY = vertical ? 0 : 1;
+
+        rb2d.velocity = new Vector2(rb2d.velocity.x * multiplierX, rb2d.velocity.y * miltiplierY);
+    }
+
     public void MoveHorizontal(float speed)
     {
         FacingRightCheck(speed);
@@ -66,33 +73,25 @@ public class ObjectController2D : MonoBehaviour
         rb2d.velocity = new Vector2(rb2d.velocity.x + horizontalSpeed, rb2d.velocity.y + verticalSpeed);
     }
 
-    public void Teleport(Vector3 position)
-    {
-        transform.position = position;
-    }
-
     public void Teleport(float positionX, float positionY, float positionZ)
     {
         transform.position = new Vector3(positionX, positionY, positionZ);
     }
 
-    ////START TEST SETPARENTA
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (Physics2D.IsTouchingLayers(groundCheck, whatCanCarryObject))
-    //    {
-    //        transform.SetParent(collision.gameObject.transform, false);
-    //    }
-    //}
+    public void Teleport(Vector3 position)
+    {
+        transform.position = position;
+    }
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (!Physics2D.IsTouchingLayers(groundCheck, whatCanCarryObject))
-    //    {
-    //        transform.SetParent(transform, false);
-    //    }
-    //}
-    ////END TEST SETPARENTA
+    public void Teleport(Transform positionTransform)
+    {
+        transform.position = positionTransform.position;
+    }
+
+    public void SetDrag(float drag)
+    {
+        rb2d.drag = drag;
+    }
 
     public void Jump(float jumpSpeed)
     {
@@ -102,7 +101,7 @@ public class ObjectController2D : MonoBehaviour
         }
     }
 
-    public void PreventRotation()
+    public void Rotate()
     {
         if (IsFacingRight)
         {
@@ -113,5 +112,4 @@ public class ObjectController2D : MonoBehaviour
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
     }
-
 }
