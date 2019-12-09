@@ -40,17 +40,24 @@ public class PlayerController2D : MonoBehaviour
 
     private void Animate()
     {
-        if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
+        if(canBeControlled)
         {
-            animator.Play("PlayerRun");
-        }
-        else if (objectController.IsGrounded)
-        {
-            animator.Play("PlayerIdle");
+            if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
+            {
+                animator.Play("PlayerRun");
+            }
+            else if (objectController.IsGrounded)
+            {
+                animator.Play("PlayerIdle");
+            }
+            else
+            {
+                animator.Play("PlayerJump");
+            }
         }
         else
         {
-            animator.Play("PlayerJump");
+            animator.Play("PlayerHurt");
         }
 
         //Blinking red animation when hurt
@@ -155,16 +162,19 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //WATER DETECTON
+        if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Water"))
+        {
+            OnWaterEnter();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         //ENEMY DETECTION
         if (!isImmortal && Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
         {
             OnEnemyTouch();
-        }
-
-        //WATER DETECTON
-        if (Physics2D.IsTouchingLayers(playerCollider, LayerMask.GetMask("Water")))
-        {
-            OnWaterEnter();
         }
     }
 
