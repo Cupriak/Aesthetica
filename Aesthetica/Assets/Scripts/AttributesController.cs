@@ -15,15 +15,15 @@ public class AttributesController : MonoBehaviour
         IsAlive = true;
         IsImmortal = false;
         Health = initialHealth;
-	}
-	
-	void FixedUpdate()
+    }
+
+    void FixedUpdate()
     {
-		if(Health<0)
+        if (Health <= 0)
         {
             IsAlive = false;
         }
-	}
+    }
 
     public void TakeDamage(int amount)
     {

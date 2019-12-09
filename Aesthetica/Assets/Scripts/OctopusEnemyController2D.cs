@@ -17,6 +17,11 @@ public class OctopusEnemyController2D : MonoBehaviour
     [SerializeField] private Timer hurtTimer;
     private bool isHurt;
 
+    //DEATH ATTRIBUTES
+    private bool isDying;
+    [SerializeField] private Timer dyingTimer;
+    private bool dyingProcedureActivated;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Collider2D octopusCollider;
@@ -47,8 +52,15 @@ public class OctopusEnemyController2D : MonoBehaviour
 
     private void Animate()
     {
-        animator.Play("OctopusIdle");
-
+        if (!isDying)
+        {
+            animator.Play("OctopusIdle");
+        }
+        else
+        {
+            animator.Play("Death");
+        }
+        
         //Blinking red animation when hurt
         if (isHurt)
         {
@@ -71,6 +83,27 @@ public class OctopusEnemyController2D : MonoBehaviour
         }
     }
 
+    private void DeathHandler()
+    {
+        if (!dyingProcedureActivated && !attributesController.IsAlive)
+        {
+            isHurt = false;
+            isDying = true;
+            dyingProcedureActivated = true;
+            dyingTimer.StartTimer(1f);
+        }
+
+        if(dyingProcedureActivated && dyingTimer.timeElapsed)
+        {
+            OnDeath();
+        }
+    }
+
+    private void OnDeath()
+    {
+        transform.parent.gameObject.SetActive(false);
+    }
+
     private void OnEnemyTouch()
     {
         attributesController.TakeDamage(1);
@@ -81,6 +114,7 @@ public class OctopusEnemyController2D : MonoBehaviour
     private void Update()
     {
         HurtHandler();
+        DeathHandler();
         Animate();
 
         if (IsTriggered)
