@@ -9,7 +9,7 @@ public class ObjectController2D : MonoBehaviour
     [SerializeField] private Collider2D groundCheck;
 
     public bool IsGrounded { get; private set; }
-    public bool IsFacingRight { get; private set; }
+    public bool IsFacingRight { get; set; }
 
     private Rigidbody2D rb2d;
 
