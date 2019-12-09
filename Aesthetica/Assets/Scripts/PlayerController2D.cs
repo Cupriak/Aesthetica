@@ -13,11 +13,15 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private float jumpSpeed;
     [SerializeField] private bool rotate;
 
+    //ENEMY RELATED ATTRIBUTES
     [SerializeField] private Timer immortalTimer;
     [SerializeField] private float immortalTime;
     [SerializeField] private bool canBeControlled;
-
     private bool isImmortal;
+
+    //WATER RELATED ATTRIBUTES
+    private bool isInWater;
+    private float initialJumpSpeed;
 
     [SerializeField] private LayerMask whatIsEnemy;
 
@@ -30,6 +34,8 @@ public class PlayerController2D : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
+
+        initialJumpSpeed = jumpSpeed;
     }
 
     private void Animate()
@@ -48,7 +54,7 @@ public class PlayerController2D : MonoBehaviour
         }
 
         //Blinking red animation when hurt
-        if(isImmortal)
+        if (isImmortal)
         {
             if (immortalTimer.TimeLeft() % 0.2 < 0.1)
             {
@@ -95,8 +101,10 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Stop hurt animation and immortality after certain time
         HurtHandler();
 
+        //Movement method
         MovementControl();
     }
 
@@ -127,7 +135,24 @@ public class PlayerController2D : MonoBehaviour
         Debug.Log("HP Left = " + attributesController.Health);
     }
 
-    //FIX THAT SOME ENEMIES WILL NOT BE TRIGGERS
+    private void OnWaterEnter()
+    {
+        if (!isInWater)
+        {
+            objectController.SetDrag(15f);
+            jumpSpeed *= 2.5f;
+        }
+        isInWater = true;
+    }
+
+    private void OnWaterExit()
+    {
+        objectController.SetDrag(0f);
+        jumpSpeed = initialJumpSpeed;
+        objectController.MoveVertical(jumpSpeed / 2f); // fixed vertical speed while jumping out of water
+        isInWater = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //ENEMY DETECTION
@@ -139,7 +164,7 @@ public class PlayerController2D : MonoBehaviour
         //WATER DETECTON
         if (Physics2D.IsTouchingLayers(playerCollider, LayerMask.GetMask("Water")))
         {
-            objectController.SetDrag(5f);
+            OnWaterEnter();
         }
     }
 
@@ -148,7 +173,7 @@ public class PlayerController2D : MonoBehaviour
         //LEAVING WATER
         if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Water"))
         {
-            objectController.SetDrag(0f);
+            OnWaterExit();
         }
     }
 }
