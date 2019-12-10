@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletController2D : MonoBehaviour
 {
     public ObjectController2D controller;
-    private ObjectController2D parentController;
 
     private float speed = 3f;
 

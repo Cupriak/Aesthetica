@@ -18,9 +18,12 @@ public class OctopusEnemyController2D : MonoBehaviour
     private bool isHurt;
 
     //DEATH ATTRIBUTES
-    private bool isDying;
-    [SerializeField] private Timer dyingTimer;
-    private bool dyingProcedureActivated;
+    [SerializeField] private GameObject deathPrefab;
+
+    //SHOOT AI ATTRIBUTES
+    [SerializeField] private EnemyWeapon weapon;
+    [SerializeField] private Timer shootTimer;
+    private bool canShoot;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -35,6 +38,8 @@ public class OctopusEnemyController2D : MonoBehaviour
         octopusCollider = GetComponent<Collider2D>();
 
         spriteRenderer.flipX = true; // octopus sprite looks to the left -> we want it to look right
+
+        canShoot = true;
     }
 
     private void LookAtTarget()
@@ -52,15 +57,8 @@ public class OctopusEnemyController2D : MonoBehaviour
 
     private void Animate()
     {
-        if (!isDying)
-        {
-            animator.Play("OctopusIdle");
-        }
-        else
-        {
-            animator.Play("Death");
-        }
-        
+        animator.Play("OctopusIdle");
+
         //Blinking red animation when hurt
         if (isHurt)
         {
@@ -83,25 +81,10 @@ public class OctopusEnemyController2D : MonoBehaviour
         }
     }
 
-    private void DeathHandler()
-    {
-        if (!dyingProcedureActivated && !attributesController.IsAlive)
-        {
-            isHurt = false;
-            isDying = true;
-            dyingProcedureActivated = true;
-            dyingTimer.StartTimer(1f);
-        }
-
-        if(dyingProcedureActivated && dyingTimer.timeElapsed)
-        {
-            OnDeath();
-        }
-    }
-
     private void OnDeath()
     {
-        transform.parent.gameObject.SetActive(false);
+        Instantiate(deathPrefab, transform.position, transform.rotation);
+        Destroy(transform.parent.gameObject, Time.deltaTime);
     }
 
     private void OnEnemyTouch()
@@ -111,12 +94,36 @@ public class OctopusEnemyController2D : MonoBehaviour
         isHurt = true;
     }
 
+    private void ShootAI()
+    {
+        float aroundDistance = 0.05f;
+        bool beAround = Target.position.y > transform.position.y - aroundDistance && Target.position.y < transform.position.y + aroundDistance ? true : false;
+
+        if (IsTriggered && beAround && canShoot)
+        {
+            weapon.Shoot();
+            canShoot = false;
+            shootTimer.StartTimer(0.5f);
+        }
+        if(shootTimer.timeElapsed)
+        {
+            canShoot = true;
+        }
+    }
+    
     private void Update()
     {
         Debug.Log("OCTOPUS HP = " + attributesController.Health);
-        HurtHandler();
-        DeathHandler();
+
         Animate();
+        HurtHandler();
+
+        ShootAI();
+
+        if (!attributesController.IsAlive)
+        {
+            OnDeath();
+        }
 
         if (IsTriggered)
         {

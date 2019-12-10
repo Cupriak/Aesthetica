@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathController : MonoBehaviour
 {
-    [SerializeField] private float deathTime = 1f;
+    [SerializeField] private float deathTime;
 
     void Start()
     {
