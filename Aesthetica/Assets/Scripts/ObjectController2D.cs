@@ -63,6 +63,13 @@ public class ObjectController2D : MonoBehaviour
         rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
     }
 
+    public void MoveHorizontal(Vector3 side, float speed)
+    {
+        FacingRightCheck(speed);
+
+        rb2d.velocity = side * speed;
+    }
+
     public void MoveVertical(float speed)
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, speed);

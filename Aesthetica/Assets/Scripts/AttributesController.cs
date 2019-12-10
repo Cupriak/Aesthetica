@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttributesController : MonoBehaviour
 {
-    [SerializeField] int initialHealth;
+    [SerializeField] private int initialHealth;
 
     public int Health { get; private set; }
     public bool IsAlive { get; private set; }
@@ -17,12 +17,16 @@ public class AttributesController : MonoBehaviour
         Health = initialHealth;
     }
 
-    void FixedUpdate()
+    private void CheckIfAlive()
     {
         if (Health <= 0)
         {
             IsAlive = false;
         }
+    }
+    void FixedUpdate()
+    {
+        CheckIfAlive();
     }
 
     public void TakeDamage(int amount)

@@ -113,6 +113,7 @@ public class OctopusEnemyController2D : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("OCTOPUS HP = " + attributesController.Health);
         HurtHandler();
         DeathHandler();
         Animate();
