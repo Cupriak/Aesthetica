@@ -96,16 +96,20 @@ public class OctopusEnemyController2D : MonoBehaviour
 
     private void ShootAI()
     {
-        float aroundDistance = 0.05f;
-        bool beAround = Target.position.y > transform.position.y - aroundDistance && Target.position.y < transform.position.y + aroundDistance ? true : false;
-
-        if (IsTriggered && beAround && canShoot)
+        if(IsTriggered)
         {
-            weapon.Shoot();
-            canShoot = false;
-            shootTimer.StartTimer(0.5f);
+            float aroundDistance = 0.05f;
+            bool beAround = Target.position.y > transform.position.y - aroundDistance && Target.position.y < transform.position.y + aroundDistance ? true : false;
+
+            if (beAround && canShoot)
+            {
+                weapon.Shoot();
+                canShoot = false;
+                shootTimer.StartTimer(0.5f);
+            }
         }
-        if(shootTimer.timeElapsed)
+
+        if (shootTimer.timeElapsed)
         {
             canShoot = true;
         }

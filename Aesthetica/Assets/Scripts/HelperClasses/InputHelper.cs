@@ -9,6 +9,7 @@ public static class InputHelper
     public static bool jump;
     public static bool stop;
     public static bool shoot;
+    public static bool menu;
 
     public static void GetInput()
     {
@@ -17,5 +18,6 @@ public static class InputHelper
         jump = Input.GetButton("Jump");
         stop = Input.GetKey(KeyCode.F);
         shoot = Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.LeftControl);
+        menu = Input.GetKey(KeyCode.Escape);
     }
 }
