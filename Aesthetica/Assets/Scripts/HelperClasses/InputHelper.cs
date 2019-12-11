@@ -17,7 +17,7 @@ public static class InputHelper
         verticalMove = Input.GetAxisRaw("Vertical");
         jump = Input.GetButton("Jump");
         stop = Input.GetKey(KeyCode.F);
-        shoot = Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.LeftControl);
+        shoot = Input.GetButton("Fire1") || Input.GetKey(KeyCode.LeftControl);
         menu = Input.GetKey(KeyCode.Escape);
     }
 }

@@ -16,12 +16,15 @@ public class PlayerController2D : MonoBehaviour
     //ENEMY RELATED ATTRIBUTES
     [SerializeField] private Timer immortalTimer;
     [SerializeField] private float immortalTime;
-    [SerializeField] private bool canBeControlled;
+    [HideInInspector] public bool canBeControlled;
     private bool isImmortal;
 
     //WATER RELATED ATTRIBUTES
     private bool isInWater;
     private float initialJumpSpeed;
+
+    //JUMP RELATED ATTRIBUTES
+    [SerializeField] private Timer jumpTimer;
 
     [SerializeField] private LayerMask whatIsEnemy;
 
@@ -40,11 +43,19 @@ public class PlayerController2D : MonoBehaviour
 
     private void Animate()
     {
-        if(canBeControlled)
+        if (canBeControlled)
         {
-            if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
+            if (InputHelper.horizontalMove != 0 && objectController.IsGrounded && InputHelper.shoot)
+            {
+                animator.Play("PlayerRunShoot");
+            }
+            else if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
             {
                 animator.Play("PlayerRun");
+            }
+            else if (InputHelper.shoot && objectController.IsGrounded)
+            {
+                animator.Play("PlayerShoot");
             }
             else if (objectController.IsGrounded)
             {
@@ -59,6 +70,27 @@ public class PlayerController2D : MonoBehaviour
         {
             animator.Play("PlayerHurt");
         }
+
+        //ANIMATION COPY
+        //if(canBeControlled)
+        //{
+        //    if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
+        //    {
+        //        animator.Play("PlayerRun");
+        //    }
+        //    else if (objectController.IsGrounded)
+        //    {
+        //        animator.Play("PlayerIdle");
+        //    }
+        //    else
+        //    {
+        //        animator.Play("PlayerJump");
+        //    }
+        //}
+        //else
+        //{
+        //    animator.Play("PlayerHurt");
+        //}
 
         //Blinking red animation when hurt
         if (isImmortal)
@@ -88,9 +120,10 @@ public class PlayerController2D : MonoBehaviour
                 objectController.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
             }
 
-            if (InputHelper.jump)
+            if (jumpTimer.timeElapsed && InputHelper.jump)
             {
                 objectController.Jump(jumpSpeed);
+                jumpTimer.StartTimer(0.4f);
             }
 
             if (InputHelper.stop)

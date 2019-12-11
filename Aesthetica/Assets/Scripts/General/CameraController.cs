@@ -10,6 +10,11 @@ public class CameraController : MonoBehaviour
 
     [HideInInspector] public bool isStatic;
 
+    private void Awake()
+    {
+        transform.position = playerTransform.position;
+    }
+
     public void FocusOn(Transform target)
     {
         Vector3 desiredPosition = target.position + offset;
