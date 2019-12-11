@@ -26,7 +26,14 @@ public class CameraController : MonoBehaviour
     {
         if(!isStatic)
         {
-            FocusOn(playerTransform);
+            if(playerTransform != null)
+            {
+                FocusOn(playerTransform);
+            }
+            else
+            {
+                isStatic = true;
+            }
         }
     }
 }

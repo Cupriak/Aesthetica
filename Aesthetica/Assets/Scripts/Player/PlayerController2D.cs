@@ -19,6 +19,9 @@ public class PlayerController2D : MonoBehaviour
     [HideInInspector] public bool canBeControlled;
     private bool isImmortal;
 
+    //DEATH RELATED ATTRIBUTES
+    [SerializeField] private GameObject deathPrefab;
+
     //WATER RELATED ATTRIBUTES
     private bool isInWater;
     private float initialJumpSpeed;
@@ -71,27 +74,6 @@ public class PlayerController2D : MonoBehaviour
             animator.Play("PlayerHurt");
         }
 
-        //ANIMATION COPY
-        //if(canBeControlled)
-        //{
-        //    if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
-        //    {
-        //        animator.Play("PlayerRun");
-        //    }
-        //    else if (objectController.IsGrounded)
-        //    {
-        //        animator.Play("PlayerIdle");
-        //    }
-        //    else
-        //    {
-        //        animator.Play("PlayerJump");
-        //    }
-        //}
-        //else
-        //{
-        //    animator.Play("PlayerHurt");
-        //}
-
         //Blinking red animation when hurt
         if (isImmortal)
         {
@@ -133,6 +115,20 @@ public class PlayerController2D : MonoBehaviour
         }
     }
 
+    private void OnDeath()
+    {
+        Instantiate(deathPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    private void DeathHandler()
+    {
+        if(!attributesController.IsAlive)
+        {
+            OnDeath();
+        }
+    }
+
     private void Update()
     {
         InputHelper.GetInput();
@@ -143,6 +139,8 @@ public class PlayerController2D : MonoBehaviour
     {
         //Stop hurt animation and immortality after certain time
         HurtHandler();
+
+        DeathHandler();
 
         //Movement method
         MovementControl();

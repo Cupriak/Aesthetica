@@ -349,6 +349,8 @@ MonoBehaviour:
   immortalTimer: {fileID: 114551491624874186}
   immortalTime: 2
   canBeControlled: 1
+  deathPrefab: {fileID: 1546462204491176, guid: 2ddbfdeef174ed747a75c583eceea718,
+    type: 2}
   jumpTimer: {fileID: 114412758903702910}
   whatIsEnemy:
     serializedVersion: 2
@@ -376,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8ba1dc66c99994ab50b04b346fa293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHealth: 100
+  initialHealth: 5
 --- !u!212 &212151730831095516
 SpriteRenderer:
   m_ObjectHideFlags: 1
