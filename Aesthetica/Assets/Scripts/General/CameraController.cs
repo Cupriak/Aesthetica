@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] Transform targetTransform;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private float smoothSpeed;
+    [SerializeField] private Vector3 offset;
 
-    [SerializeField] bool isStatic;
+    [HideInInspector] public bool isStatic;
 
-    void FocusOn(Transform target)
+    public void FocusOn(Transform target)
     {
-        transform.position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+        Vector3 desiredPosition = target.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = smoothedPosition;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(!isStatic)
         {
-            FocusOn(targetTransform);
+            FocusOn(playerTransform);
         }
     }
 }
