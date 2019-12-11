@@ -52,11 +52,11 @@ public class OctopusEnemyController2D : MonoBehaviour
         {
             objectController.IsFacingRight = false;
         }
-        objectController.Rotate();
     }
 
     private void Animate()
     {
+        objectController.Rotate();
         animator.Play("OctopusIdle");
 
         //Blinking red animation when hurt
@@ -117,8 +117,6 @@ public class OctopusEnemyController2D : MonoBehaviour
     
     private void Update()
     {
-        Debug.Log("OCTOPUS HP = " + attributesController.Health);
-
         Animate();
         HurtHandler();
 

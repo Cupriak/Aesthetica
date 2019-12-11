@@ -85,5 +85,4 @@ public class MovingObjectController2D : MonoBehaviour
             }
         }
     }
-
 }
