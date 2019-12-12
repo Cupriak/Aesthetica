@@ -133,6 +133,7 @@ public class PlayerController2D : MonoBehaviour
     {
         InputHelper.GetInput();
         Animate();
+        Debug.Log("HP = " + attributesController.Health);
     }
 
     private void FixedUpdate()
@@ -169,8 +170,11 @@ public class PlayerController2D : MonoBehaviour
         canBeControlled = false;
         objectController.MoveVertical(2f);
         objectController.MoveHorizontal(objectController.IsFacingRight ? -2f : 2f);
+    }
 
-        Debug.Log("HP Left = " + attributesController.Health);
+    public void OnPowerUpTouch()
+    {
+        attributesController.TakeHealth(1);
     }
 
     private void OnWaterEnter()

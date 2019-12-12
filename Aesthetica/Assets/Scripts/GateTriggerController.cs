@@ -15,7 +15,7 @@ public class GateTriggerController : MonoBehaviour
         if (LayerMaskHelper.IsLayerInLayerMask(collision.gameObject.layer, whatCanTrigger))
         {
             gate.IsTriggered = true;
-            gateTimer.StartTimer(0.5f);
+            gateTimer.StartTimer(1f);
         }
     }
 }
