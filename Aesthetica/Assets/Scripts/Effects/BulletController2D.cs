@@ -32,7 +32,10 @@ public class BulletController2D : MonoBehaviour
     {
         if (LayerMaskHelper.IsLayerInLayerMask(collision.gameObject.layer, whatShouldDestroyBullet))
         {
-            Impact();
+            if (collision.GetComponent<GhostEnemyController2D>() == null)
+            {
+                Impact();
+            }
         }
     }
 }
