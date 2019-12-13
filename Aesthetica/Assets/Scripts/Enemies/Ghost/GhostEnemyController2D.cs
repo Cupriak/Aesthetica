@@ -19,13 +19,11 @@ public class GhostEnemyController2D : MonoBehaviour
     [SerializeField] private float backToPositionSpeed;
 
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
 
     public void Awake()
     {
         controller = GetComponent<ObjectController2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Animate()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    public ObjectController2D objectController;
-    public AttributesController attributesController;
+    public ObjectController2D controller;
+    public AttributesController attributes;
 
     [SerializeField] Collider2D groundCheck;
 
@@ -50,19 +50,19 @@ public class PlayerController2D : MonoBehaviour
     {
         if (canBeControlled)
         {
-            if (InputHelper.horizontalMove != 0 && objectController.IsGrounded && InputHelper.shoot)
+            if (InputHelper.horizontalMove != 0 && controller.IsGrounded && InputHelper.shoot)
             {
                 animator.Play("PlayerRunShoot");
             }
-            else if (InputHelper.horizontalMove != 0 && objectController.IsGrounded)
+            else if (InputHelper.horizontalMove != 0 && controller.IsGrounded)
             {
                 animator.Play("PlayerRun");
             }
-            else if (InputHelper.shoot && objectController.IsGrounded)
+            else if (InputHelper.shoot && controller.IsGrounded)
             {
                 animator.Play("PlayerShoot");
             }
-            else if (objectController.IsGrounded)
+            else if (controller.IsGrounded)
             {
                 animator.Play("PlayerIdle");
             }
@@ -96,23 +96,23 @@ public class PlayerController2D : MonoBehaviour
         {
             if (rotate)
             {
-                objectController.Rotate();
+                controller.Rotate();
             }
 
             if (!(InputHelper.horizontalMove == 0 && Physics2D.IsTouchingLayers(groundCheck, LayerMask.GetMask("MovingHorizontalPlatform"))))
             {
-                objectController.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
+                controller.MoveHorizontal(InputHelper.horizontalMove * runSpeed);
             }
 
             if (jumpTimer.timeElapsed && InputHelper.jump)
             {
-                objectController.Jump(jumpSpeed);
+                controller.Jump(jumpSpeed);
                 jumpTimer.StartTimer(0.4f);
             }
 
             if (InputHelper.stop)
             {
-                objectController.Stop(true, true);
+                controller.Stop(true, true);
             }
         }
     }
@@ -125,7 +125,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void DeathHandler()
     {
-        if(!attributesController.IsAlive)
+        if(!attributes.IsAlive)
         {
             OnDeath();
         }
@@ -135,7 +135,7 @@ public class PlayerController2D : MonoBehaviour
     {
         InputHelper.GetInput();
         Animate();
-        Debug.Log("HP = " + attributesController.Health);
+        Debug.Log("HP = " + attributes.Health);
     }
 
     private void FixedUpdate()
@@ -166,24 +166,24 @@ public class PlayerController2D : MonoBehaviour
     private void OnEnemyTouch()
     {
         isImmortal = true;
-        attributesController.TakeDamage(1);
+        attributes.TakeDamage(1);
         immortalTimer.StartTimer(immortalTime);
 
         canBeControlled = false;
-        objectController.MoveVertical(2f);
-        objectController.MoveHorizontal(objectController.IsFacingRight ? -2f : 2f);
+        controller.MoveVertical(2f);
+        controller.MoveHorizontal(controller.IsFacingRight ? -2f : 2f);
     }
 
     public void OnPowerUpTouch()
     {
-        attributesController.TakeHealth(1);
+        attributes.TakeHealth(1);
     }
 
     private void OnWaterEnter()
     {
         if (!isInWater)
         {
-            objectController.SetDrag(15f);
+            controller.SetDrag(15f);
             jumpSpeed *= 2.5f;
         }
         isInWater = true;
@@ -191,9 +191,9 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnWaterExit()
     {
-        objectController.SetDrag(0f);
+        controller.SetDrag(0f);
         jumpSpeed = initialJumpSpeed;
-        objectController.MoveVertical(jumpSpeed / 2f); // fixed vertical speed while jumping out of water
+        controller.MoveVertical(jumpSpeed / 2f); // fixed vertical speed while jumping out of water
         isInWater = false;
     }
 

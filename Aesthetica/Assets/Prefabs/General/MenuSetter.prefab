@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606647721745880}
-  - component: {fileID: 114428291004174030}
+  - component: {fileID: 114361721409098504}
   m_Layer: 0
   m_Name: MenuSetter
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114428291004174030
+--- !u!114 &114361721409098504
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,3 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc7b5156f08bc046a4feb5b4c6eb417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints: []
+  player: {fileID: 0}
+  allowWaypointTeleportation: 1
