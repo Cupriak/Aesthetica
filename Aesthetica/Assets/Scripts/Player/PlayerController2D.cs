@@ -33,12 +33,14 @@ public class PlayerController2D : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Color basicColor;
     private Collider2D playerCollider;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        basicColor = spriteRenderer.color;
         playerCollider = GetComponent<Collider2D>();
 
         initialJumpSpeed = jumpSpeed;
@@ -79,7 +81,7 @@ public class PlayerController2D : MonoBehaviour
         {
             if (immortalTimer.TimeLeft() % 0.2 < 0.1)
             {
-                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+                spriteRenderer.color = basicColor;
             }
             else
             {

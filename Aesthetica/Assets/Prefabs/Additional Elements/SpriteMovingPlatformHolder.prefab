@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4783614937260524}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: SpriteMovingPlatformHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4415377369783272}
   - component: {fileID: 61138293489261838}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FirstBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4422212614652642}
   - component: {fileID: 61446349576098052}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: SecondBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656912173727896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.369, y: 0.09, z: 0}
+  m_LocalPosition: {x: 5.1684904, y: 1.2594934, z: -49.614258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4134783989314084}
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 114764653314328512}
-  speedX: 1
+  speedX: -1
   speedY: 0
   firstBound: {fileID: 61138293489261838}
   secondBound: {fileID: 61446349576098052}

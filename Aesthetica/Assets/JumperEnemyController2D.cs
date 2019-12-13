@@ -22,6 +22,7 @@ public class JumperEnemyController2D : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Color basicColor;
 
     [SerializeField] private Collider2D jumperCollider;
 
@@ -36,6 +37,7 @@ public class JumperEnemyController2D : MonoBehaviour
     [Range(0, 1)] [SerializeField] private float probabilityToJump;
     [Range(0, 1)] [SerializeField] private float shootingRange;
     [Range(0, 1)] [SerializeField] private float reloadTime;
+    [Range(0, 1)] [SerializeField] private float idleActiveness;
 
 
     //JUMPER ENEMY SIDE COLLIDER DETECTION SETS THIS VALUE
@@ -47,6 +49,7 @@ public class JumperEnemyController2D : MonoBehaviour
         controller = GetComponent<ObjectController2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        basicColor = spriteRenderer.color;
         movingDirection = 1;
         canShoot = true;
     }
@@ -66,7 +69,7 @@ public class JumperEnemyController2D : MonoBehaviour
         {
             if (hurtTimer.TimeLeft() % 0.2 < 0.1)
             {
-                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+                spriteRenderer.color = basicColor;
             }
             else
             {
@@ -77,7 +80,11 @@ public class JumperEnemyController2D : MonoBehaviour
 
     private void JumperIdleAI()
     {
-        controller.MoveHorizontal(movingDirection * runSpeed * 0.2f);
+        controller.MoveHorizontal(movingDirection * runSpeed * idleActiveness);
+        if (Random.value < probabilityToJump * idleActiveness*0.7f)
+        {
+            controller.Jump(jumpSpeed * (idleActiveness*2.5f));
+        }
     }
 
     private void JumperFightAI()

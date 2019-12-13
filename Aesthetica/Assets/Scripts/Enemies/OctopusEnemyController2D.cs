@@ -28,6 +28,7 @@ public class OctopusEnemyController2D : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Collider2D octopusCollider;
+    private Color basicColor;
 
     public void Awake()
     {
@@ -35,6 +36,7 @@ public class OctopusEnemyController2D : MonoBehaviour
         objectController = GetComponent<ObjectController2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        basicColor = spriteRenderer.color;
         octopusCollider = GetComponent<Collider2D>();
 
         spriteRenderer.flipX = true; // octopus sprite looks to the left -> we want it to look right
@@ -64,7 +66,7 @@ public class OctopusEnemyController2D : MonoBehaviour
         {
             if (hurtTimer.TimeLeft() % 0.2 < 0.1)
             {
-                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+                spriteRenderer.color = basicColor;
             }
             else
             {

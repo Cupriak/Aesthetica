@@ -8,7 +8,6 @@ public class GateController2D : MonoBehaviour
     public bool IsTriggered { get; set; }
 
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
 
     [SerializeField] private GameObject doorTrigger;
     [SerializeField] private GameObject doorSide;
@@ -21,7 +20,6 @@ public class GateController2D : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Animate()

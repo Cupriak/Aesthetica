@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1704561394190790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.12, y: 1.54, z: 0}
+  m_LocalPosition: {x: 15.78, y: -7.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4381152103609496}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 7168
+    m_Bits: 15360
   groundCheck: {fileID: 61333672837167590}
 --- !u!114 &114117867874074972
 MonoBehaviour:
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8ba1dc66c99994ab50b04b346fa293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHealth: 5
+  initialHealth: 999
 --- !u!212 &212151730831095516
 SpriteRenderer:
   m_ObjectHideFlags: 1

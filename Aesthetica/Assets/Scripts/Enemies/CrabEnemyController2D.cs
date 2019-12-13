@@ -29,6 +29,7 @@ public class CrabEnemyController2D : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Color basicColor;
     [SerializeField] private Collider2D crabCollider;
 
     public void Awake()
@@ -37,6 +38,7 @@ public class CrabEnemyController2D : MonoBehaviour
         controller = GetComponent<ObjectController2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        basicColor = spriteRenderer.color;
 
         spriteRenderer.flipX = true; // crab sprite looks to the left -> we want it to look right
     }
@@ -59,7 +61,7 @@ public class CrabEnemyController2D : MonoBehaviour
         {
             if (hurtTimer.TimeLeft() % 0.2 < 0.1)
             {
-                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+                spriteRenderer.color = basicColor;
             }
             else
             {
