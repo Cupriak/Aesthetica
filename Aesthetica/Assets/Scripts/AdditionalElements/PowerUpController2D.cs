@@ -6,7 +6,6 @@ public class PowerUpController2D : MonoBehaviour
 {
     private void Disappear()
     {
-        //Destroy(gameObject, Time.deltaTime);
         Destroy(gameObject);
     }
 
