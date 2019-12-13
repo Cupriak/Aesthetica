@@ -33,6 +33,9 @@ public class JumperEnemyController2D : MonoBehaviour
     [SerializeField] private Timer shootTimer;
     private bool canShoot;
     [SerializeField] private Transform shootStartPoint;
+    [Range(0, 1)] [SerializeField] private float probabilityToJump;
+    [Range(0, 1)] [SerializeField] private float shootingRange;
+    [Range(0, 1)] [SerializeField] private float reloadTime;
 
 
     //JUMPER ENEMY SIDE COLLIDER DETECTION SETS THIS VALUE
@@ -50,7 +53,7 @@ public class JumperEnemyController2D : MonoBehaviour
 
     private void Animate()
     {
-        if(controller.IsGrounded)
+        if (controller.IsGrounded)
         {
             animator.Play("JumperIdle");
         }
@@ -80,16 +83,19 @@ public class JumperEnemyController2D : MonoBehaviour
     private void JumperFightAI()
     {
         controller.MoveHorizontal(movingDirection * runSpeed);
-        controller.Jump(jumpSpeed);
+        if (Random.value < probabilityToJump)
+        {
+            controller.Jump(jumpSpeed);
+        }
 
-        float aroundDistance = 0.4f;
+        float aroundDistance = shootingRange;
         bool beAround = Target.position.x > shootStartPoint.position.x - aroundDistance && Target.position.x < shootStartPoint.position.x + aroundDistance ? true : false;
 
         if (beAround && canShoot)
         {
             weapon.Shoot();
             canShoot = false;
-            shootTimer.StartTimer(0.1f);
+            shootTimer.StartTimer(reloadTime);
         }
 
         if (shootTimer.timeElapsed)
