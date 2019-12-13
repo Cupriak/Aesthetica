@@ -122,6 +122,7 @@ public class JumperEnemyController2D : MonoBehaviour
 
     private void OnDeath()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         Instantiate(deathPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

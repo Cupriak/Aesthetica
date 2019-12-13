@@ -14,6 +14,7 @@ public class CrabEnemyTrigger : MonoBehaviour
         {
             crab.IsTriggered = true;
             crab.Target = collision.gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("CrabAggro");
         }
     }
 

@@ -85,6 +85,7 @@ public class OctopusEnemyController2D : MonoBehaviour
 
     private void OnDeath()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         Instantiate(deathPrefab, transform.position, transform.rotation);
         Destroy(transform.parent.gameObject, Time.deltaTime);
     }

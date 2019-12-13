@@ -8,6 +8,7 @@ public class ImpactController : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Impact");
         Destroy(gameObject, impactTime);
     }
 }

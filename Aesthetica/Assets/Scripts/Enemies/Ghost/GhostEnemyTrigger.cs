@@ -14,6 +14,7 @@ public class GhostEnemyTrigger : MonoBehaviour
         {
             ghost.IsTriggered = true;
             ghost.Target = collision.gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("GhostAggro");
         }
     }
 

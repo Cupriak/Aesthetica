@@ -12,6 +12,11 @@ public class BulletController2D : MonoBehaviour
 
     [SerializeField] private GameObject impactPrefab;
 
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Bullet");
+    }
+
     private void FixedUpdate()
     {
         MoveBullet();

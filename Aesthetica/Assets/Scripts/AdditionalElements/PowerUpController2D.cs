@@ -15,6 +15,7 @@ public class PowerUpController2D : MonoBehaviour
         if(player != null)
         {
             player.OnPowerUpTouch();
+            FindObjectOfType<AudioManager>().Play("PowerUp");
             Disappear();
         }
     }

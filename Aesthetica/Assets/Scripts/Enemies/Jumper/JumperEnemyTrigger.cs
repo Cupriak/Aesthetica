@@ -14,6 +14,7 @@ public class JumperEnemyTrigger : MonoBehaviour
         {
             jumper.IsTriggered = true;
             jumper.Target = collision.gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("JumperAggro");
         }
     }
 

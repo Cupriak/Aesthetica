@@ -119,6 +119,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnDeath()
     {
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
         Instantiate(deathPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
