@@ -46,45 +46,77 @@ public class GhostEnemyController2D : MonoBehaviour
         if (!getBackToStartPoint)
         {
             //Going back to X start position
-            if (startPoint.position.x > transform.position.x)
+            if(!beAroundX)
             {
-                controller.MoveHorizontal(backToPositionSpeed);
+                if (startPoint.position.x > transform.position.x)
+                {
+                    controller.MoveHorizontal(backToPositionSpeed);
+                }
+                else
+                {
+                    controller.MoveHorizontal(-backToPositionSpeed);
+                }
             }
             else
             {
-                controller.MoveHorizontal(-backToPositionSpeed);
+                controller.Stop(true, false);
             }
 
             //Going back to Y start position
-            if (startPoint.position.y > transform.position.y)
+            if(!beAroundY)
             {
-                controller.MoveVertical(backToPositionSpeed);
+                if (startPoint.position.y > transform.position.y)
+                {
+                    controller.MoveVertical(backToPositionSpeed);
+                }
+                else
+                {
+                    controller.MoveVertical(-backToPositionSpeed);
+                }
             }
             else
             {
-                controller.MoveVertical(-backToPositionSpeed);
+                controller.Stop(false, true);
             }
         }
     }
 
     private void ChaseTargetAI()
     {
-        if (Target.position.x > transform.position.x)
+        float aroundDistance = 0.05f;
+        bool beAroundX = Target.position.x > transform.position.x - aroundDistance && Target.position.x < transform.position.x + aroundDistance ? true : false;
+        bool beAroundY = Target.position.y > transform.position.y - aroundDistance && Target.position.y < transform.position.y + aroundDistance ? true : false;
+
+        if(!beAroundX)
         {
-            controller.MoveHorizontal(chaseHorizontalSpeed);
+            if (Target.position.x > transform.position.x)
+            {
+                controller.MoveHorizontal(chaseHorizontalSpeed);
+            }
+            else
+            {
+                controller.MoveHorizontal(-chaseHorizontalSpeed);
+            }
         }
         else
         {
-            controller.MoveHorizontal(-chaseHorizontalSpeed);
+            controller.Stop(true, false);
         }
 
-        if (Target.position.y > transform.position.y)
+        if(!beAroundY)
         {
-            controller.MoveVertical(chaseVerticalSpeed);
+            if (Target.position.y > transform.position.y)
+            {
+                controller.MoveVertical(chaseVerticalSpeed);
+            }
+            else
+            {
+                controller.MoveVertical(-chaseVerticalSpeed);
+            }
         }
         else
         {
-            controller.MoveVertical(-chaseVerticalSpeed);
+            controller.Stop(false, true);
         }
     }
 

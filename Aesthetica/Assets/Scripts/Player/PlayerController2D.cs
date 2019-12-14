@@ -34,14 +34,12 @@ public class PlayerController2D : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Color basicColor;
-    private Collider2D playerCollider;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         basicColor = spriteRenderer.color;
-        playerCollider = GetComponent<Collider2D>();
 
         initialJumpSpeed = jumpSpeed;
     }
@@ -135,8 +133,10 @@ public class PlayerController2D : MonoBehaviour
     private void Update()
     {
         InputHelper.GetInput();
-        Animate();
-        Debug.Log("HP = " + attributes.Health);
+        if(!UIController.isGamePaused)
+        {
+            Animate();
+        }
     }
 
     private void FixedUpdate()
@@ -210,7 +210,8 @@ public class PlayerController2D : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         //ENEMY DETECTION
-        if (!isImmortal && Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
+        //if (!isImmortal && Physics2D.IsTouchingLayers(playerCollider, whatIsEnemy))
+        if(!isImmortal && LayerMaskHelper.IsLayerInLayerMask(collision.gameObject.layer, whatIsEnemy))
         {
             OnEnemyTouch();
         }

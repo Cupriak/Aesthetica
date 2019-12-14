@@ -26,11 +26,11 @@ public class GateController2D : MonoBehaviour
     {
         if (doorOpen)
         {
-            animator.Play("GateOpen");
+            animator.Play("GateOpening");
         }
         else
         {
-            animator.Play("GateClosed");
+            animator.Play("GateClosing");
         }
     }
 

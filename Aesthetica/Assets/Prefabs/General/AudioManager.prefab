@@ -54,7 +54,7 @@ MonoBehaviour:
   sounds:
   - name: LevelTheme
     clip: {fileID: 8300000, guid: f0cf8d4d4a87f434d8b89a33f9303e6e, type: 3}
-    volume: 1
+    volume: 0.7
     loop: 1
     source: {fileID: 0}
   - name: Bullet
@@ -64,7 +64,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: 05a67f1812e5a76469fd65820f9678de, type: 3}
-    volume: 1
+    volume: 0.8
     loop: 0
     source: {fileID: 0}
   - name: PlayerDeath
@@ -74,26 +74,26 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CrabAggro
     clip: {fileID: 8300000, guid: 463625f34d8f7434f9fb00a931fcdcd2, type: 3}
-    volume: 0.3
+    volume: 0.1
     loop: 0
     source: {fileID: 0}
   - name: GhostAggro
     clip: {fileID: 8300000, guid: 038cec0a6b50a3c44b6ff55878ccf16a, type: 3}
-    volume: 1
+    volume: 0.8
     loop: 0
     source: {fileID: 0}
   - name: Impact
     clip: {fileID: 8300000, guid: e75bb7cb5cd283c44a9a0863aa3fa7d3, type: 3}
-    volume: 0.4
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: JumperAggro
     clip: {fileID: 8300000, guid: fc0e83983327e2548b0147020f5589e8, type: 3}
-    volume: 1
+    volume: 0.8
     loop: 0
     source: {fileID: 0}
   - name: PowerUp
     clip: {fileID: 8300000, guid: 2ed7240e8afb4f94883c35163f18c144, type: 3}
-    volume: 1
+    volume: 0.8
     loop: 0
     source: {fileID: 0}

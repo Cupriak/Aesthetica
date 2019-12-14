@@ -619,7 +619,7 @@ MonoBehaviour:
   jumper: {fileID: 114937476324232212}
   whatIsObsticle:
     serializedVersion: 2
-    m_Bits: 40704
+    m_Bits: 7936
 --- !u!114 &114356120439399784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,7 +660,7 @@ MonoBehaviour:
   jumper: {fileID: 114937476324232212}
   whatIsObsticle:
     serializedVersion: 2
-    m_Bits: 40704
+    m_Bits: 7936
 --- !u!114 &114530412210413480
 MonoBehaviour:
   m_ObjectHideFlags: 1

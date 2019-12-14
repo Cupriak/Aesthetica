@@ -23,6 +23,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void ChangeVolume(string clipName, float volume)
+    {
+        Sound sound = Array.Find(sounds, s => s.name == clipName);
+        if (sound != null)
+        {
+            sound.source.volume = Mathf.Clamp01(volume);
+        }
+        else
+        {
+            Debug.LogWarning("Sound = " + clipName + " does not exist!");
+        }
+    }
+
     public void Play(string clipName)
     {
         Sound sound = Array.Find(sounds, s => s.name == clipName);

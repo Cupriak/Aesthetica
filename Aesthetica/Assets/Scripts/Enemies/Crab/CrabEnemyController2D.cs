@@ -116,13 +116,23 @@ public class CrabEnemyController2D : MonoBehaviour
 
     private void ChaseTargetAI()
     {
-        if (Target.position.x > transform.position.x)
+        float aroundDistance = 0.05f;
+        bool beAround = Target.position.x > transform.position.x - aroundDistance && Target.position.x < transform.position.x + aroundDistance ? true : false;
+
+        if(!beAround)
         {
-            controller.MoveHorizontal(chaseSpeed);
+            if (Target.position.x > transform.position.x)
+            {
+                controller.MoveHorizontal(chaseSpeed);
+            }
+            else
+            {
+                controller.MoveHorizontal(-chaseSpeed);
+            }
         }
         else
         {
-            controller.MoveHorizontal(-chaseSpeed);
+            controller.Stop(true, false);
         }
     }
 
