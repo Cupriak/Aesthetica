@@ -177,6 +177,8 @@ public class PlayerController2D : MonoBehaviour
         canBeControlled = false;
         controller.MoveVertical(2f);
         controller.MoveHorizontal(controller.IsFacingRight ? -2f : 2f);
+
+        FindObjectOfType<AudioManager>().Play("PlayerHurt");
     }
 
     public void OnPowerUpTouch()

@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("TestScene01");
+        SceneManager.LoadScene("Level28");
     }
 
     public void PlayLevel00()
@@ -17,7 +17,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayLevel01()
     {
-        Debug.Log("NOT READY YET!");
+        SceneManager.LoadScene("Level28");
     }
 
     public void PlayLevel02()
