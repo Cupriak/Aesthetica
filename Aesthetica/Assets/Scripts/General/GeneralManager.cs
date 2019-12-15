@@ -90,7 +90,7 @@ public class GeneralManager : MonoBehaviour
         InputHelper.GetInput();
         if(InputHelper.menu)
         {
-            SceneManager.LoadScene("MainMenuTest");
+            SceneManager.LoadScene("MainMenu");
         }
 
         if(allowWaypointTeleportation)

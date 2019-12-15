@@ -10,9 +10,24 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("TestScene01");
     }
 
+    public void PlayLevel00()
+    {
+        SceneManager.LoadScene("TestScene01");
+    }
+
+    public void PlayLevel01()
+    {
+        Debug.Log("NOT READY YET!");
+    }
+
+    public void PlayLevel02()
+    {
+        Debug.Log("NOT READY YET!");
+    }
+
     public void QuitGame()
     {
+        Debug.Log("Quit Game!");
         Application.Quit();
-        Debug.Log("EXIT");
     }
 }
