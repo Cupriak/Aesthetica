@@ -91,10 +91,12 @@ public class GeneralManager : MonoBehaviour
         if(InputHelper.menu)
         {
             SceneManager.LoadScene("MainMenu");
+            FindObjectOfType<AudioManager>().Play("UIAccept");
         }
         if (InputHelper.pause)
         {
             FindObjectOfType<UIController>().Pause();
+            FindObjectOfType<AudioManager>().Play("UIAccept");
         }
 
         if (allowWaypointTeleportation)
