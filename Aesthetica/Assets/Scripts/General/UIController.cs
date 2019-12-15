@@ -29,6 +29,11 @@ public class UIController : MonoBehaviour
         healthText.text = startHealthText + playerAttributes.Health;
     }
 
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void Pause()
     {
         if (isGamePaused)

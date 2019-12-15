@@ -53,47 +53,116 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: LevelTheme
-    clip: {fileID: 8300000, guid: f0cf8d4d4a87f434d8b89a33f9303e6e, type: 3}
-    volume: 0.7
+    clip: {fileID: 8300000, guid: 904f1c1ea8bfc3d44867bf383ef82ec2, type: 3}
+    volume: 1
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Bullet
-    clip: {fileID: 8300000, guid: ee80b324b17bf024497e6fd3c468f159, type: 3}
-    volume: 0.6
+  - name: Shoot01
+    clip: {fileID: 8300000, guid: c61790f1b41f6fa47b5a6c668e498f57, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: EnemyDeath
-    clip: {fileID: 8300000, guid: 05a67f1812e5a76469fd65820f9678de, type: 3}
-    volume: 0.8
+  - name: Shoot02
+    clip: {fileID: 8300000, guid: 6faf0e718d623024fa333e59e83857d1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot03
+    clip: {fileID: 8300000, guid: c61790f1b41f6fa47b5a6c668e498f57, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot04
+    clip: {fileID: 8300000, guid: 6faf0e718d623024fa333e59e83857d1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrabAggro
+    clip: {fileID: 8300000, guid: 34b4203aa7a0dbe42a5d0c84d8976f11, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrabDeath
+    clip: {fileID: 8300000, guid: 723b808b9431cd34f8ceec29458adb6a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumperAggro
+    clip: {fileID: 8300000, guid: 0153193706bcd964aa2cb256a468b91c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumperDeath
+    clip: {fileID: 8300000, guid: 04f42866e02489942b4f14cead57077b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GhostAggro
+    clip: {fileID: 8300000, guid: 038cec0a6b50a3c44b6ff55878ccf16a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerJump
+    clip: {fileID: 8300000, guid: 56280fe780012534192bed493f30f08e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: feeb3cea9eadb824880070cca45b3472, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Impact
+    clip: {fileID: 8300000, guid: d670718a7d4e27743ba2e2cf6a69d500, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GateOpening
+    clip: {fileID: 8300000, guid: 2b1360ba87e216140953a982b2d2c539, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GateClosing
+    clip: {fileID: 8300000, guid: 2b1360ba87e216140953a982b2d2c539, type: 3}
+    volume: 1
+    pitch: -1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIAccept
+    clip: {fileID: 8300000, guid: 125f820f060164e4aa6a77223833c5ea, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIBack
+    clip: {fileID: 8300000, guid: 53a1ff620ee6178489d6d75c65665669, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: ca6a7591563677240bf35a00597c8c01, type: 3}
     volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: CrabAggro
-    clip: {fileID: 8300000, guid: 463625f34d8f7434f9fb00a931fcdcd2, type: 3}
-    volume: 0.1
-    loop: 0
-    source: {fileID: 0}
-  - name: GhostAggro
-    clip: {fileID: 8300000, guid: 038cec0a6b50a3c44b6ff55878ccf16a, type: 3}
-    volume: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: Impact
-    clip: {fileID: 8300000, guid: e75bb7cb5cd283c44a9a0863aa3fa7d3, type: 3}
-    volume: 0.2
-    loop: 0
-    source: {fileID: 0}
-  - name: JumperAggro
-    clip: {fileID: 8300000, guid: fc0e83983327e2548b0147020f5589e8, type: 3}
-    volume: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: PowerUp
-    clip: {fileID: 8300000, guid: 2ed7240e8afb4f94883c35163f18c144, type: 3}
-    volume: 0.8
+  - name: OctopusDeath
+    clip: {fileID: 8300000, guid: 6317e3a18ecbda44689420c4c7e475fc, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}

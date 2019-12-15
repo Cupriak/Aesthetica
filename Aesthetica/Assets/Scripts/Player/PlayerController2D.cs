@@ -106,6 +106,10 @@ public class PlayerController2D : MonoBehaviour
             {
                 controller.Jump(jumpSpeed);
                 jumpTimer.StartTimer(0.4f);
+                if(controller.IsGrounded)
+                {
+                    FindObjectOfType<AudioManager>().Play("PlayerJump");
+                }
             }
 
             if (InputHelper.stop)

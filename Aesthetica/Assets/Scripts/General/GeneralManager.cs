@@ -92,8 +92,12 @@ public class GeneralManager : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+        if (InputHelper.pause)
+        {
+            FindObjectOfType<UIController>().Pause();
+        }
 
-        if(allowWaypointTeleportation)
+        if (allowWaypointTeleportation)
         {
             debugTeleportation();
         } 

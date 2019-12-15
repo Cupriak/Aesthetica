@@ -49,6 +49,7 @@ public class GateController2D : MonoBehaviour
             doorSide.SetActive(false);
             doorTimer.StartTimer(3f);
             doorOpen = true;
+            FindObjectOfType<AudioManager>().Play("GateOpening");
         }
     }
 
@@ -59,6 +60,7 @@ public class GateController2D : MonoBehaviour
             doorTrigger.SetActive(true);
             doorSide.SetActive(true);
             doorOpen = false;
+            FindObjectOfType<AudioManager>().Play("GateClosing");
         }
     }
 }

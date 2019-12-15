@@ -12,9 +12,25 @@ public class BulletController2D : MonoBehaviour
 
     [SerializeField] private GameObject impactPrefab;
 
-    private void Start()
+    private void Awake()
     {
-        FindObjectOfType<AudioManager>().Play("Bullet");
+        float chance = Random.value;
+        if (chance > 0.75f)
+        {
+            FindObjectOfType<AudioManager>().Play("Shoot01");
+        }
+        else if (chance > 0.5f)
+        {
+            FindObjectOfType<AudioManager>().Play("Shoot02");
+        }
+        else if (chance > 0.25f)
+        {
+            FindObjectOfType<AudioManager>().Play("Shoot03");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("Shoot04");
+        }
     }
 
     private void FixedUpdate()

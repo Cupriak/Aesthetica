@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
             sound.source.volume = sound.volume;
+            sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
         }
     }
@@ -29,6 +30,19 @@ public class AudioManager : MonoBehaviour
         if (sound != null)
         {
             sound.source.volume = Mathf.Clamp01(volume);
+        }
+        else
+        {
+            Debug.LogWarning("Sound = " + clipName + " does not exist!");
+        }
+    }
+
+    public void ChangePitch(string clipName, float pitch)
+    {
+        Sound sound = Array.Find(sounds, s => s.name == clipName);
+        if (sound != null)
+        {
+            sound.source.pitch = Mathf.Clamp(pitch, -3f, 3f);
         }
         else
         {

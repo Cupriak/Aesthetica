@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1709305082715368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6090755, y: -1.153468, z: 16.902344}
+  m_LocalPosition: {x: -1.2204245, y: -0.12598304, z: 16.902344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactTime: 0.3
+  soundPlayDistance: 4.5
 --- !u!212 &212489698435610080
 SpriteRenderer:
   m_ObjectHideFlags: 1
