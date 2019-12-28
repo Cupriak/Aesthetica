@@ -1,0 +1,129 @@
+\hypertarget{class_audio_manager}{}\doxysection{Audio\+Manager Class Reference}
+\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+Class that is responsible for playing most of sounds in game  
+
+
+Inheritance diagram for Audio\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_a5c5c4f5cb0d4527eed42965298e9fcc6}{Change\+Volume}} (string clip\+Name, float volume)
+\begin{DoxyCompactList}\small\item\em Change volume of clip \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_aa0e731e8c9dd41ec2f11c6ba07151e14}{Change\+Pitch}} (string clip\+Name, float pitch)
+\begin{DoxyCompactList}\small\item\em Change pitch of clip \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_a5241bfd87847873f50061fdfdd35cbc5}{Play}} (string clip\+Name)
+\begin{DoxyCompactList}\small\item\em Play clip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialize sounds and start playing level theme \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_afb03ae08314cad4afa0a996550af7ab3}{Set\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of sounds \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sound}{Sound}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_audio_manager_a66e04092f8cca2c8432893159a08ea56}{sounds}}
+\begin{DoxyCompactList}\small\item\em Array of Sounds that could be played \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is responsible for playing most of sounds in game 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}\label{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}} 
+\index{AudioManager@{AudioManager}!Awake@{Awake}}
+\index{Awake@{Awake}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Initialize sounds and start playing level theme 
+
+\mbox{\Hypertarget{class_audio_manager_aa0e731e8c9dd41ec2f11c6ba07151e14}\label{class_audio_manager_aa0e731e8c9dd41ec2f11c6ba07151e14}} 
+\index{AudioManager@{AudioManager}!ChangePitch@{ChangePitch}}
+\index{ChangePitch@{ChangePitch}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{ChangePitch()}{ChangePitch()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Change\+Pitch (\begin{DoxyParamCaption}\item[{string}]{clip\+Name,  }\item[{float}]{pitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change pitch of clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Name} & Name of clip\\
+\hline
+{\em pitch} & Desired pitch (between 0-\/1)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_manager_a5c5c4f5cb0d4527eed42965298e9fcc6}\label{class_audio_manager_a5c5c4f5cb0d4527eed42965298e9fcc6}} 
+\index{AudioManager@{AudioManager}!ChangeVolume@{ChangeVolume}}
+\index{ChangeVolume@{ChangeVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{ChangeVolume()}{ChangeVolume()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Change\+Volume (\begin{DoxyParamCaption}\item[{string}]{clip\+Name,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change volume of clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Name} & Name of clip\\
+\hline
+{\em volume} & Desired volume (between 0-\/1)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_manager_a5241bfd87847873f50061fdfdd35cbc5}\label{class_audio_manager_a5241bfd87847873f50061fdfdd35cbc5}} 
+\index{AudioManager@{AudioManager}!Play@{Play}}
+\index{Play@{Play}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Play (\begin{DoxyParamCaption}\item[{string}]{clip\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Play clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Name} & Name of clip\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_manager_afb03ae08314cad4afa0a996550af7ab3}\label{class_audio_manager_afb03ae08314cad4afa0a996550af7ab3}} 
+\index{AudioManager@{AudioManager}!SetSounds@{SetSounds}}
+\index{SetSounds@{SetSounds}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{SetSounds()}{SetSounds()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Set\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialization of sounds 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_audio_manager_a66e04092f8cca2c8432893159a08ea56}\label{class_audio_manager_a66e04092f8cca2c8432893159a08ea56}} 
+\index{AudioManager@{AudioManager}!sounds@{sounds}}
+\index{sounds@{sounds}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{sounds}{sounds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sound}{Sound}} \mbox{[}$\,$\mbox{]} Audio\+Manager.\+sounds\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array of Sounds that could be played 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+General/\mbox{\hyperlink{_audio_manager_8cs}{Audio\+Manager.\+cs}}\end{DoxyCompactItemize}

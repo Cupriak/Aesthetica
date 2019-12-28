@@ -1,0 +1,349 @@
+\hypertarget{class_object_controller2_d}{}\doxysection{Object\+Controller2D Class Reference}
+\label{class_object_controller2_d}\index{ObjectController2D@{ObjectController2D}}
+
+
+Class that is responsible for movement in every other classed. Movement is based on rididbody2D component.  
+
+
+Inheritance diagram for Object\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_object_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_controller2_d_a9df3175aa374c627d3d32a8cdc8ba9a9}{Stop}} (bool horizontal, bool vertical)
+\begin{DoxyCompactList}\small\item\em Stop movement of object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a295df550aa271a9af2454262d57c024f}{Move\+Horizontal}} (float speed)
+\begin{DoxyCompactList}\small\item\em Move object horizontally \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a53548f1e8e269ea8ae587216fb98d3c3}{Move\+Horizontal}} (Vector3 side, float speed)
+\begin{DoxyCompactList}\small\item\em Move object vertically taking side as point of reference \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a98b52d43f4f53e2c15232c0b3d0af638}{Move\+Vertical}} (float speed)
+\begin{DoxyCompactList}\small\item\em Move object vertically \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a1075039af57a1f02f48ed4832c57936b}{Add\+Move}} (float horizontal\+Speed, float vertical\+Speed)
+\begin{DoxyCompactList}\small\item\em Adding velocity to object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_afdb1fc93d211df22d3dbfc55158ac395}{Teleport}} (float positionX, float positionY, float positionZ)
+\begin{DoxyCompactList}\small\item\em Teleport object to given location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a9a9a7ffaa1cb99e6f8d79aefaa5882e1}{Teleport}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Teleport object to given location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a98ce56bc18cf63b70de4c2994b58932b}{Teleport}} (Transform position\+Transform)
+\begin{DoxyCompactList}\small\item\em Teleport object to given location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a5504aa86b7e2d6bf6a08f4824aaec11c}{Set\+Drag}} (float drag)
+\begin{DoxyCompactList}\small\item\em Seting drag of object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_ab2c0f788c8878c36bdf588d37b1d15fa}{Jump}} (float jump\+Speed)
+\begin{DoxyCompactList}\small\item\em Move object vertically if it is grounded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_aa8b824792bff9da8e45de45fdbb555e1}{Rotate}} ()
+\begin{DoxyCompactList}\small\item\em Rotating object right or left depending on Is\+Facing\+Right flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_object_controller2_d_aa1bfe15a09d29b15a8f44f887dbed258}{Is\+Grounded}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if object is grounded \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_object_controller2_d_a357e513d485f3b3078cf4b5b1b35e1e2}{Is\+Facing\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if object is currently facing right \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_controller2_d_a301e12431d0720161d0dc52ee4f93adc}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Called on object creation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a73e55cf0703efc09bc678f5d432050d3}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame. Check if object is on ground \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_af0c63b10f773712a0495aa261494bbaa}{Ground\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Method that checks if player is on ground and set is\+Grounded flag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_controller2_d_a37908de37867b3ba399a2a37bda17c4a}{Facing\+Right\+Check}} (float horizontal\+Speed)
+\begin{DoxyCompactList}\small\item\em Check if object is facing right basing on its horizontal speed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_object_controller2_d_a26db9bd8a5b3f97395076ba50028e5fe}{what\+Is\+Ground}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that determine what is ground \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_object_controller2_d_a42c4d5666ffd5db98b2cb59053876245}{ground\+Check}}
+\begin{DoxyCompactList}\small\item\em Collider that check if object is grounded \end{DoxyCompactList}\item 
+Rigidbody2D \mbox{\hyperlink{class_object_controller2_d_a01f61ac6999b97e01ff6fd9219ee3abc}{rb2d}}
+\begin{DoxyCompactList}\small\item\em Rigidbody2D reference. Used for movement and physics \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is responsible for movement in every other classed. Movement is based on rididbody2D component. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_controller2_d_a1075039af57a1f02f48ed4832c57936b}\label{class_object_controller2_d_a1075039af57a1f02f48ed4832c57936b}} 
+\index{ObjectController2D@{ObjectController2D}!AddMove@{AddMove}}
+\index{AddMove@{AddMove}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{AddMove()}{AddMove()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Add\+Move (\begin{DoxyParamCaption}\item[{float}]{horizontal\+Speed,  }\item[{float}]{vertical\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adding velocity to object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em horizontal\+Speed} & horizontal speed to be added\\
+\hline
+{\em vertical\+Speed} & vertical speed to be added\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a301e12431d0720161d0dc52ee4f93adc}\label{class_object_controller2_d_a301e12431d0720161d0dc52ee4f93adc}} 
+\index{ObjectController2D@{ObjectController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called on object creation. 
+
+\mbox{\Hypertarget{class_object_controller2_d_a37908de37867b3ba399a2a37bda17c4a}\label{class_object_controller2_d_a37908de37867b3ba399a2a37bda17c4a}} 
+\index{ObjectController2D@{ObjectController2D}!FacingRightCheck@{FacingRightCheck}}
+\index{FacingRightCheck@{FacingRightCheck}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{FacingRightCheck()}{FacingRightCheck()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Facing\+Right\+Check (\begin{DoxyParamCaption}\item[{float}]{horizontal\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if object is facing right basing on its horizontal speed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em horizontal\+Speed} & horizontal speed value\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_af0c63b10f773712a0495aa261494bbaa}\label{class_object_controller2_d_af0c63b10f773712a0495aa261494bbaa}} 
+\index{ObjectController2D@{ObjectController2D}!GroundCheck@{GroundCheck}}
+\index{GroundCheck@{GroundCheck}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{GroundCheck()}{GroundCheck()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Ground\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that checks if player is on ground and set is\+Grounded flag 
+
+\mbox{\Hypertarget{class_object_controller2_d_ab2c0f788c8878c36bdf588d37b1d15fa}\label{class_object_controller2_d_ab2c0f788c8878c36bdf588d37b1d15fa}} 
+\index{ObjectController2D@{ObjectController2D}!Jump@{Jump}}
+\index{Jump@{Jump}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Jump (\begin{DoxyParamCaption}\item[{float}]{jump\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move object vertically if it is grounded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jump\+Speed} & speed of jump\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a295df550aa271a9af2454262d57c024f}\label{class_object_controller2_d_a295df550aa271a9af2454262d57c024f}} 
+\index{ObjectController2D@{ObjectController2D}!MoveHorizontal@{MoveHorizontal}}
+\index{MoveHorizontal@{MoveHorizontal}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MoveHorizontal()}{MoveHorizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Move\+Horizontal (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move object horizontally 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & speed of movement\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a53548f1e8e269ea8ae587216fb98d3c3}\label{class_object_controller2_d_a53548f1e8e269ea8ae587216fb98d3c3}} 
+\index{ObjectController2D@{ObjectController2D}!MoveHorizontal@{MoveHorizontal}}
+\index{MoveHorizontal@{MoveHorizontal}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MoveHorizontal()}{MoveHorizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Move\+Horizontal (\begin{DoxyParamCaption}\item[{Vector3}]{side,  }\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move object vertically taking side as point of reference 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side} & point of reference\\
+\hline
+{\em speed} & speed of movement\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a98b52d43f4f53e2c15232c0b3d0af638}\label{class_object_controller2_d_a98b52d43f4f53e2c15232c0b3d0af638}} 
+\index{ObjectController2D@{ObjectController2D}!MoveVertical@{MoveVertical}}
+\index{MoveVertical@{MoveVertical}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MoveVertical()}{MoveVertical()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Move\+Vertical (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move object vertically 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & speed of movement\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_aa8b824792bff9da8e45de45fdbb555e1}\label{class_object_controller2_d_aa8b824792bff9da8e45de45fdbb555e1}} 
+\index{ObjectController2D@{ObjectController2D}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotating object right or left depending on Is\+Facing\+Right flag 
+
+\mbox{\Hypertarget{class_object_controller2_d_a5504aa86b7e2d6bf6a08f4824aaec11c}\label{class_object_controller2_d_a5504aa86b7e2d6bf6a08f4824aaec11c}} 
+\index{ObjectController2D@{ObjectController2D}!SetDrag@{SetDrag}}
+\index{SetDrag@{SetDrag}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{SetDrag()}{SetDrag()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Set\+Drag (\begin{DoxyParamCaption}\item[{float}]{drag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Seting drag of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drag} & dragvalue\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a9df3175aa374c627d3d32a8cdc8ba9a9}\label{class_object_controller2_d_a9df3175aa374c627d3d32a8cdc8ba9a9}} 
+\index{ObjectController2D@{ObjectController2D}!Stop@{Stop}}
+\index{Stop@{Stop}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Stop (\begin{DoxyParamCaption}\item[{bool}]{horizontal,  }\item[{bool}]{vertical }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stop movement of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em horizontal} & if true stop horizontal movement\\
+\hline
+{\em vertical} & if true stop vertical movement\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_afdb1fc93d211df22d3dbfc55158ac395}\label{class_object_controller2_d_afdb1fc93d211df22d3dbfc55158ac395}} 
+\index{ObjectController2D@{ObjectController2D}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Teleport (\begin{DoxyParamCaption}\item[{float}]{positionX,  }\item[{float}]{positionY,  }\item[{float}]{positionZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Teleport object to given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em positionX} & x coordinate\\
+\hline
+{\em positionY} & y coordinate\\
+\hline
+{\em positionZ} & z coordinate\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a98ce56bc18cf63b70de4c2994b58932b}\label{class_object_controller2_d_a98ce56bc18cf63b70de4c2994b58932b}} 
+\index{ObjectController2D@{ObjectController2D}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Teleport (\begin{DoxyParamCaption}\item[{Transform}]{position\+Transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Teleport object to given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+Transform} & target position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a9a9a7ffaa1cb99e6f8d79aefaa5882e1}\label{class_object_controller2_d_a9a9a7ffaa1cb99e6f8d79aefaa5882e1}} 
+\index{ObjectController2D@{ObjectController2D}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Teleport (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Teleport object to given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & coordinates\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_controller2_d_a73e55cf0703efc09bc678f5d432050d3}\label{class_object_controller2_d_a73e55cf0703efc09bc678f5d432050d3}} 
+\index{ObjectController2D@{ObjectController2D}!Update@{Update}}
+\index{Update@{Update}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Object\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame. Check if object is on ground 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_object_controller2_d_a42c4d5666ffd5db98b2cb59053876245}\label{class_object_controller2_d_a42c4d5666ffd5db98b2cb59053876245}} 
+\index{ObjectController2D@{ObjectController2D}!groundCheck@{groundCheck}}
+\index{groundCheck@{groundCheck}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{groundCheck}{groundCheck}}
+{\footnotesize\ttfamily Collider2D Object\+Controller2\+D.\+ground\+Check\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Collider that check if object is grounded 
+
+\mbox{\Hypertarget{class_object_controller2_d_a01f61ac6999b97e01ff6fd9219ee3abc}\label{class_object_controller2_d_a01f61ac6999b97e01ff6fd9219ee3abc}} 
+\index{ObjectController2D@{ObjectController2D}!rb2d@{rb2d}}
+\index{rb2d@{rb2d}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{rb2d}{rb2d}}
+{\footnotesize\ttfamily Rigidbody2D Object\+Controller2\+D.\+rb2d\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rigidbody2D reference. Used for movement and physics 
+
+\mbox{\Hypertarget{class_object_controller2_d_a26db9bd8a5b3f97395076ba50028e5fe}\label{class_object_controller2_d_a26db9bd8a5b3f97395076ba50028e5fe}} 
+\index{ObjectController2D@{ObjectController2D}!whatIsGround@{whatIsGround}}
+\index{whatIsGround@{whatIsGround}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{whatIsGround}{whatIsGround}}
+{\footnotesize\ttfamily Layer\+Mask Object\+Controller2\+D.\+what\+Is\+Ground\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that determine what is ground 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_object_controller2_d_a357e513d485f3b3078cf4b5b1b35e1e2}\label{class_object_controller2_d_a357e513d485f3b3078cf4b5b1b35e1e2}} 
+\index{ObjectController2D@{ObjectController2D}!IsFacingRight@{IsFacingRight}}
+\index{IsFacingRight@{IsFacingRight}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{IsFacingRight}{IsFacingRight}}
+{\footnotesize\ttfamily bool Object\+Controller2\+D.\+Is\+Facing\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that determine if object is currently facing right 
+
+\mbox{\Hypertarget{class_object_controller2_d_aa1bfe15a09d29b15a8f44f887dbed258}\label{class_object_controller2_d_aa1bfe15a09d29b15a8f44f887dbed258}} 
+\index{ObjectController2D@{ObjectController2D}!IsGrounded@{IsGrounded}}
+\index{IsGrounded@{IsGrounded}!ObjectController2D@{ObjectController2D}}
+\doxysubsubsection{\texorpdfstring{IsGrounded}{IsGrounded}}
+{\footnotesize\ttfamily bool Object\+Controller2\+D.\+Is\+Grounded\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Flag that determine if object is grounded 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Movement/\mbox{\hyperlink{_object_controller2_d_8cs}{Object\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

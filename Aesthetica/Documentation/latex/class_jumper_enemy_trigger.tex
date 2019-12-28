@@ -1,0 +1,96 @@
+\hypertarget{class_jumper_enemy_trigger}{}\doxysection{Jumper\+Enemy\+Trigger Class Reference}
+\label{class_jumper_enemy_trigger}\index{JumperEnemyTrigger@{JumperEnemyTrigger}}
+
+
+Class responsible for triggering jumper enemy  
+
+
+Inheritance diagram for Jumper\+Enemy\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_jumper_enemy_trigger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jumper_enemy_controller2_d}{Jumper\+Enemy\+Controller2D}} \mbox{\hyperlink{class_jumper_enemy_trigger_a3e386ac0da6d0e827685fcebb39820ef}{jumper}}
+\begin{DoxyCompactList}\small\item\em Instance of jumper controller used to change its Is\+Trigger flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jumper_enemy_trigger_a6279b77d520cc321e74469518fc152ae}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when jumper enters trigger Set flag in jumper Is\+Trigger to true and plays aggro sound \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_trigger_aba89948738a16dd222ef909cb787ea21}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when jumper exits trigger Set flag in jumper Is\+Trigger to false \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_jumper_enemy_trigger_a0f883d757988dd8a564035124563fa3d}{what\+Can\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask thet defines what can trigger jumper \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for triggering jumper enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_jumper_enemy_trigger_a6279b77d520cc321e74469518fc152ae}\label{class_jumper_enemy_trigger_a6279b77d520cc321e74469518fc152ae}} 
+\index{JumperEnemyTrigger@{JumperEnemyTrigger}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!JumperEnemyTrigger@{JumperEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Trigger.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when jumper enters trigger Set flag in jumper Is\+Trigger to true and plays aggro sound 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jumper_enemy_trigger_aba89948738a16dd222ef909cb787ea21}\label{class_jumper_enemy_trigger_aba89948738a16dd222ef909cb787ea21}} 
+\index{JumperEnemyTrigger@{JumperEnemyTrigger}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!JumperEnemyTrigger@{JumperEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Trigger.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when jumper exits trigger Set flag in jumper Is\+Trigger to false 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_jumper_enemy_trigger_a3e386ac0da6d0e827685fcebb39820ef}\label{class_jumper_enemy_trigger_a3e386ac0da6d0e827685fcebb39820ef}} 
+\index{JumperEnemyTrigger@{JumperEnemyTrigger}!jumper@{jumper}}
+\index{jumper@{jumper}!JumperEnemyTrigger@{JumperEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{jumper}{jumper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jumper_enemy_controller2_d}{Jumper\+Enemy\+Controller2D}} Jumper\+Enemy\+Trigger.\+jumper}
+
+
+
+Instance of jumper controller used to change its Is\+Trigger flag 
+
+\mbox{\Hypertarget{class_jumper_enemy_trigger_a0f883d757988dd8a564035124563fa3d}\label{class_jumper_enemy_trigger_a0f883d757988dd8a564035124563fa3d}} 
+\index{JumperEnemyTrigger@{JumperEnemyTrigger}!whatCanTrigger@{whatCanTrigger}}
+\index{whatCanTrigger@{whatCanTrigger}!JumperEnemyTrigger@{JumperEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{whatCanTrigger}{whatCanTrigger}}
+{\footnotesize\ttfamily Layer\+Mask Jumper\+Enemy\+Trigger.\+what\+Can\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask thet defines what can trigger jumper 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Jumper/\mbox{\hyperlink{_jumper_enemy_trigger_8cs}{Jumper\+Enemy\+Trigger.\+cs}}\end{DoxyCompactItemize}

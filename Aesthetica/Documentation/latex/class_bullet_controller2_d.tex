@@ -1,0 +1,151 @@
+\hypertarget{class_bullet_controller2_d}{}\doxysection{Bullet\+Controller2D Class Reference}
+\label{class_bullet_controller2_d}\index{BulletController2D@{BulletController2D}}
+
+
+Class that controlls Bullets in game  
+
+
+Inheritance diagram for Bullet\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bullet_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_bullet_controller2_d_a42f811bab1d03102c7bbe10628cb0c76}{controller}}
+\begin{DoxyCompactList}\small\item\em Allows object to move \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_controller2_d_af96a8818ab6303c467c1dd3c701f90d4}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Called on creation of object. Play random bullet sound \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_controller2_d_a2ace3c11900eb5722e4410cf78868484}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called fixed number of times per second. Main object logic \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_controller2_d_ad440e3ea3c44dfe1e433bd00bbd2c1c2}{Move\+Bullet}} ()
+\begin{DoxyCompactList}\small\item\em Move bullet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_controller2_d_a7553d96428de5aad9a0b4f52e6581889}{Impact}} ()
+\begin{DoxyCompactList}\small\item\em Destroy bullet game object and spawn impact object on its place \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_controller2_d_a70df692a779fa2bc759875c7115095b9}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when object enter trigger. If trigger can destroy bullet call impact method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_bullet_controller2_d_aa6324aea0b6e823430d52ee9483b2895}{speed}} = 3f
+\begin{DoxyCompactList}\small\item\em Constant bullet speed \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_bullet_controller2_d_aa2536e325856ae2f1955df50129d6e30}{what\+Should\+Destroy\+Bullet}}
+\begin{DoxyCompactList}\small\item\em Determines what layer can destroy bullet on contact \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_bullet_controller2_d_a6d703f66873532b9fed3efc617dffb70}{impact\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab that will be spawned upon destroying bullet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls Bullets in game 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bullet_controller2_d_af96a8818ab6303c467c1dd3c701f90d4}\label{class_bullet_controller2_d_af96a8818ab6303c467c1dd3c701f90d4}} 
+\index{BulletController2D@{BulletController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Bullet\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called on creation of object. Play random bullet sound 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_a2ace3c11900eb5722e4410cf78868484}\label{class_bullet_controller2_d_a2ace3c11900eb5722e4410cf78868484}} 
+\index{BulletController2D@{BulletController2D}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Bullet\+Controller2\+D.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called fixed number of times per second. Main object logic 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_a7553d96428de5aad9a0b4f52e6581889}\label{class_bullet_controller2_d_a7553d96428de5aad9a0b4f52e6581889}} 
+\index{BulletController2D@{BulletController2D}!Impact@{Impact}}
+\index{Impact@{Impact}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{Impact()}{Impact()}}
+{\footnotesize\ttfamily void Bullet\+Controller2\+D.\+Impact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Destroy bullet game object and spawn impact object on its place 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_ad440e3ea3c44dfe1e433bd00bbd2c1c2}\label{class_bullet_controller2_d_ad440e3ea3c44dfe1e433bd00bbd2c1c2}} 
+\index{BulletController2D@{BulletController2D}!MoveBullet@{MoveBullet}}
+\index{MoveBullet@{MoveBullet}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{MoveBullet()}{MoveBullet()}}
+{\footnotesize\ttfamily void Bullet\+Controller2\+D.\+Move\+Bullet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Move bullet 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_a70df692a779fa2bc759875c7115095b9}\label{class_bullet_controller2_d_a70df692a779fa2bc759875c7115095b9}} 
+\index{BulletController2D@{BulletController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Bullet\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when object enter trigger. If trigger can destroy bullet call impact method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bullet_controller2_d_a42f811bab1d03102c7bbe10628cb0c76}\label{class_bullet_controller2_d_a42f811bab1d03102c7bbe10628cb0c76}} 
+\index{BulletController2D@{BulletController2D}!controller@{controller}}
+\index{controller@{controller}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Bullet\+Controller2\+D.\+controller}
+
+
+
+Allows object to move 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_a6d703f66873532b9fed3efc617dffb70}\label{class_bullet_controller2_d_a6d703f66873532b9fed3efc617dffb70}} 
+\index{BulletController2D@{BulletController2D}!impactPrefab@{impactPrefab}}
+\index{impactPrefab@{impactPrefab}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{impactPrefab}{impactPrefab}}
+{\footnotesize\ttfamily Game\+Object Bullet\+Controller2\+D.\+impact\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab that will be spawned upon destroying bullet 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_aa6324aea0b6e823430d52ee9483b2895}\label{class_bullet_controller2_d_aa6324aea0b6e823430d52ee9483b2895}} 
+\index{BulletController2D@{BulletController2D}!speed@{speed}}
+\index{speed@{speed}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Bullet\+Controller2\+D.\+speed = 3f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constant bullet speed 
+
+\mbox{\Hypertarget{class_bullet_controller2_d_aa2536e325856ae2f1955df50129d6e30}\label{class_bullet_controller2_d_aa2536e325856ae2f1955df50129d6e30}} 
+\index{BulletController2D@{BulletController2D}!whatShouldDestroyBullet@{whatShouldDestroyBullet}}
+\index{whatShouldDestroyBullet@{whatShouldDestroyBullet}!BulletController2D@{BulletController2D}}
+\doxysubsubsection{\texorpdfstring{whatShouldDestroyBullet}{whatShouldDestroyBullet}}
+{\footnotesize\ttfamily Layer\+Mask Bullet\+Controller2\+D.\+what\+Should\+Destroy\+Bullet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines what layer can destroy bullet on contact 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Effects/\mbox{\hyperlink{_bullet_controller2_d_8cs}{Bullet\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

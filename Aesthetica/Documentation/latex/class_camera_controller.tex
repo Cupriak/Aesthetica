@@ -1,0 +1,178 @@
+\hypertarget{class_camera_controller}{}\doxysection{Camera\+Controller Class Reference}
+\label{class_camera_controller}\index{CameraController@{CameraController}}
+
+
+Class that controlls camera  
+
+
+Inheritance diagram for Camera\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_controller_a9161023fcc3d7074be9df78f148f2da1}{Focus\+On}} (Transform target)
+\begin{DoxyCompactList}\small\item\em Linearly interpolates position of camera to target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_camera_controller_ac0d5d927af1636cf49ac8626848d713b}{is\+Static}}
+\begin{DoxyCompactList}\small\item\em Flag that allows camera to follow the player or make it static \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_controller_a266b0fde6845020de831bbd9bbcbc6a9}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Set initial values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_controller_a4394c0a874c432d1ac63a7c4c4a2eeb4}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called fixed times per second. Updates camera zoom and pozition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_camera_controller_ad9faa3affa05d10f403d6d6e1026ae14}{player\+Transform}}
+\begin{DoxyCompactList}\small\item\em Transform of player that will be followed \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_controller_aa75a1925362e7c10d225bded494d594e}{smooth\+Speed}}
+\begin{DoxyCompactList}\small\item\em Smoothing speed. Bigger value means slower camera movement \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_camera_controller_aff80d2275dae360196361c39078bfda4}{offset}}
+\begin{DoxyCompactList}\small\item\em Camera offset. \end{DoxyCompactList}\item 
+Camera \mbox{\hyperlink{class_camera_controller_a8393464679e71c7fe4f5e972e75f201e}{main\+Camera}}
+\begin{DoxyCompactList}\small\item\em Main camera reference \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_controller_aa1d1ddd197fc1cb73c1c2278bb917299}{camera\+Zoom}}
+\begin{DoxyCompactList}\small\item\em Zoom of the camera \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_controller_ad81dec5e69a6c3dcf1d1d13a71cfcdac}{default\+Zoom}} = 2.\+424129f
+\begin{DoxyCompactList}\small\item\em default value of camera zoom \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_controller_a5c7db5d26409d3302323b4436b06a172}{allow\+Camera\+Zoom}}
+\begin{DoxyCompactList}\small\item\em Flag that allowes camera zoom \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls camera 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_controller_a266b0fde6845020de831bbd9bbcbc6a9}\label{class_camera_controller_a266b0fde6845020de831bbd9bbcbc6a9}} 
+\index{CameraController@{CameraController}!Awake@{Awake}}
+\index{Awake@{Awake}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Camera\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Set initial values 
+
+\mbox{\Hypertarget{class_camera_controller_a4394c0a874c432d1ac63a7c4c4a2eeb4}\label{class_camera_controller_a4394c0a874c432d1ac63a7c4c4a2eeb4}} 
+\index{CameraController@{CameraController}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Camera\+Controller.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called fixed times per second. Updates camera zoom and pozition 
+
+\mbox{\Hypertarget{class_camera_controller_a9161023fcc3d7074be9df78f148f2da1}\label{class_camera_controller_a9161023fcc3d7074be9df78f148f2da1}} 
+\index{CameraController@{CameraController}!FocusOn@{FocusOn}}
+\index{FocusOn@{FocusOn}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{FocusOn()}{FocusOn()}}
+{\footnotesize\ttfamily void Camera\+Controller.\+Focus\+On (\begin{DoxyParamCaption}\item[{Transform}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Linearly interpolates position of camera to target 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_controller_a5c7db5d26409d3302323b4436b06a172}\label{class_camera_controller_a5c7db5d26409d3302323b4436b06a172}} 
+\index{CameraController@{CameraController}!allowCameraZoom@{allowCameraZoom}}
+\index{allowCameraZoom@{allowCameraZoom}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{allowCameraZoom}{allowCameraZoom}}
+{\footnotesize\ttfamily bool Camera\+Controller.\+allow\+Camera\+Zoom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that allowes camera zoom 
+
+\mbox{\Hypertarget{class_camera_controller_aa1d1ddd197fc1cb73c1c2278bb917299}\label{class_camera_controller_aa1d1ddd197fc1cb73c1c2278bb917299}} 
+\index{CameraController@{CameraController}!cameraZoom@{cameraZoom}}
+\index{cameraZoom@{cameraZoom}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{cameraZoom}{cameraZoom}}
+{\footnotesize\ttfamily float Camera\+Controller.\+camera\+Zoom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zoom of the camera 
+
+\mbox{\Hypertarget{class_camera_controller_ad81dec5e69a6c3dcf1d1d13a71cfcdac}\label{class_camera_controller_ad81dec5e69a6c3dcf1d1d13a71cfcdac}} 
+\index{CameraController@{CameraController}!defaultZoom@{defaultZoom}}
+\index{defaultZoom@{defaultZoom}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{defaultZoom}{defaultZoom}}
+{\footnotesize\ttfamily float Camera\+Controller.\+default\+Zoom = 2.\+424129f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+default value of camera zoom 
+
+\mbox{\Hypertarget{class_camera_controller_ac0d5d927af1636cf49ac8626848d713b}\label{class_camera_controller_ac0d5d927af1636cf49ac8626848d713b}} 
+\index{CameraController@{CameraController}!isStatic@{isStatic}}
+\index{isStatic@{isStatic}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{isStatic}{isStatic}}
+{\footnotesize\ttfamily bool Camera\+Controller.\+is\+Static}
+
+
+
+Flag that allows camera to follow the player or make it static 
+
+\mbox{\Hypertarget{class_camera_controller_a8393464679e71c7fe4f5e972e75f201e}\label{class_camera_controller_a8393464679e71c7fe4f5e972e75f201e}} 
+\index{CameraController@{CameraController}!mainCamera@{mainCamera}}
+\index{mainCamera@{mainCamera}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{mainCamera}{mainCamera}}
+{\footnotesize\ttfamily Camera Camera\+Controller.\+main\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main camera reference 
+
+\mbox{\Hypertarget{class_camera_controller_aff80d2275dae360196361c39078bfda4}\label{class_camera_controller_aff80d2275dae360196361c39078bfda4}} 
+\index{CameraController@{CameraController}!offset@{offset}}
+\index{offset@{offset}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily Vector3 Camera\+Controller.\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Camera offset. 
+
+\mbox{\Hypertarget{class_camera_controller_ad9faa3affa05d10f403d6d6e1026ae14}\label{class_camera_controller_ad9faa3affa05d10f403d6d6e1026ae14}} 
+\index{CameraController@{CameraController}!playerTransform@{playerTransform}}
+\index{playerTransform@{playerTransform}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{playerTransform}{playerTransform}}
+{\footnotesize\ttfamily Transform Camera\+Controller.\+player\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transform of player that will be followed 
+
+\mbox{\Hypertarget{class_camera_controller_aa75a1925362e7c10d225bded494d594e}\label{class_camera_controller_aa75a1925362e7c10d225bded494d594e}} 
+\index{CameraController@{CameraController}!smoothSpeed@{smoothSpeed}}
+\index{smoothSpeed@{smoothSpeed}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{smoothSpeed}{smoothSpeed}}
+{\footnotesize\ttfamily float Camera\+Controller.\+smooth\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Smoothing speed. Bigger value means slower camera movement 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+General/\mbox{\hyperlink{_camera_controller_8cs}{Camera\+Controller.\+cs}}\end{DoxyCompactItemize}

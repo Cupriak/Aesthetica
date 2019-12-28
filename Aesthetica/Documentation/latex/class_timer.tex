@@ -1,0 +1,145 @@
+\hypertarget{class_timer}{}\doxysection{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+Class that measure time  
+
+
+Inheritance diagram for Timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timer_aa321dfe6a57d2dc3cde6ec99fbd326e5}{Start\+Timer}} (float seconds)
+\begin{DoxyCompactList}\small\item\em Starts \mbox{\hyperlink{class_timer}{Timer}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_timer_acf34fce4a10e15dda33c3a311932751f}{Stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops timer. Set time\+Elapsed flag to true and timer\+Set flag to false \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_timer_a718e969ba1cce2e25a2f1c8b0612dca7}{Time\+Left}} ()
+\begin{DoxyCompactList}\small\item\em calculate time left in timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_timer_a3bf8755cd3846de36c888d96819a4caf}{time\+Elapsed}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if time is up \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timer_ac2c16f9aa88f2d3e7df7785545578f27}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Add time that passed from last frame to current time. If time is up stops timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_timer_a825e1897f81b091c4a0c40c626470b0c}{timer\+Set}}
+\begin{DoxyCompactList}\small\item\em Flag that determine is timer is set \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_timer_a4efea60d204ec23e3959d6cb81a0c695}{time}}
+\begin{DoxyCompactList}\small\item\em Current time that passet after timer started \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_timer_ad0dd4414a8fa302b6ba30091d441729b}{end\+Time}}
+\begin{DoxyCompactList}\small\item\em Time that need to pass to stop timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that measure time 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timer_aa321dfe6a57d2dc3cde6ec99fbd326e5}\label{class_timer_aa321dfe6a57d2dc3cde6ec99fbd326e5}} 
+\index{Timer@{Timer}!StartTimer@{StartTimer}}
+\index{StartTimer@{StartTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{StartTimer()}{StartTimer()}}
+{\footnotesize\ttfamily void Timer.\+Start\+Timer (\begin{DoxyParamCaption}\item[{float}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts \mbox{\hyperlink{class_timer}{Timer}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Seconds before time is up\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_timer_acf34fce4a10e15dda33c3a311932751f}\label{class_timer_acf34fce4a10e15dda33c3a311932751f}} 
+\index{Timer@{Timer}!StopTimer@{StopTimer}}
+\index{StopTimer@{StopTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{StopTimer()}{StopTimer()}}
+{\footnotesize\ttfamily void Timer.\+Stop\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops timer. Set time\+Elapsed flag to true and timer\+Set flag to false 
+
+\mbox{\Hypertarget{class_timer_a718e969ba1cce2e25a2f1c8b0612dca7}\label{class_timer_a718e969ba1cce2e25a2f1c8b0612dca7}} 
+\index{Timer@{Timer}!TimeLeft@{TimeLeft}}
+\index{TimeLeft@{TimeLeft}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimeLeft()}{TimeLeft()}}
+{\footnotesize\ttfamily float Timer.\+Time\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate time left in timer 
+
+\begin{DoxyReturn}{Returns}
+time that left
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_timer_ac2c16f9aa88f2d3e7df7785545578f27}\label{class_timer_ac2c16f9aa88f2d3e7df7785545578f27}} 
+\index{Timer@{Timer}!Update@{Update}}
+\index{Update@{Update}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Timer.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called every frame. Add time that passed from last frame to current time. If time is up stops timer 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timer_ad0dd4414a8fa302b6ba30091d441729b}\label{class_timer_ad0dd4414a8fa302b6ba30091d441729b}} 
+\index{Timer@{Timer}!endTime@{endTime}}
+\index{endTime@{endTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily float Timer.\+end\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Time that need to pass to stop timer 
+
+\mbox{\Hypertarget{class_timer_a4efea60d204ec23e3959d6cb81a0c695}\label{class_timer_a4efea60d204ec23e3959d6cb81a0c695}} 
+\index{Timer@{Timer}!time@{time}}
+\index{time@{time}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Timer.\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current time that passet after timer started 
+
+\mbox{\Hypertarget{class_timer_a3bf8755cd3846de36c888d96819a4caf}\label{class_timer_a3bf8755cd3846de36c888d96819a4caf}} 
+\index{Timer@{Timer}!timeElapsed@{timeElapsed}}
+\index{timeElapsed@{timeElapsed}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{timeElapsed}{timeElapsed}}
+{\footnotesize\ttfamily bool Timer.\+time\+Elapsed}
+
+
+
+Flag that determine if time is up 
+
+\mbox{\Hypertarget{class_timer_a825e1897f81b091c4a0c40c626470b0c}\label{class_timer_a825e1897f81b091c4a0c40c626470b0c}} 
+\index{Timer@{Timer}!timerSet@{timerSet}}
+\index{timerSet@{timerSet}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{timerSet}{timerSet}}
+{\footnotesize\ttfamily bool Timer.\+timer\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that determine is timer is set 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Helper\+Classes/\mbox{\hyperlink{_timer_8cs}{Timer.\+cs}}\end{DoxyCompactItemize}

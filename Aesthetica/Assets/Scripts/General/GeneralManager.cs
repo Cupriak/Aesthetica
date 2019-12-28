@@ -3,12 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class that is responsible for general controlls of the game
+/// </summary>
 public class GeneralManager : MonoBehaviour
 {
+    /// <summary>
+    /// Array of waypoints that player can teleport to
+    /// </summary>
     [SerializeField] private Transform[] waypoints;
+    /// <summary>
+    /// Reference of player controller used for debug teleportation
+    /// </summary>
     [SerializeField] private ObjectController2D player;
+    /// <summary>
+    /// Flag that allows debug teleportation between waypoints
+    /// </summary>
     [SerializeField] private bool allowWaypointTeleportation;
 
+    /// <summary>
+    /// Method that teleport player to certain waypoint if player press button from 1 to 0 on alphanumeric keyboard
+    /// </summary>
     private void debugTeleportation()
     {
         if (waypoints.Length == 0) return;
@@ -85,6 +100,10 @@ public class GeneralManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Calle every frame. 
+    /// Main object logic. Allow to teleport between waypoints, pause game, go to main menu or quit
+    /// </summary>
 	void Update ()
     {
         InputHelper.GetInput();

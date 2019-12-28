@@ -1,0 +1,340 @@
+\hypertarget{class_octopus_enemy_controller2_d}{}\doxysection{Octopus\+Enemy\+Controller2D Class Reference}
+\label{class_octopus_enemy_controller2_d}\index{OctopusEnemyController2D@{OctopusEnemyController2D}}
+
+
+Class that controlls octopus enemy  
+
+
+Inheritance diagram for Octopus\+Enemy\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_octopus_enemy_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a91f44cf202642d581ddd086072783a5a}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialization of basic attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} \mbox{\hyperlink{class_octopus_enemy_controller2_d_a58082de0fbc16153f7d9eae500223f89}{attributes\+Controller}}
+\begin{DoxyCompactList}\small\item\em Used to change health of octopus \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_octopus_enemy_controller2_d_a6fe0dd806717e8ef30a8a3260a1a6ac7}{object\+Controller}}
+\begin{DoxyCompactList}\small\item\em Used to be able to move octopus \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_octopus_enemy_controller2_d_ac9eb619e4ffdea5a896e14f13848a80f}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if octopus is triggerd \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_octopus_enemy_controller2_d_ac1c11593a5e3277e76828ccf3b20b3c1}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Transform of target that octopus is going to chase \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a76b0312fcb8bb95a551a64e1a4d86b34}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame. Main octopus logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a0fcb54e573b71dcd546f942275d9574a}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when octopus enters trigger. Check if octopus touch enemy and if so call On\+Enemy\+Touch function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a8f27e864d42d6921427f3b79bd601e4e}{Look\+At\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Basing on target position set Is\+Facing\+Right flag in object\+Controller \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a40cf1c07b808c02d3003b774533f21b9}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Playing animation and blink with red color if hurt. Rotates object if necessary \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_ae57b5f5df153955b87698371e94d4f02}{Hurt\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Check if hurt timer time elapsed. If so set is\+Hurt flat to flase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a118f002e465a51f839287dd0554c261c}{On\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Play octopus death sound, destroy octopus game object and spawn death prefab on its place $<$/summary \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_a18a71b5cd919e8b611936483342a2936}{On\+Enemy\+Touch}} ()
+\begin{DoxyCompactList}\small\item\em Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_octopus_enemy_controller2_d_af8858d70ab48d04a9a189ea2523a7c4f}{Shoot\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI method that is responsible for shooting to target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_octopus_enemy_controller2_d_a2684543efcf8047c1ee2df2e213e6185}{animator}}
+\begin{DoxyCompactList}\small\item\em Reference to object animator \end{DoxyCompactList}\item 
+Sprite\+Renderer \mbox{\hyperlink{class_octopus_enemy_controller2_d_ab24b3e5aae595e866d47f3b0bb8af459}{sprite\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Reference to object sprite renderer \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_octopus_enemy_controller2_d_a90daed995f4c543b2829f1188d9f8b76}{octopus\+Collider}}
+\begin{DoxyCompactList}\small\item\em Reference to octopus collider \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_octopus_enemy_controller2_d_a63f70ce888b29dee0b7cbc5c1e5af7cb}{basic\+Color}}
+\begin{DoxyCompactList}\small\item\em Start color of octopus \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_octopus_enemy_controller2_d_ab0a717192257da95c5027074d3cf7e25}{what\+Is\+Enemy}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that defines what can hurt octopus \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_octopus_enemy_controller2_d_ab6b6aa43b9798c825f504ba2957ed100}{hurt\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that is used to track how long octopus should blink in red color when hurt \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_octopus_enemy_controller2_d_ad1a27ce9e69877cb2f8451b593b8070b}{is\+Hurt}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if octopus is hurt \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_octopus_enemy_controller2_d_aa5623cdba09b09c17f772cff0b20ceba}{death\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab that will be spawned upon death to make death effect \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} \mbox{\hyperlink{class_octopus_enemy_controller2_d_aefecd2b239541dec9c4f649fdb12cfbe}{weapon}}
+\begin{DoxyCompactList}\small\item\em Reference to enemy weapon attached to the object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_octopus_enemy_controller2_d_ade28a8515cc1b29099dfb0a27c856682}{shoot\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} to measure how long octopus need to wait before another shoot \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_octopus_enemy_controller2_d_af71036b56ceb684512068ca784bafdfa}{can\+Shoot}}
+\begin{DoxyCompactList}\small\item\em Flag to check if octopus can shoot again \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls octopus enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a40cf1c07b808c02d3003b774533f21b9}\label{class_octopus_enemy_controller2_d_a40cf1c07b808c02d3003b774533f21b9}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Playing animation and blink with red color if hurt. Rotates object if necessary 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a91f44cf202642d581ddd086072783a5a}\label{class_octopus_enemy_controller2_d_a91f44cf202642d581ddd086072783a5a}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call on object creation. Initialization of basic attributes. 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ae57b5f5df153955b87698371e94d4f02}\label{class_octopus_enemy_controller2_d_ae57b5f5df153955b87698371e94d4f02}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!HurtHandler@{HurtHandler}}
+\index{HurtHandler@{HurtHandler}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{HurtHandler()}{HurtHandler()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Hurt\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if hurt timer time elapsed. If so set is\+Hurt flat to flase 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a8f27e864d42d6921427f3b79bd601e4e}\label{class_octopus_enemy_controller2_d_a8f27e864d42d6921427f3b79bd601e4e}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!LookAtTarget@{LookAtTarget}}
+\index{LookAtTarget@{LookAtTarget}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{LookAtTarget()}{LookAtTarget()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Look\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Basing on target position set Is\+Facing\+Right flag in object\+Controller 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a118f002e465a51f839287dd0554c261c}\label{class_octopus_enemy_controller2_d_a118f002e465a51f839287dd0554c261c}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!OnDeath@{OnDeath}}
+\index{OnDeath@{OnDeath}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnDeath()}{OnDeath()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+On\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Play octopus death sound, destroy octopus game object and spawn death prefab on its place $<$/summary 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a18a71b5cd919e8b611936483342a2936}\label{class_octopus_enemy_controller2_d_a18a71b5cd919e8b611936483342a2936}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!OnEnemyTouch@{OnEnemyTouch}}
+\index{OnEnemyTouch@{OnEnemyTouch}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnEnemyTouch()}{OnEnemyTouch()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+On\+Enemy\+Touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a0fcb54e573b71dcd546f942275d9574a}\label{class_octopus_enemy_controller2_d_a0fcb54e573b71dcd546f942275d9574a}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when octopus enters trigger. Check if octopus touch enemy and if so call On\+Enemy\+Touch function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_af8858d70ab48d04a9a189ea2523a7c4f}\label{class_octopus_enemy_controller2_d_af8858d70ab48d04a9a189ea2523a7c4f}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!ShootAI@{ShootAI}}
+\index{ShootAI@{ShootAI}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ShootAI()}{ShootAI()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Shoot\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI method that is responsible for shooting to target 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a76b0312fcb8bb95a551a64e1a4d86b34}\label{class_octopus_enemy_controller2_d_a76b0312fcb8bb95a551a64e1a4d86b34}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!Update@{Update}}
+\index{Update@{Update}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Octopus\+Enemy\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame. Main octopus logic. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a2684543efcf8047c1ee2df2e213e6185}\label{class_octopus_enemy_controller2_d_a2684543efcf8047c1ee2df2e213e6185}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!animator@{animator}}
+\index{animator@{animator}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Octopus\+Enemy\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object animator 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a58082de0fbc16153f7d9eae500223f89}\label{class_octopus_enemy_controller2_d_a58082de0fbc16153f7d9eae500223f89}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!attributesController@{attributesController}}
+\index{attributesController@{attributesController}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{attributesController}{attributesController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} Octopus\+Enemy\+Controller2\+D.\+attributes\+Controller}
+
+
+
+Used to change health of octopus 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a63f70ce888b29dee0b7cbc5c1e5af7cb}\label{class_octopus_enemy_controller2_d_a63f70ce888b29dee0b7cbc5c1e5af7cb}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!basicColor@{basicColor}}
+\index{basicColor@{basicColor}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{basicColor}{basicColor}}
+{\footnotesize\ttfamily Color Octopus\+Enemy\+Controller2\+D.\+basic\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start color of octopus 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_af71036b56ceb684512068ca784bafdfa}\label{class_octopus_enemy_controller2_d_af71036b56ceb684512068ca784bafdfa}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!canShoot@{canShoot}}
+\index{canShoot@{canShoot}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{canShoot}{canShoot}}
+{\footnotesize\ttfamily bool Octopus\+Enemy\+Controller2\+D.\+can\+Shoot\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag to check if octopus can shoot again 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_aa5623cdba09b09c17f772cff0b20ceba}\label{class_octopus_enemy_controller2_d_aa5623cdba09b09c17f772cff0b20ceba}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!deathPrefab@{deathPrefab}}
+\index{deathPrefab@{deathPrefab}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{deathPrefab}{deathPrefab}}
+{\footnotesize\ttfamily Game\+Object Octopus\+Enemy\+Controller2\+D.\+death\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab that will be spawned upon death to make death effect 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ab6b6aa43b9798c825f504ba2957ed100}\label{class_octopus_enemy_controller2_d_ab6b6aa43b9798c825f504ba2957ed100}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!hurtTimer@{hurtTimer}}
+\index{hurtTimer@{hurtTimer}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{hurtTimer}{hurtTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Octopus\+Enemy\+Controller2\+D.\+hurt\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that is used to track how long octopus should blink in red color when hurt 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ad1a27ce9e69877cb2f8451b593b8070b}\label{class_octopus_enemy_controller2_d_ad1a27ce9e69877cb2f8451b593b8070b}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!isHurt@{isHurt}}
+\index{isHurt@{isHurt}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{isHurt}{isHurt}}
+{\footnotesize\ttfamily bool Octopus\+Enemy\+Controller2\+D.\+is\+Hurt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that is used to check if octopus is hurt 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a6fe0dd806717e8ef30a8a3260a1a6ac7}\label{class_octopus_enemy_controller2_d_a6fe0dd806717e8ef30a8a3260a1a6ac7}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!objectController@{objectController}}
+\index{objectController@{objectController}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{objectController}{objectController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Octopus\+Enemy\+Controller2\+D.\+object\+Controller}
+
+
+
+Used to be able to move octopus 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_a90daed995f4c543b2829f1188d9f8b76}\label{class_octopus_enemy_controller2_d_a90daed995f4c543b2829f1188d9f8b76}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!octopusCollider@{octopusCollider}}
+\index{octopusCollider@{octopusCollider}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{octopusCollider}{octopusCollider}}
+{\footnotesize\ttfamily Collider2D Octopus\+Enemy\+Controller2\+D.\+octopus\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to octopus collider 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ade28a8515cc1b29099dfb0a27c856682}\label{class_octopus_enemy_controller2_d_ade28a8515cc1b29099dfb0a27c856682}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!shootTimer@{shootTimer}}
+\index{shootTimer@{shootTimer}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootTimer}{shootTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Octopus\+Enemy\+Controller2\+D.\+shoot\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} to measure how long octopus need to wait before another shoot 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ab24b3e5aae595e866d47f3b0bb8af459}\label{class_octopus_enemy_controller2_d_ab24b3e5aae595e866d47f3b0bb8af459}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Octopus\+Enemy\+Controller2\+D.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object sprite renderer 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_aefecd2b239541dec9c4f649fdb12cfbe}\label{class_octopus_enemy_controller2_d_aefecd2b239541dec9c4f649fdb12cfbe}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!weapon@{weapon}}
+\index{weapon@{weapon}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{weapon}{weapon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} Octopus\+Enemy\+Controller2\+D.\+weapon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to enemy weapon attached to the object 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ab0a717192257da95c5027074d3cf7e25}\label{class_octopus_enemy_controller2_d_ab0a717192257da95c5027074d3cf7e25}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!whatIsEnemy@{whatIsEnemy}}
+\index{whatIsEnemy@{whatIsEnemy}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{whatIsEnemy}{whatIsEnemy}}
+{\footnotesize\ttfamily Layer\+Mask Octopus\+Enemy\+Controller2\+D.\+what\+Is\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that defines what can hurt octopus 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ac9eb619e4ffdea5a896e14f13848a80f}\label{class_octopus_enemy_controller2_d_ac9eb619e4ffdea5a896e14f13848a80f}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Octopus\+Enemy\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that is used to check if octopus is triggerd 
+
+\mbox{\Hypertarget{class_octopus_enemy_controller2_d_ac1c11593a5e3277e76828ccf3b20b3c1}\label{class_octopus_enemy_controller2_d_ac1c11593a5e3277e76828ccf3b20b3c1}} 
+\index{OctopusEnemyController2D@{OctopusEnemyController2D}!Target@{Target}}
+\index{Target@{Target}!OctopusEnemyController2D@{OctopusEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily Transform Octopus\+Enemy\+Controller2\+D.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Transform of target that octopus is going to chase 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Octopus/\mbox{\hyperlink{_octopus_enemy_controller2_d_8cs}{Octopus\+Enemy\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

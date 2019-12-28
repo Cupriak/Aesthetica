@@ -1,0 +1,91 @@
+\hypertarget{class_gate_trigger_controller}{}\doxysection{Gate\+Trigger\+Controller Class Reference}
+\label{class_gate_trigger_controller}\index{GateTriggerController@{GateTriggerController}}
+
+
+Class that checks if gate is triggered  
+
+
+Inheritance diagram for Gate\+Trigger\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gate_trigger_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gate_controller2_d}{Gate\+Controller2D}} \mbox{\hyperlink{class_gate_trigger_controller_a5d8bd73ab1207258a550f755784df9d9}{gate}}
+\begin{DoxyCompactList}\small\item\em Gate that will be triggered \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gate_trigger_controller_aefebec3a6fc2e98351b79f5d2dc4414d}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when object enter trigger. If touched object can trigger gate set gate Is\+Trigger flag and start gate timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_gate_trigger_controller_a2ca9e5455d87e609fe84b62901546e3a}{what\+Can\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Determines what layer can open gate \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_gate_trigger_controller_afea8a1977b062f8a9872cb1b1a49134e}{gate\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that determine how long gate will be open \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that checks if gate is triggered 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gate_trigger_controller_aefebec3a6fc2e98351b79f5d2dc4414d}\label{class_gate_trigger_controller_aefebec3a6fc2e98351b79f5d2dc4414d}} 
+\index{GateTriggerController@{GateTriggerController}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!GateTriggerController@{GateTriggerController}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Gate\+Trigger\+Controller.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when object enter trigger. If touched object can trigger gate set gate Is\+Trigger flag and start gate timer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_gate_trigger_controller_a5d8bd73ab1207258a550f755784df9d9}\label{class_gate_trigger_controller_a5d8bd73ab1207258a550f755784df9d9}} 
+\index{GateTriggerController@{GateTriggerController}!gate@{gate}}
+\index{gate@{gate}!GateTriggerController@{GateTriggerController}}
+\doxysubsubsection{\texorpdfstring{gate}{gate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gate_controller2_d}{Gate\+Controller2D}} Gate\+Trigger\+Controller.\+gate}
+
+
+
+Gate that will be triggered 
+
+\mbox{\Hypertarget{class_gate_trigger_controller_afea8a1977b062f8a9872cb1b1a49134e}\label{class_gate_trigger_controller_afea8a1977b062f8a9872cb1b1a49134e}} 
+\index{GateTriggerController@{GateTriggerController}!gateTimer@{gateTimer}}
+\index{gateTimer@{gateTimer}!GateTriggerController@{GateTriggerController}}
+\doxysubsubsection{\texorpdfstring{gateTimer}{gateTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Gate\+Trigger\+Controller.\+gate\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that determine how long gate will be open 
+
+\mbox{\Hypertarget{class_gate_trigger_controller_a2ca9e5455d87e609fe84b62901546e3a}\label{class_gate_trigger_controller_a2ca9e5455d87e609fe84b62901546e3a}} 
+\index{GateTriggerController@{GateTriggerController}!whatCanTrigger@{whatCanTrigger}}
+\index{whatCanTrigger@{whatCanTrigger}!GateTriggerController@{GateTriggerController}}
+\doxysubsubsection{\texorpdfstring{whatCanTrigger}{whatCanTrigger}}
+{\footnotesize\ttfamily Layer\+Mask Gate\+Trigger\+Controller.\+what\+Can\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines what layer can open gate 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Additional\+Elements/\+Gate/\mbox{\hyperlink{_gate_trigger_controller_8cs}{Gate\+Trigger\+Controller.\+cs}}\end{DoxyCompactItemize}

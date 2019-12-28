@@ -1,0 +1,376 @@
+\hypertarget{class_crab_enemy_controller2_d}{}\doxysection{Crab\+Enemy\+Controller2D Class Reference}
+\label{class_crab_enemy_controller2_d}\index{CrabEnemyController2D@{CrabEnemyController2D}}
+
+
+Class that controlls crab enemy  
+
+
+Inheritance diagram for Crab\+Enemy\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_crab_enemy_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_aa186b5233c40b65a2400224b6c63c40b}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialization of basic attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} \mbox{\hyperlink{class_crab_enemy_controller2_d_ad750148e39adf58f50ebb67fd1d17c8e}{attributes}}
+\begin{DoxyCompactList}\small\item\em Used to change health of crab \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_crab_enemy_controller2_d_aee53533dc908ebbdfd8dd3e2cfeb0bec}{controller}}
+\begin{DoxyCompactList}\small\item\em Used to be able to move crab \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_crab_enemy_controller2_d_ac2a476412a98423ccce52f76c14a0cf9}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if crab is triggerd \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_crab_enemy_controller2_d_a3e16c067992d44d4518bb9c82bcd7445}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Transform of target that crab is going to chase \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_ae08f484d0ddda6e7fb810f5686188ef0}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame. Main crab logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_abbdfe0891ada5c2577fa40d249117f3c}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when crab enters trigger. Check if crab touch enemy and if so call On\+Enemy\+Touch function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_aff8efedcd9e06941196112077e737acc}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Playing proper animation based on is\+Chasing flag. Rotates object if necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_aacd81046991929aaddb0549891a41175}{Hurt\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Check if hurt timer time elapsed. If so set is\+Hurt flat to flase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_a8539812f614d063911e5075438c879f0}{On\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Play crab death sound, destroy crab game object and spawn death prefab on its place \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_a2b57596a14062c8692c39086d93d3b5f}{On\+Enemy\+Touch}} ()
+\begin{DoxyCompactList}\small\item\em Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_aaa370f8013416c7c1ce181dc3b2f55c9}{Go\+Back\+To\+Position\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI method that is responsible for going back to start position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_a3f53fba0a3aca4dfbc5f0e1733b85a35}{Chase\+Target\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI method that is responsible for chasing target \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_controller2_d_ab8f89b8580eeb7324541cd21cd3104e8}{Chase\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Main AI logic. Basing on flags calls proper AI methods and set flags \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_crab_enemy_controller2_d_aaa02440f184134e98ee18efc20811b84}{animator}}
+\begin{DoxyCompactList}\small\item\em Reference to object animator \end{DoxyCompactList}\item 
+Sprite\+Renderer \mbox{\hyperlink{class_crab_enemy_controller2_d_aeac0b60294b0af0704f5b61c9fad8888}{sprite\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Reference to object sprite renderer \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_crab_enemy_controller2_d_ad5d1c9fc1179f91eee2bdcc4c0cb3d33}{basic\+Color}}
+\begin{DoxyCompactList}\small\item\em Start color of crab \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_crab_enemy_controller2_d_a3cebfa784601a37199be8d96224e0c21}{crab\+Collider}}
+\begin{DoxyCompactList}\small\item\em Reference to crab collider \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_crab_enemy_controller2_d_a5732b7676b717abd56f24eac2b32f1e5}{what\+Is\+Enemy}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that defines what can hurt crab \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_crab_enemy_controller2_d_ac49f3ca01b253437928ce459d2e853bf}{hurt\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that is used to track how long crab should blink in red color when hurt \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_crab_enemy_controller2_d_aeef857f40e87418bdcd7cb100126452c}{is\+Hurt}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if crab is hurt \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_moving_object_controller2_d}{Moving\+Object\+Controller2D}} \mbox{\hyperlink{class_crab_enemy_controller2_d_a3127c3d124e6860026353697fc2ecd92}{idle\+Script}}
+\begin{DoxyCompactList}\small\item\em Script responsible for idle AI of crab \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_crab_enemy_controller2_d_ace11f6477f25d1cd21020f0faf3d9388}{start\+Point}}
+\begin{DoxyCompactList}\small\item\em Starting point of the crab. When trigger ends it will go back to this position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_crab_enemy_controller2_d_aefca465e14fb5909139d1cb305740922}{get\+Back\+To\+Start\+Point}}
+\begin{DoxyCompactList}\small\item\em Flag that checks if crab came to starting point \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_crab_enemy_controller2_d_a3efefaf5fc82c85a0a035faf743e1efa}{chase\+Speed}}
+\begin{DoxyCompactList}\small\item\em Speed of crab while chasing target \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_crab_enemy_controller2_d_a30ca50e653a141bf30cdb70d033c9d75}{is\+Chasing}}
+\begin{DoxyCompactList}\small\item\em Flag used to check if crab is chasing target \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_crab_enemy_controller2_d_aec4a02380ecf55aaf986733d03425122}{death\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab that will be spawned upon death to make death effect \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls crab enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aff8efedcd9e06941196112077e737acc}\label{class_crab_enemy_controller2_d_aff8efedcd9e06941196112077e737acc}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Playing proper animation based on is\+Chasing flag. Rotates object if necessary. 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aa186b5233c40b65a2400224b6c63c40b}\label{class_crab_enemy_controller2_d_aa186b5233c40b65a2400224b6c63c40b}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call on object creation. Initialization of basic attributes. 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ab8f89b8580eeb7324541cd21cd3104e8}\label{class_crab_enemy_controller2_d_ab8f89b8580eeb7324541cd21cd3104e8}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!ChaseAI@{ChaseAI}}
+\index{ChaseAI@{ChaseAI}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ChaseAI()}{ChaseAI()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Chase\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Main AI logic. Basing on flags calls proper AI methods and set flags 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a3f53fba0a3aca4dfbc5f0e1733b85a35}\label{class_crab_enemy_controller2_d_a3f53fba0a3aca4dfbc5f0e1733b85a35}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!ChaseTargetAI@{ChaseTargetAI}}
+\index{ChaseTargetAI@{ChaseTargetAI}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ChaseTargetAI()}{ChaseTargetAI()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Chase\+Target\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI method that is responsible for chasing target 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aaa370f8013416c7c1ce181dc3b2f55c9}\label{class_crab_enemy_controller2_d_aaa370f8013416c7c1ce181dc3b2f55c9}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!GoBackToPositionAI@{GoBackToPositionAI}}
+\index{GoBackToPositionAI@{GoBackToPositionAI}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{GoBackToPositionAI()}{GoBackToPositionAI()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Go\+Back\+To\+Position\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI method that is responsible for going back to start position 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aacd81046991929aaddb0549891a41175}\label{class_crab_enemy_controller2_d_aacd81046991929aaddb0549891a41175}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!HurtHandler@{HurtHandler}}
+\index{HurtHandler@{HurtHandler}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{HurtHandler()}{HurtHandler()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Hurt\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if hurt timer time elapsed. If so set is\+Hurt flat to flase 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a8539812f614d063911e5075438c879f0}\label{class_crab_enemy_controller2_d_a8539812f614d063911e5075438c879f0}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!OnDeath@{OnDeath}}
+\index{OnDeath@{OnDeath}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnDeath()}{OnDeath()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+On\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Play crab death sound, destroy crab game object and spawn death prefab on its place 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a2b57596a14062c8692c39086d93d3b5f}\label{class_crab_enemy_controller2_d_a2b57596a14062c8692c39086d93d3b5f}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!OnEnemyTouch@{OnEnemyTouch}}
+\index{OnEnemyTouch@{OnEnemyTouch}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnEnemyTouch()}{OnEnemyTouch()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+On\+Enemy\+Touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_abbdfe0891ada5c2577fa40d249117f3c}\label{class_crab_enemy_controller2_d_abbdfe0891ada5c2577fa40d249117f3c}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when crab enters trigger. Check if crab touch enemy and if so call On\+Enemy\+Touch function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ae08f484d0ddda6e7fb810f5686188ef0}\label{class_crab_enemy_controller2_d_ae08f484d0ddda6e7fb810f5686188ef0}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!Update@{Update}}
+\index{Update@{Update}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame. Main crab logic. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aaa02440f184134e98ee18efc20811b84}\label{class_crab_enemy_controller2_d_aaa02440f184134e98ee18efc20811b84}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!animator@{animator}}
+\index{animator@{animator}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Crab\+Enemy\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object animator 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ad750148e39adf58f50ebb67fd1d17c8e}\label{class_crab_enemy_controller2_d_ad750148e39adf58f50ebb67fd1d17c8e}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!attributes@{attributes}}
+\index{attributes@{attributes}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} Crab\+Enemy\+Controller2\+D.\+attributes}
+
+
+
+Used to change health of crab 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ad5d1c9fc1179f91eee2bdcc4c0cb3d33}\label{class_crab_enemy_controller2_d_ad5d1c9fc1179f91eee2bdcc4c0cb3d33}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!basicColor@{basicColor}}
+\index{basicColor@{basicColor}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{basicColor}{basicColor}}
+{\footnotesize\ttfamily Color Crab\+Enemy\+Controller2\+D.\+basic\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start color of crab 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a3efefaf5fc82c85a0a035faf743e1efa}\label{class_crab_enemy_controller2_d_a3efefaf5fc82c85a0a035faf743e1efa}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!chaseSpeed@{chaseSpeed}}
+\index{chaseSpeed@{chaseSpeed}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{chaseSpeed}{chaseSpeed}}
+{\footnotesize\ttfamily float Crab\+Enemy\+Controller2\+D.\+chase\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Speed of crab while chasing target 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aee53533dc908ebbdfd8dd3e2cfeb0bec}\label{class_crab_enemy_controller2_d_aee53533dc908ebbdfd8dd3e2cfeb0bec}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!controller@{controller}}
+\index{controller@{controller}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Crab\+Enemy\+Controller2\+D.\+controller}
+
+
+
+Used to be able to move crab 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a3cebfa784601a37199be8d96224e0c21}\label{class_crab_enemy_controller2_d_a3cebfa784601a37199be8d96224e0c21}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!crabCollider@{crabCollider}}
+\index{crabCollider@{crabCollider}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{crabCollider}{crabCollider}}
+{\footnotesize\ttfamily Collider2D Crab\+Enemy\+Controller2\+D.\+crab\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to crab collider 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aec4a02380ecf55aaf986733d03425122}\label{class_crab_enemy_controller2_d_aec4a02380ecf55aaf986733d03425122}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!deathPrefab@{deathPrefab}}
+\index{deathPrefab@{deathPrefab}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{deathPrefab}{deathPrefab}}
+{\footnotesize\ttfamily Game\+Object Crab\+Enemy\+Controller2\+D.\+death\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab that will be spawned upon death to make death effect 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aefca465e14fb5909139d1cb305740922}\label{class_crab_enemy_controller2_d_aefca465e14fb5909139d1cb305740922}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!getBackToStartPoint@{getBackToStartPoint}}
+\index{getBackToStartPoint@{getBackToStartPoint}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{getBackToStartPoint}{getBackToStartPoint}}
+{\footnotesize\ttfamily bool Crab\+Enemy\+Controller2\+D.\+get\+Back\+To\+Start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that checks if crab came to starting point 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ac49f3ca01b253437928ce459d2e853bf}\label{class_crab_enemy_controller2_d_ac49f3ca01b253437928ce459d2e853bf}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!hurtTimer@{hurtTimer}}
+\index{hurtTimer@{hurtTimer}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{hurtTimer}{hurtTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Crab\+Enemy\+Controller2\+D.\+hurt\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that is used to track how long crab should blink in red color when hurt 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a3127c3d124e6860026353697fc2ecd92}\label{class_crab_enemy_controller2_d_a3127c3d124e6860026353697fc2ecd92}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!idleScript@{idleScript}}
+\index{idleScript@{idleScript}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{idleScript}{idleScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_moving_object_controller2_d}{Moving\+Object\+Controller2D}} Crab\+Enemy\+Controller2\+D.\+idle\+Script\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Script responsible for idle AI of crab 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a30ca50e653a141bf30cdb70d033c9d75}\label{class_crab_enemy_controller2_d_a30ca50e653a141bf30cdb70d033c9d75}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!isChasing@{isChasing}}
+\index{isChasing@{isChasing}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{isChasing}{isChasing}}
+{\footnotesize\ttfamily bool Crab\+Enemy\+Controller2\+D.\+is\+Chasing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag used to check if crab is chasing target 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aeef857f40e87418bdcd7cb100126452c}\label{class_crab_enemy_controller2_d_aeef857f40e87418bdcd7cb100126452c}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!isHurt@{isHurt}}
+\index{isHurt@{isHurt}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{isHurt}{isHurt}}
+{\footnotesize\ttfamily bool Crab\+Enemy\+Controller2\+D.\+is\+Hurt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that is used to check if crab is hurt 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_aeac0b60294b0af0704f5b61c9fad8888}\label{class_crab_enemy_controller2_d_aeac0b60294b0af0704f5b61c9fad8888}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Crab\+Enemy\+Controller2\+D.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object sprite renderer 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ace11f6477f25d1cd21020f0faf3d9388}\label{class_crab_enemy_controller2_d_ace11f6477f25d1cd21020f0faf3d9388}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!startPoint@{startPoint}}
+\index{startPoint@{startPoint}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{startPoint}{startPoint}}
+{\footnotesize\ttfamily Transform Crab\+Enemy\+Controller2\+D.\+start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Starting point of the crab. When trigger ends it will go back to this position. 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a5732b7676b717abd56f24eac2b32f1e5}\label{class_crab_enemy_controller2_d_a5732b7676b717abd56f24eac2b32f1e5}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!whatIsEnemy@{whatIsEnemy}}
+\index{whatIsEnemy@{whatIsEnemy}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{whatIsEnemy}{whatIsEnemy}}
+{\footnotesize\ttfamily Layer\+Mask Crab\+Enemy\+Controller2\+D.\+what\+Is\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that defines what can hurt crab 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_ac2a476412a98423ccce52f76c14a0cf9}\label{class_crab_enemy_controller2_d_ac2a476412a98423ccce52f76c14a0cf9}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Crab\+Enemy\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that is used to check if crab is triggerd 
+
+\mbox{\Hypertarget{class_crab_enemy_controller2_d_a3e16c067992d44d4518bb9c82bcd7445}\label{class_crab_enemy_controller2_d_a3e16c067992d44d4518bb9c82bcd7445}} 
+\index{CrabEnemyController2D@{CrabEnemyController2D}!Target@{Target}}
+\index{Target@{Target}!CrabEnemyController2D@{CrabEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily Transform Crab\+Enemy\+Controller2\+D.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Transform of target that crab is going to chase 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Crab/\mbox{\hyperlink{_crab_enemy_controller2_d_8cs}{Crab\+Enemy\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

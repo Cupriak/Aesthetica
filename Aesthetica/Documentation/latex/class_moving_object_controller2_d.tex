@@ -1,0 +1,271 @@
+\hypertarget{class_moving_object_controller2_d}{}\doxysection{Moving\+Object\+Controller2D Class Reference}
+\label{class_moving_object_controller2_d}\index{MovingObjectController2D@{MovingObjectController2D}}
+
+
+Class that can move objects harmonic way  
+
+
+Inheritance diagram for Moving\+Object\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moving_object_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_ac528971ecc7aee4a71c6dcbf20a6805a}{Change\+DirectionX}} ()
+\begin{DoxyCompactList}\small\item\em Changes diraction of horizontal movement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_a5fb84e2ccd7d14572d9ee2f4b60b5209}{Change\+DirectionY}} ()
+\begin{DoxyCompactList}\small\item\em Changes diraction of horizontal movement \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_moving_object_controller2_d_a39e707fc695a515e9c7d1ffe03244788}{controller}}
+\begin{DoxyCompactList}\small\item\em object controller reference to be able to move object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_moving_object_controller2_d_a6c51567d9ca46c1c739f18b755196ee1}{Moving\+DirectionX}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Horizontal direction where object is moving. -\/1 to move left, 1 to move right \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_moving_object_controller2_d_a6b850720b1e5b55a146257836a699043}{Moving\+DirectionY}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Horizontal direction where object is moving. -\/1 to move down, 1 to move up \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_a0560570fbfdaa09469fc04080ccbc2b4}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialization of basic variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_af166923105eb54bb519e3e561bfe9f07}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called fixed times per second. Keep moving object vertically and horizontally \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_aea6e5b67f095ab8f4a72cd06620c2e51}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call on trigger enter. Check if object touch one of its bounds. If so change diraction of movement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_a64a85edcb4cec22312ad7546b53dabda}{Move\+Object}} (Rigidbody2D rb2d)
+\begin{DoxyCompactList}\small\item\em Move object using its rigidbody \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_afc9aaefd5fcda94ef0773250203c3347}{On\+Collision\+Enter2D}} (Collision2D collision)
+\begin{DoxyCompactList}\small\item\em Call on collision enter. Detects object that collided can be carried. In that case that object is moved \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_object_controller2_d_ac2b95ae60185fcc35309fc80200282f1}{On\+Collision\+Stay2D}} (Collision2D collision)
+\begin{DoxyCompactList}\small\item\em Call on collision enter. Detects object that collided can be carried. In that case that object is moved \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Collider2D \mbox{\hyperlink{class_moving_object_controller2_d_a27cd3fa22b684a416afac94b53d6b88b}{object\+Collidder}}
+\begin{DoxyCompactList}\small\item\em Object collider reference \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_object_controller2_d_a523652dcf0e225250a641b911b494179}{speedX}}
+\begin{DoxyCompactList}\small\item\em Vertical speed \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_object_controller2_d_a59f9ec504f19af1e1aa2565bb689ec34}{speedY}}
+\begin{DoxyCompactList}\small\item\em Horizontal speed \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_moving_object_controller2_d_aaa83e3ff00c12961b9b7fb7e280deb77}{first\+Bound}}
+\begin{DoxyCompactList}\small\item\em First bound in between object would move \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_moving_object_controller2_d_aae36103e8813b164d3a66e15cc5ca3f9}{second\+Bound}}
+\begin{DoxyCompactList}\small\item\em Second bound in between object would move \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_moving_object_controller2_d_ad8ff4b63ff7e5b307c6631863d90c2f1}{what\+Can\+Be\+Carried}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that define what can be carried by object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that can move objects harmonic way 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_moving_object_controller2_d_a0560570fbfdaa09469fc04080ccbc2b4}\label{class_moving_object_controller2_d_a0560570fbfdaa09469fc04080ccbc2b4}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Initialization of basic variables 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_ac528971ecc7aee4a71c6dcbf20a6805a}\label{class_moving_object_controller2_d_ac528971ecc7aee4a71c6dcbf20a6805a}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!ChangeDirectionX@{ChangeDirectionX}}
+\index{ChangeDirectionX@{ChangeDirectionX}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{ChangeDirectionX()}{ChangeDirectionX()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+Change\+DirectionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes diraction of horizontal movement 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a5fb84e2ccd7d14572d9ee2f4b60b5209}\label{class_moving_object_controller2_d_a5fb84e2ccd7d14572d9ee2f4b60b5209}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!ChangeDirectionY@{ChangeDirectionY}}
+\index{ChangeDirectionY@{ChangeDirectionY}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{ChangeDirectionY()}{ChangeDirectionY()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+Change\+DirectionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes diraction of horizontal movement 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_af166923105eb54bb519e3e561bfe9f07}\label{class_moving_object_controller2_d_af166923105eb54bb519e3e561bfe9f07}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called fixed times per second. Keep moving object vertically and horizontally 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a64a85edcb4cec22312ad7546b53dabda}\label{class_moving_object_controller2_d_a64a85edcb4cec22312ad7546b53dabda}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!MoveObject@{MoveObject}}
+\index{MoveObject@{MoveObject}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MoveObject()}{MoveObject()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+Move\+Object (\begin{DoxyParamCaption}\item[{Rigidbody2D}]{rb2d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Move object using its rigidbody 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb2d} & Rigidbody2D of object that would be moved\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_moving_object_controller2_d_afc9aaefd5fcda94ef0773250203c3347}\label{class_moving_object_controller2_d_afc9aaefd5fcda94ef0773250203c3347}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!OnCollisionEnter2D@{OnCollisionEnter2D}}
+\index{OnCollisionEnter2D@{OnCollisionEnter2D}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter2D()}{OnCollisionEnter2D()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+On\+Collision\+Enter2D (\begin{DoxyParamCaption}\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on collision enter. Detects object that collided can be carried. In that case that object is moved 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_moving_object_controller2_d_ac2b95ae60185fcc35309fc80200282f1}\label{class_moving_object_controller2_d_ac2b95ae60185fcc35309fc80200282f1}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!OnCollisionStay2D@{OnCollisionStay2D}}
+\index{OnCollisionStay2D@{OnCollisionStay2D}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{OnCollisionStay2D()}{OnCollisionStay2D()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+On\+Collision\+Stay2D (\begin{DoxyParamCaption}\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on collision enter. Detects object that collided can be carried. In that case that object is moved 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_moving_object_controller2_d_aea6e5b67f095ab8f4a72cd06620c2e51}\label{class_moving_object_controller2_d_aea6e5b67f095ab8f4a72cd06620c2e51}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Moving\+Object\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on trigger enter. Check if object touch one of its bounds. If so change diraction of movement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_moving_object_controller2_d_a39e707fc695a515e9c7d1ffe03244788}\label{class_moving_object_controller2_d_a39e707fc695a515e9c7d1ffe03244788}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!controller@{controller}}
+\index{controller@{controller}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Moving\+Object\+Controller2\+D.\+controller}
+
+
+
+object controller reference to be able to move object 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_aaa83e3ff00c12961b9b7fb7e280deb77}\label{class_moving_object_controller2_d_aaa83e3ff00c12961b9b7fb7e280deb77}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!firstBound@{firstBound}}
+\index{firstBound@{firstBound}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{firstBound}{firstBound}}
+{\footnotesize\ttfamily Collider2D Moving\+Object\+Controller2\+D.\+first\+Bound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+First bound in between object would move 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a27cd3fa22b684a416afac94b53d6b88b}\label{class_moving_object_controller2_d_a27cd3fa22b684a416afac94b53d6b88b}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!objectCollidder@{objectCollidder}}
+\index{objectCollidder@{objectCollidder}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{objectCollidder}{objectCollidder}}
+{\footnotesize\ttfamily Collider2D Moving\+Object\+Controller2\+D.\+object\+Collidder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Object collider reference 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_aae36103e8813b164d3a66e15cc5ca3f9}\label{class_moving_object_controller2_d_aae36103e8813b164d3a66e15cc5ca3f9}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!secondBound@{secondBound}}
+\index{secondBound@{secondBound}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{secondBound}{secondBound}}
+{\footnotesize\ttfamily Collider2D Moving\+Object\+Controller2\+D.\+second\+Bound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Second bound in between object would move 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a523652dcf0e225250a641b911b494179}\label{class_moving_object_controller2_d_a523652dcf0e225250a641b911b494179}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!speedX@{speedX}}
+\index{speedX@{speedX}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{speedX}{speedX}}
+{\footnotesize\ttfamily float Moving\+Object\+Controller2\+D.\+speedX\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vertical speed 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a59f9ec504f19af1e1aa2565bb689ec34}\label{class_moving_object_controller2_d_a59f9ec504f19af1e1aa2565bb689ec34}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!speedY@{speedY}}
+\index{speedY@{speedY}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{speedY}{speedY}}
+{\footnotesize\ttfamily float Moving\+Object\+Controller2\+D.\+speedY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Horizontal speed 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_ad8ff4b63ff7e5b307c6631863d90c2f1}\label{class_moving_object_controller2_d_ad8ff4b63ff7e5b307c6631863d90c2f1}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!whatCanBeCarried@{whatCanBeCarried}}
+\index{whatCanBeCarried@{whatCanBeCarried}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{whatCanBeCarried}{whatCanBeCarried}}
+{\footnotesize\ttfamily Layer\+Mask Moving\+Object\+Controller2\+D.\+what\+Can\+Be\+Carried\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that define what can be carried by object 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_moving_object_controller2_d_a6c51567d9ca46c1c739f18b755196ee1}\label{class_moving_object_controller2_d_a6c51567d9ca46c1c739f18b755196ee1}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!MovingDirectionX@{MovingDirectionX}}
+\index{MovingDirectionX@{MovingDirectionX}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MovingDirectionX}{MovingDirectionX}}
+{\footnotesize\ttfamily int Moving\+Object\+Controller2\+D.\+Moving\+DirectionX\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Horizontal direction where object is moving. -\/1 to move left, 1 to move right 
+
+\mbox{\Hypertarget{class_moving_object_controller2_d_a6b850720b1e5b55a146257836a699043}\label{class_moving_object_controller2_d_a6b850720b1e5b55a146257836a699043}} 
+\index{MovingObjectController2D@{MovingObjectController2D}!MovingDirectionY@{MovingDirectionY}}
+\index{MovingDirectionY@{MovingDirectionY}!MovingObjectController2D@{MovingObjectController2D}}
+\doxysubsubsection{\texorpdfstring{MovingDirectionY}{MovingDirectionY}}
+{\footnotesize\ttfamily int Moving\+Object\+Controller2\+D.\+Moving\+DirectionY\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Horizontal direction where object is moving. -\/1 to move down, 1 to move up 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Movement/\mbox{\hyperlink{_moving_object_controller2_d_8cs}{Moving\+Object\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

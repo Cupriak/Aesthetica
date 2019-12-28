@@ -1,0 +1,436 @@
+\hypertarget{class_jumper_enemy_controller2_d}{}\doxysection{Jumper\+Enemy\+Controller2D Class Reference}
+\label{class_jumper_enemy_controller2_d}\index{JumperEnemyController2D@{JumperEnemyController2D}}
+
+
+Class that controlls jumper enemy  
+
+
+Inheritance diagram for Jumper\+Enemy\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_jumper_enemy_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_a0eb8dc6eaea146ec5222f74560a7e94d}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Called on object creation. Initialization of basic attributes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} \mbox{\hyperlink{class_jumper_enemy_controller2_d_a04e0d1277e4eba1d8724f285ab622a45}{attributes}}
+\begin{DoxyCompactList}\small\item\em Used to change health of jumper \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_jumper_enemy_controller2_d_a466cfd71b9e06edc291b732c79b5e087}{controller}}
+\begin{DoxyCompactList}\small\item\em Used to be able to move jumper \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jumper_enemy_controller2_d_a7c225731dbaec07bbf5141422739ed26}{moving\+Direction}}
+\begin{DoxyCompactList}\small\item\em Direction in which way jumper moves. Should be set to -\/1 for left side or 1 for right side. This value is set by Jumper\+Side\+Collision\+Detection script \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jumper_enemy_controller2_d_ab90b9f1baca7acda9a53307b353967de}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if jumper is triggerd \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_jumper_enemy_controller2_d_a938da461a494510acc50525c21f0a8ba}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Transform of target that jumper is going to shoot \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_a62fc577ed6858ee6a8c7d019094a16b7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Main object logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_af8e5616459c16339041857c6f9e54af0}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when jumper enters trigger. Check if jumper touch enemy and if so call On\+Enemy\+Touch function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_ab7038e65967c6664e4fc0d57db608326}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Playing proper animations. Blink red colour if hurt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_adbdeb76cd3d1f3a16099b7bf3814c858}{Jumper\+Idle\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI Method that is responsibe for idle behaviour of jumper \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_a517e34370a48b772643fa57d9f5c3faa}{Jumper\+Fight\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI Methrod that is responsible for fighting target \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_af22d22a6f940ebac562316ce01a3c210}{Hurt\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Check if hurt timer time elapsed. If so set is\+Hurt flat to flase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_a65d573be60b6b21761fdfa45b2bcfbf3}{On\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Play jumper death sound, destroy crab game object and spawn death prefab on its place \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jumper_enemy_controller2_d_a1108a6acd47fc2d16b6c8fc5562d30a7}{On\+Enemy\+Touch}} ()
+\begin{DoxyCompactList}\small\item\em Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_jumper_enemy_controller2_d_ab541f076ec3ef30128bc1641bb6a2fdd}{animator}}
+\begin{DoxyCompactList}\small\item\em Reference to object animator \end{DoxyCompactList}\item 
+Sprite\+Renderer \mbox{\hyperlink{class_jumper_enemy_controller2_d_a13949265e4cc2dc6da2c695d59300c2a}{sprite\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Reference to object sprite renderer \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_jumper_enemy_controller2_d_a7b90c7ed785b9e9490e9dd0efd830542}{basic\+Color}}
+\begin{DoxyCompactList}\small\item\em Start color of jumper \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_jumper_enemy_controller2_d_a91bdb9b672f62c0f0908685881e3ce95}{jumper\+Collider}}
+\begin{DoxyCompactList}\small\item\em Reference to jumper collider \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_a44298cda5b31da385f5de7467bb9bb2a}{run\+Speed}}
+\begin{DoxyCompactList}\small\item\em Vertical speed of jumper \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_a0f6ede21a2c31a162d4320c4832fd71f}{jump\+Speed}}
+\begin{DoxyCompactList}\small\item\em Jump speed of jumper \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_jumper_enemy_controller2_d_acfdb8efe15ff61028bf131950d3ead45}{what\+Is\+Enemy}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that defines what can hurt jumper \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_jumper_enemy_controller2_d_a5bdfd81c3356ede3738432d60cf7a00f}{hurt\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that is used to track how long jumper should blink in red color when hurt \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jumper_enemy_controller2_d_a6116e0ffc6b6f367b5230d1ab3afad7e}{is\+Hurt}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if jumper is hurt \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_jumper_enemy_controller2_d_a10bfa04e95f6eab48a99e5a2ac471b80}{death\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab that will be spawned upon death to make death effect \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} \mbox{\hyperlink{class_jumper_enemy_controller2_d_a0d5a486b0ec92d6f44559ffbf06896a1}{weapon}}
+\begin{DoxyCompactList}\small\item\em Reference to enemy weapon that is attached to game object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_jumper_enemy_controller2_d_af6e16aff6a903884842612ec188d914b}{shoot\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that controlls how fast jumper can shoot \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jumper_enemy_controller2_d_aa1d9078cf79d3f1231d22a26ac82d271}{can\+Shoot}}
+\begin{DoxyCompactList}\small\item\em Flag that check if jumper can shoot again \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_jumper_enemy_controller2_d_a14c252434ae510956323b1a116c90bbb}{shoot\+Start\+Point}}
+\begin{DoxyCompactList}\small\item\em Point where bullets will be spawned when enemy shoot \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_ad01e7cd135af4b75ab01121293f24a5d}{probability\+To\+Jump}}
+\begin{DoxyCompactList}\small\item\em Probability to jump when its possible from 0 to 1. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_a42930ee90597f7ff67a00e5b0c4a2904}{shooting\+Range}}
+\begin{DoxyCompactList}\small\item\em Lenght between shoot start point to target that is required to trigger shoot \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_a8fbaaaab5e8aa80e1f6758be27eadd21}{reload\+Time}}
+\begin{DoxyCompactList}\small\item\em Time that need to pass before jumper reloads in seconds \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_jumper_enemy_controller2_d_a90ff10eba239a74c93b656b54a87b7a9}{idle\+Activeness}}
+\begin{DoxyCompactList}\small\item\em Defines how active jumper will be when idle. It affects its jump probability speed speed and run speed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls jumper enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_ab7038e65967c6664e4fc0d57db608326}\label{class_jumper_enemy_controller2_d_ab7038e65967c6664e4fc0d57db608326}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Playing proper animations. Blink red colour if hurt. 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a0eb8dc6eaea146ec5222f74560a7e94d}\label{class_jumper_enemy_controller2_d_a0eb8dc6eaea146ec5222f74560a7e94d}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called on object creation. Initialization of basic attributes 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_af22d22a6f940ebac562316ce01a3c210}\label{class_jumper_enemy_controller2_d_af22d22a6f940ebac562316ce01a3c210}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!HurtHandler@{HurtHandler}}
+\index{HurtHandler@{HurtHandler}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{HurtHandler()}{HurtHandler()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Hurt\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if hurt timer time elapsed. If so set is\+Hurt flat to flase 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a517e34370a48b772643fa57d9f5c3faa}\label{class_jumper_enemy_controller2_d_a517e34370a48b772643fa57d9f5c3faa}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!JumperFightAI@{JumperFightAI}}
+\index{JumperFightAI@{JumperFightAI}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{JumperFightAI()}{JumperFightAI()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Jumper\+Fight\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI Methrod that is responsible for fighting target 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_adbdeb76cd3d1f3a16099b7bf3814c858}\label{class_jumper_enemy_controller2_d_adbdeb76cd3d1f3a16099b7bf3814c858}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!JumperIdleAI@{JumperIdleAI}}
+\index{JumperIdleAI@{JumperIdleAI}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{JumperIdleAI()}{JumperIdleAI()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Jumper\+Idle\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI Method that is responsibe for idle behaviour of jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a65d573be60b6b21761fdfa45b2bcfbf3}\label{class_jumper_enemy_controller2_d_a65d573be60b6b21761fdfa45b2bcfbf3}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!OnDeath@{OnDeath}}
+\index{OnDeath@{OnDeath}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnDeath()}{OnDeath()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+On\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Play jumper death sound, destroy crab game object and spawn death prefab on its place 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a1108a6acd47fc2d16b6c8fc5562d30a7}\label{class_jumper_enemy_controller2_d_a1108a6acd47fc2d16b6c8fc5562d30a7}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!OnEnemyTouch@{OnEnemyTouch}}
+\index{OnEnemyTouch@{OnEnemyTouch}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnEnemyTouch()}{OnEnemyTouch()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+On\+Enemy\+Touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Take damage, set hurt timer to 0.\+5sec and set is\+Hurt flag to true 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_af8e5616459c16339041857c6f9e54af0}\label{class_jumper_enemy_controller2_d_af8e5616459c16339041857c6f9e54af0}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when jumper enters trigger. Check if jumper touch enemy and if so call On\+Enemy\+Touch function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a62fc577ed6858ee6a8c7d019094a16b7}\label{class_jumper_enemy_controller2_d_a62fc577ed6858ee6a8c7d019094a16b7}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!Update@{Update}}
+\index{Update@{Update}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Jumper\+Enemy\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called every frame. Main object logic. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_ab541f076ec3ef30128bc1641bb6a2fdd}\label{class_jumper_enemy_controller2_d_ab541f076ec3ef30128bc1641bb6a2fdd}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!animator@{animator}}
+\index{animator@{animator}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Jumper\+Enemy\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object animator 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a04e0d1277e4eba1d8724f285ab622a45}\label{class_jumper_enemy_controller2_d_a04e0d1277e4eba1d8724f285ab622a45}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!attributes@{attributes}}
+\index{attributes@{attributes}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} Jumper\+Enemy\+Controller2\+D.\+attributes}
+
+
+
+Used to change health of jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a7b90c7ed785b9e9490e9dd0efd830542}\label{class_jumper_enemy_controller2_d_a7b90c7ed785b9e9490e9dd0efd830542}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!basicColor@{basicColor}}
+\index{basicColor@{basicColor}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{basicColor}{basicColor}}
+{\footnotesize\ttfamily Color Jumper\+Enemy\+Controller2\+D.\+basic\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start color of jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_aa1d9078cf79d3f1231d22a26ac82d271}\label{class_jumper_enemy_controller2_d_aa1d9078cf79d3f1231d22a26ac82d271}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!canShoot@{canShoot}}
+\index{canShoot@{canShoot}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{canShoot}{canShoot}}
+{\footnotesize\ttfamily bool Jumper\+Enemy\+Controller2\+D.\+can\+Shoot\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that check if jumper can shoot again 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a466cfd71b9e06edc291b732c79b5e087}\label{class_jumper_enemy_controller2_d_a466cfd71b9e06edc291b732c79b5e087}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!controller@{controller}}
+\index{controller@{controller}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Jumper\+Enemy\+Controller2\+D.\+controller}
+
+
+
+Used to be able to move jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a10bfa04e95f6eab48a99e5a2ac471b80}\label{class_jumper_enemy_controller2_d_a10bfa04e95f6eab48a99e5a2ac471b80}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!deathPrefab@{deathPrefab}}
+\index{deathPrefab@{deathPrefab}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{deathPrefab}{deathPrefab}}
+{\footnotesize\ttfamily Game\+Object Jumper\+Enemy\+Controller2\+D.\+death\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab that will be spawned upon death to make death effect 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a5bdfd81c3356ede3738432d60cf7a00f}\label{class_jumper_enemy_controller2_d_a5bdfd81c3356ede3738432d60cf7a00f}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!hurtTimer@{hurtTimer}}
+\index{hurtTimer@{hurtTimer}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{hurtTimer}{hurtTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Jumper\+Enemy\+Controller2\+D.\+hurt\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that is used to track how long jumper should blink in red color when hurt 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a90ff10eba239a74c93b656b54a87b7a9}\label{class_jumper_enemy_controller2_d_a90ff10eba239a74c93b656b54a87b7a9}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!idleActiveness@{idleActiveness}}
+\index{idleActiveness@{idleActiveness}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{idleActiveness}{idleActiveness}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+idle\+Activeness\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Defines how active jumper will be when idle. It affects its jump probability speed speed and run speed 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a6116e0ffc6b6f367b5230d1ab3afad7e}\label{class_jumper_enemy_controller2_d_a6116e0ffc6b6f367b5230d1ab3afad7e}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!isHurt@{isHurt}}
+\index{isHurt@{isHurt}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{isHurt}{isHurt}}
+{\footnotesize\ttfamily bool Jumper\+Enemy\+Controller2\+D.\+is\+Hurt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that is used to check if jumper is hurt 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a91bdb9b672f62c0f0908685881e3ce95}\label{class_jumper_enemy_controller2_d_a91bdb9b672f62c0f0908685881e3ce95}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!jumperCollider@{jumperCollider}}
+\index{jumperCollider@{jumperCollider}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{jumperCollider}{jumperCollider}}
+{\footnotesize\ttfamily Collider2D Jumper\+Enemy\+Controller2\+D.\+jumper\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to jumper collider 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a0f6ede21a2c31a162d4320c4832fd71f}\label{class_jumper_enemy_controller2_d_a0f6ede21a2c31a162d4320c4832fd71f}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!jumpSpeed@{jumpSpeed}}
+\index{jumpSpeed@{jumpSpeed}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{jumpSpeed}{jumpSpeed}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+jump\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Jump speed of jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a7c225731dbaec07bbf5141422739ed26}\label{class_jumper_enemy_controller2_d_a7c225731dbaec07bbf5141422739ed26}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!movingDirection@{movingDirection}}
+\index{movingDirection@{movingDirection}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{movingDirection}{movingDirection}}
+{\footnotesize\ttfamily int Jumper\+Enemy\+Controller2\+D.\+moving\+Direction}
+
+
+
+Direction in which way jumper moves. Should be set to -\/1 for left side or 1 for right side. This value is set by Jumper\+Side\+Collision\+Detection script 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_ad01e7cd135af4b75ab01121293f24a5d}\label{class_jumper_enemy_controller2_d_ad01e7cd135af4b75ab01121293f24a5d}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!probabilityToJump@{probabilityToJump}}
+\index{probabilityToJump@{probabilityToJump}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{probabilityToJump}{probabilityToJump}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+probability\+To\+Jump\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Probability to jump when its possible from 0 to 1. 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a8fbaaaab5e8aa80e1f6758be27eadd21}\label{class_jumper_enemy_controller2_d_a8fbaaaab5e8aa80e1f6758be27eadd21}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!reloadTime@{reloadTime}}
+\index{reloadTime@{reloadTime}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{reloadTime}{reloadTime}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+reload\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Time that need to pass before jumper reloads in seconds 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a44298cda5b31da385f5de7467bb9bb2a}\label{class_jumper_enemy_controller2_d_a44298cda5b31da385f5de7467bb9bb2a}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!runSpeed@{runSpeed}}
+\index{runSpeed@{runSpeed}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{runSpeed}{runSpeed}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+run\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vertical speed of jumper 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a42930ee90597f7ff67a00e5b0c4a2904}\label{class_jumper_enemy_controller2_d_a42930ee90597f7ff67a00e5b0c4a2904}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!shootingRange@{shootingRange}}
+\index{shootingRange@{shootingRange}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootingRange}{shootingRange}}
+{\footnotesize\ttfamily float Jumper\+Enemy\+Controller2\+D.\+shooting\+Range\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lenght between shoot start point to target that is required to trigger shoot 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a14c252434ae510956323b1a116c90bbb}\label{class_jumper_enemy_controller2_d_a14c252434ae510956323b1a116c90bbb}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!shootStartPoint@{shootStartPoint}}
+\index{shootStartPoint@{shootStartPoint}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootStartPoint}{shootStartPoint}}
+{\footnotesize\ttfamily Transform Jumper\+Enemy\+Controller2\+D.\+shoot\+Start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Point where bullets will be spawned when enemy shoot 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_af6e16aff6a903884842612ec188d914b}\label{class_jumper_enemy_controller2_d_af6e16aff6a903884842612ec188d914b}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!shootTimer@{shootTimer}}
+\index{shootTimer@{shootTimer}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootTimer}{shootTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Jumper\+Enemy\+Controller2\+D.\+shoot\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that controlls how fast jumper can shoot 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a13949265e4cc2dc6da2c695d59300c2a}\label{class_jumper_enemy_controller2_d_a13949265e4cc2dc6da2c695d59300c2a}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Jumper\+Enemy\+Controller2\+D.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object sprite renderer 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a0d5a486b0ec92d6f44559ffbf06896a1}\label{class_jumper_enemy_controller2_d_a0d5a486b0ec92d6f44559ffbf06896a1}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!weapon@{weapon}}
+\index{weapon@{weapon}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{weapon}{weapon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} Jumper\+Enemy\+Controller2\+D.\+weapon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to enemy weapon that is attached to game object 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_acfdb8efe15ff61028bf131950d3ead45}\label{class_jumper_enemy_controller2_d_acfdb8efe15ff61028bf131950d3ead45}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!whatIsEnemy@{whatIsEnemy}}
+\index{whatIsEnemy@{whatIsEnemy}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{whatIsEnemy}{whatIsEnemy}}
+{\footnotesize\ttfamily Layer\+Mask Jumper\+Enemy\+Controller2\+D.\+what\+Is\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that defines what can hurt jumper 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_ab90b9f1baca7acda9a53307b353967de}\label{class_jumper_enemy_controller2_d_ab90b9f1baca7acda9a53307b353967de}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Jumper\+Enemy\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that is used to check if jumper is triggerd 
+
+\mbox{\Hypertarget{class_jumper_enemy_controller2_d_a938da461a494510acc50525c21f0a8ba}\label{class_jumper_enemy_controller2_d_a938da461a494510acc50525c21f0a8ba}} 
+\index{JumperEnemyController2D@{JumperEnemyController2D}!Target@{Target}}
+\index{Target@{Target}!JumperEnemyController2D@{JumperEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily Transform Jumper\+Enemy\+Controller2\+D.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Transform of target that jumper is going to shoot 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Jumper/\mbox{\hyperlink{_jumper_enemy_controller2_d_8cs}{Jumper\+Enemy\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

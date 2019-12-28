@@ -2,36 +2,83 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that controlls ghost enemy
+/// </summary>
 public class GhostEnemyController2D : MonoBehaviour
 {
+    /// <summary>
+    /// Used to be able to move ghost
+    /// </summary>
     public ObjectController2D controller;
 
-    //TRIGGER ATTRIBUTES
-    //CrabEnemyTrigger script sets that values
+    #region Trigger Attributes
+    /// <summary>
+    /// Flag that is used to check if crab is triggerd
+    /// </summary>
     public bool IsTriggered { get; set; }
+    /// <summary>
+    /// Transform of target that crab is going to chase
+    /// </summary>
     public Transform Target { get; set; }
+    #endregion
 
-    //CHASE AI ATTRIBUTES
+    #region Chase AI Attributes
+    /// <summary>
+    /// Start point of ghost
+    /// </summary>
     [SerializeField] private Transform startPoint;
+    /// <summary>
+    /// Flag that determines if ghost is back on start position
+    /// </summary>
     private bool getBackToStartPoint;
+    /// <summary>
+    /// Horizontal speed of ghost
+    /// </summary>
     [SerializeField] private float chaseHorizontalSpeed;
+    /// <summary>
+    /// Vertical speed of ghost
+    /// </summary>
     [SerializeField] private float chaseVerticalSpeed;
+    /// <summary>
+    /// Speed that ghost will use while going back to start position
+    /// </summary>
     [SerializeField] private float backToPositionSpeed;
+    #endregion
 
     private Animator animator;
 
+    /// <summary>
+    /// Called on object creation. Initialize default values of some fields
+    /// </summary>
     public void Awake()
     {
         controller = GetComponent<ObjectController2D>();
         animator = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Called every frame. 
+    /// Main object logic that call animation and AI methods
+    /// </summary>
+    private void Update()
+    {
+        Animate();
+
+        ChaseAI();
+    }
+    /// <summary>
+    /// Rotate ghost and play its animation
+    /// </summary>
     private void Animate()
     {
         controller.Rotate();
         animator.Play("OctopusIdle");
     }
 
+    /// <summary>
+    /// AI method that is responsible for going back to start position if ghost loose its target
+    /// </summary>
     private void GoBackToPositionAI()
     {
         float aroundDistance = 0.05f;
@@ -81,6 +128,9 @@ public class GhostEnemyController2D : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// AI method that is responsible for chasing target
+    /// </summary>
     private void ChaseTargetAI()
     {
         float aroundDistance = 0.05f;
@@ -120,6 +170,9 @@ public class GhostEnemyController2D : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Main AI logic method. Call other AI methods basing on IsTriggered flag
+    /// </summary>
     private void ChaseAI()
     {
         if (IsTriggered)
@@ -131,12 +184,5 @@ public class GhostEnemyController2D : MonoBehaviour
         {
             GoBackToPositionAI();
         }
-    }
-
-    private void Update()
-    {
-        Animate();
-
-        ChaseAI();
     }
 }

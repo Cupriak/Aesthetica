@@ -1,0 +1,96 @@
+\hypertarget{class_crab_enemy_trigger}{}\doxysection{Crab\+Enemy\+Trigger Class Reference}
+\label{class_crab_enemy_trigger}\index{CrabEnemyTrigger@{CrabEnemyTrigger}}
+
+
+Class responsible for triggering crab enemy  
+
+
+Inheritance diagram for Crab\+Enemy\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_crab_enemy_trigger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_crab_enemy_controller2_d}{Crab\+Enemy\+Controller2D}} \mbox{\hyperlink{class_crab_enemy_trigger_aed39bd2eeddde397c9b76cc7470eae77}{crab}}
+\begin{DoxyCompactList}\small\item\em Instance of crab controller used to change its Is\+Trigger flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_crab_enemy_trigger_a61f39c0504f0dc70eb74ec1f01ad5714}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when crab enters trigger Set flag in crab Is\+Trigger to true and plays aggro sound \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crab_enemy_trigger_a0aac5f24adfeb2eb966293b444727aea}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when crab exits trigger Set flag in crab Is\+Trigger to false \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_crab_enemy_trigger_a913e00e78b9e7e1156107c41b2c0d25b}{what\+Can\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask thet defines what can trigger crab \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for triggering crab enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_crab_enemy_trigger_a61f39c0504f0dc70eb74ec1f01ad5714}\label{class_crab_enemy_trigger_a61f39c0504f0dc70eb74ec1f01ad5714}} 
+\index{CrabEnemyTrigger@{CrabEnemyTrigger}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!CrabEnemyTrigger@{CrabEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Trigger.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when crab enters trigger Set flag in crab Is\+Trigger to true and plays aggro sound 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_crab_enemy_trigger_a0aac5f24adfeb2eb966293b444727aea}\label{class_crab_enemy_trigger_a0aac5f24adfeb2eb966293b444727aea}} 
+\index{CrabEnemyTrigger@{CrabEnemyTrigger}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!CrabEnemyTrigger@{CrabEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Crab\+Enemy\+Trigger.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when crab exits trigger Set flag in crab Is\+Trigger to false 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_crab_enemy_trigger_aed39bd2eeddde397c9b76cc7470eae77}\label{class_crab_enemy_trigger_aed39bd2eeddde397c9b76cc7470eae77}} 
+\index{CrabEnemyTrigger@{CrabEnemyTrigger}!crab@{crab}}
+\index{crab@{crab}!CrabEnemyTrigger@{CrabEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{crab}{crab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_crab_enemy_controller2_d}{Crab\+Enemy\+Controller2D}} Crab\+Enemy\+Trigger.\+crab}
+
+
+
+Instance of crab controller used to change its Is\+Trigger flag 
+
+\mbox{\Hypertarget{class_crab_enemy_trigger_a913e00e78b9e7e1156107c41b2c0d25b}\label{class_crab_enemy_trigger_a913e00e78b9e7e1156107c41b2c0d25b}} 
+\index{CrabEnemyTrigger@{CrabEnemyTrigger}!whatCanTrigger@{whatCanTrigger}}
+\index{whatCanTrigger@{whatCanTrigger}!CrabEnemyTrigger@{CrabEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{whatCanTrigger}{whatCanTrigger}}
+{\footnotesize\ttfamily Layer\+Mask Crab\+Enemy\+Trigger.\+what\+Can\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask thet defines what can trigger crab 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Crab/\mbox{\hyperlink{_crab_enemy_trigger_8cs}{Crab\+Enemy\+Trigger.\+cs}}\end{DoxyCompactItemize}

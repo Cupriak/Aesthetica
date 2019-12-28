@@ -1,0 +1,96 @@
+\hypertarget{class_plant_turret_enemy_trigger}{}\doxysection{Plant\+Turret\+Enemy\+Trigger Class Reference}
+\label{class_plant_turret_enemy_trigger}\index{PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}}
+
+
+Class responsible for triggering plant turret enemy  
+
+
+Inheritance diagram for Plant\+Turret\+Enemy\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plant_turret_enemy_trigger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plant_turret_enemy_controller2_d}{Plant\+Turret\+Enemy\+Controller2D}} \mbox{\hyperlink{class_plant_turret_enemy_trigger_a661604a1baef7548a66e96b100b52e7e}{turret}}
+\begin{DoxyCompactList}\small\item\em Reference of plant controller used to change its Is\+Trigger flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plant_turret_enemy_trigger_aa8925e391e7aefe30c698192d57d59d4}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when plant enters trigger Set flag in plant Is\+Trigger to true \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plant_turret_enemy_trigger_ae5f1618c72e4ade6a3a598551c19a53c}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when plant exits trigger Set flag in plant Is\+Trigger to false \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_plant_turret_enemy_trigger_a907ab601883fd29ab77d8df2a322bd79}{what\+Can\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask thet defines what can trigger plant \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for triggering plant turret enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plant_turret_enemy_trigger_aa8925e391e7aefe30c698192d57d59d4}\label{class_plant_turret_enemy_trigger_aa8925e391e7aefe30c698192d57d59d4}} 
+\index{PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Plant\+Turret\+Enemy\+Trigger.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when plant enters trigger Set flag in plant Is\+Trigger to true 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plant_turret_enemy_trigger_ae5f1618c72e4ade6a3a598551c19a53c}\label{class_plant_turret_enemy_trigger_ae5f1618c72e4ade6a3a598551c19a53c}} 
+\index{PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Plant\+Turret\+Enemy\+Trigger.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when plant exits trigger Set flag in plant Is\+Trigger to false 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_plant_turret_enemy_trigger_a661604a1baef7548a66e96b100b52e7e}\label{class_plant_turret_enemy_trigger_a661604a1baef7548a66e96b100b52e7e}} 
+\index{PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}!turret@{turret}}
+\index{turret@{turret}!PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{turret}{turret}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plant_turret_enemy_controller2_d}{Plant\+Turret\+Enemy\+Controller2D}} Plant\+Turret\+Enemy\+Trigger.\+turret}
+
+
+
+Reference of plant controller used to change its Is\+Trigger flag 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_trigger_a907ab601883fd29ab77d8df2a322bd79}\label{class_plant_turret_enemy_trigger_a907ab601883fd29ab77d8df2a322bd79}} 
+\index{PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}!whatCanTrigger@{whatCanTrigger}}
+\index{whatCanTrigger@{whatCanTrigger}!PlantTurretEnemyTrigger@{PlantTurretEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{whatCanTrigger}{whatCanTrigger}}
+{\footnotesize\ttfamily Layer\+Mask Plant\+Turret\+Enemy\+Trigger.\+what\+Can\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask thet defines what can trigger plant 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Plant\+Turret/\mbox{\hyperlink{_plant_turret_enemy_trigger_8cs}{Plant\+Turret\+Enemy\+Trigger.\+cs}}\end{DoxyCompactItemize}

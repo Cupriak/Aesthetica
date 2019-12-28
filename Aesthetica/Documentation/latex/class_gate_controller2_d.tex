@@ -1,0 +1,197 @@
+\hypertarget{class_gate_controller2_d}{}\doxysection{Gate\+Controller2D Class Reference}
+\label{class_gate_controller2_d}\index{GateController2D@{GateController2D}}
+
+
+Main class that controlls Gate game object  
+
+
+Inheritance diagram for Gate\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gate_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gate_controller2_d_a2992d6ee824086f819d26a979a069102}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used to check is gate is triggered. Values are set by \mbox{\hyperlink{class_gate_trigger_controller}{Gate\+Trigger\+Controller}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gate_controller2_d_af5ba93600e5ac2d0228443b7e31cd6cd}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call when object is created. Variable initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gate_controller2_d_a3a064d2d5a3c9dce9162f9e33f350861}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Play proper animation based on door\+Open flag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gate_controller2_d_a4a277bdc5f0f2e7b44d0b532287fa377}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Responsible for calling animation and checking if door should be open or close \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gate_controller2_d_a06ae63e35f2fe04e4ea9cbee4304f7cf}{Door\+Opening\+Detection}} ()
+\begin{DoxyCompactList}\small\item\em Detects if gate should open \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gate_controller2_d_ad2304926bca986405824c1fa52966f11}{Door\+Closing\+Detection}} ()
+\begin{DoxyCompactList}\small\item\em Detects if gate should close \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_gate_controller2_d_a5f679fdb5a127abe7454aff3509f03f7}{animator}}
+\begin{DoxyCompactList}\small\item\em Animator component reference. Used for animation. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_gate_controller2_d_a8e7161a207931f40d3dd0de2a7d0d9e9}{door\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Game Object that holds instance of gate\+Trigger\+Controller class \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_gate_controller2_d_a97521ce7fdbce351d638ae2dbb462e8e}{door\+Side}}
+\begin{DoxyCompactList}\small\item\em Game Object that holds collider that block the possibility to enter the gate is its closed \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_gate_controller2_d_ab5bc6f72822edd82a65e546cb6f7b9a5}{door\+Trigger\+Collider}}
+\begin{DoxyCompactList}\small\item\em Trigger collider. Used to initiate door opening \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_gate_controller2_d_a6911ef1965460eab352f174ef3ffb6d7}{what\+Can\+Open\+Door}}
+\begin{DoxyCompactList}\small\item\em Determines what layer can open gate \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_gate_controller2_d_a1f6bee17991dffa73d90aeee1c6556ed}{door\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that counts how long gate should be opened \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gate_controller2_d_ab005c66bc7cf20e023607259678d4e59}{door\+Open}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if gate is open \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class that controlls Gate game object 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gate_controller2_d_a3a064d2d5a3c9dce9162f9e33f350861}\label{class_gate_controller2_d_a3a064d2d5a3c9dce9162f9e33f350861}} 
+\index{GateController2D@{GateController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Gate\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Play proper animation based on door\+Open flag 
+
+\mbox{\Hypertarget{class_gate_controller2_d_af5ba93600e5ac2d0228443b7e31cd6cd}\label{class_gate_controller2_d_af5ba93600e5ac2d0228443b7e31cd6cd}} 
+\index{GateController2D@{GateController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Gate\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when object is created. Variable initialization. 
+
+\mbox{\Hypertarget{class_gate_controller2_d_ad2304926bca986405824c1fa52966f11}\label{class_gate_controller2_d_ad2304926bca986405824c1fa52966f11}} 
+\index{GateController2D@{GateController2D}!DoorClosingDetection@{DoorClosingDetection}}
+\index{DoorClosingDetection@{DoorClosingDetection}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{DoorClosingDetection()}{DoorClosingDetection()}}
+{\footnotesize\ttfamily void Gate\+Controller2\+D.\+Door\+Closing\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Detects if gate should close 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a06ae63e35f2fe04e4ea9cbee4304f7cf}\label{class_gate_controller2_d_a06ae63e35f2fe04e4ea9cbee4304f7cf}} 
+\index{GateController2D@{GateController2D}!DoorOpeningDetection@{DoorOpeningDetection}}
+\index{DoorOpeningDetection@{DoorOpeningDetection}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{DoorOpeningDetection()}{DoorOpeningDetection()}}
+{\footnotesize\ttfamily void Gate\+Controller2\+D.\+Door\+Opening\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Detects if gate should open 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a4a277bdc5f0f2e7b44d0b532287fa377}\label{class_gate_controller2_d_a4a277bdc5f0f2e7b44d0b532287fa377}} 
+\index{GateController2D@{GateController2D}!Update@{Update}}
+\index{Update@{Update}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Gate\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called every frame. Responsible for calling animation and checking if door should be open or close 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_gate_controller2_d_a5f679fdb5a127abe7454aff3509f03f7}\label{class_gate_controller2_d_a5f679fdb5a127abe7454aff3509f03f7}} 
+\index{GateController2D@{GateController2D}!animator@{animator}}
+\index{animator@{animator}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Gate\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Animator component reference. Used for animation. 
+
+\mbox{\Hypertarget{class_gate_controller2_d_ab005c66bc7cf20e023607259678d4e59}\label{class_gate_controller2_d_ab005c66bc7cf20e023607259678d4e59}} 
+\index{GateController2D@{GateController2D}!doorOpen@{doorOpen}}
+\index{doorOpen@{doorOpen}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{doorOpen}{doorOpen}}
+{\footnotesize\ttfamily bool Gate\+Controller2\+D.\+door\+Open\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that is used to check if gate is open 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a97521ce7fdbce351d638ae2dbb462e8e}\label{class_gate_controller2_d_a97521ce7fdbce351d638ae2dbb462e8e}} 
+\index{GateController2D@{GateController2D}!doorSide@{doorSide}}
+\index{doorSide@{doorSide}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{doorSide}{doorSide}}
+{\footnotesize\ttfamily Game\+Object Gate\+Controller2\+D.\+door\+Side\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game Object that holds collider that block the possibility to enter the gate is its closed 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a1f6bee17991dffa73d90aeee1c6556ed}\label{class_gate_controller2_d_a1f6bee17991dffa73d90aeee1c6556ed}} 
+\index{GateController2D@{GateController2D}!doorTimer@{doorTimer}}
+\index{doorTimer@{doorTimer}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{doorTimer}{doorTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Gate\+Controller2\+D.\+door\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that counts how long gate should be opened 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a8e7161a207931f40d3dd0de2a7d0d9e9}\label{class_gate_controller2_d_a8e7161a207931f40d3dd0de2a7d0d9e9}} 
+\index{GateController2D@{GateController2D}!doorTrigger@{doorTrigger}}
+\index{doorTrigger@{doorTrigger}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{doorTrigger}{doorTrigger}}
+{\footnotesize\ttfamily Game\+Object Gate\+Controller2\+D.\+door\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game Object that holds instance of gate\+Trigger\+Controller class 
+
+\mbox{\Hypertarget{class_gate_controller2_d_ab5bc6f72822edd82a65e546cb6f7b9a5}\label{class_gate_controller2_d_ab5bc6f72822edd82a65e546cb6f7b9a5}} 
+\index{GateController2D@{GateController2D}!doorTriggerCollider@{doorTriggerCollider}}
+\index{doorTriggerCollider@{doorTriggerCollider}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{doorTriggerCollider}{doorTriggerCollider}}
+{\footnotesize\ttfamily Collider2D Gate\+Controller2\+D.\+door\+Trigger\+Collider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Trigger collider. Used to initiate door opening 
+
+\mbox{\Hypertarget{class_gate_controller2_d_a6911ef1965460eab352f174ef3ffb6d7}\label{class_gate_controller2_d_a6911ef1965460eab352f174ef3ffb6d7}} 
+\index{GateController2D@{GateController2D}!whatCanOpenDoor@{whatCanOpenDoor}}
+\index{whatCanOpenDoor@{whatCanOpenDoor}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{whatCanOpenDoor}{whatCanOpenDoor}}
+{\footnotesize\ttfamily Layer\+Mask Gate\+Controller2\+D.\+what\+Can\+Open\+Door\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines what layer can open gate 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_gate_controller2_d_a2992d6ee824086f819d26a979a069102}\label{class_gate_controller2_d_a2992d6ee824086f819d26a979a069102}} 
+\index{GateController2D@{GateController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!GateController2D@{GateController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Gate\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Used to check is gate is triggered. Values are set by \mbox{\hyperlink{class_gate_trigger_controller}{Gate\+Trigger\+Controller}} class. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Additional\+Elements/\+Gate/\mbox{\hyperlink{_gate_controller2_d_8cs}{Gate\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

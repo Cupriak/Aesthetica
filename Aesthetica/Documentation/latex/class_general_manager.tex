@@ -1,0 +1,95 @@
+\hypertarget{class_general_manager}{}\doxysection{General\+Manager Class Reference}
+\label{class_general_manager}\index{GeneralManager@{GeneralManager}}
+
+
+Class that is responsible for general controlls of the game  
+
+
+Inheritance diagram for General\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_general_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_general_manager_abb8f8fbb6d1755a7d42edef8b6d9f0c6}{debug\+Teleportation}} ()
+\begin{DoxyCompactList}\small\item\em Method that teleport player to certain waypoint if player press button from 1 to 0 on alphanumeric keyboard \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_general_manager_a04a7b82003baf9163cb40b21b57fce31}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Calle every frame. Main object logic. Allow to teleport between waypoints, pause game, go to main menu or quit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_general_manager_a0ebaf61628d4cee3127e1fce0de160a2}{waypoints}}
+\begin{DoxyCompactList}\small\item\em Array of waypoints that player can teleport to \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_general_manager_a3564244bca88e3805033d15d644ebee3}{player}}
+\begin{DoxyCompactList}\small\item\em Reference of player controller used for debug teleportation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_general_manager_a96fd85881bc05f066c7f567e3e171fc9}{allow\+Waypoint\+Teleportation}}
+\begin{DoxyCompactList}\small\item\em Flag that allows debug teleportation between waypoints \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is responsible for general controlls of the game 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_general_manager_abb8f8fbb6d1755a7d42edef8b6d9f0c6}\label{class_general_manager_abb8f8fbb6d1755a7d42edef8b6d9f0c6}} 
+\index{GeneralManager@{GeneralManager}!debugTeleportation@{debugTeleportation}}
+\index{debugTeleportation@{debugTeleportation}!GeneralManager@{GeneralManager}}
+\doxysubsubsection{\texorpdfstring{debugTeleportation()}{debugTeleportation()}}
+{\footnotesize\ttfamily void General\+Manager.\+debug\+Teleportation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that teleport player to certain waypoint if player press button from 1 to 0 on alphanumeric keyboard 
+
+\mbox{\Hypertarget{class_general_manager_a04a7b82003baf9163cb40b21b57fce31}\label{class_general_manager_a04a7b82003baf9163cb40b21b57fce31}} 
+\index{GeneralManager@{GeneralManager}!Update@{Update}}
+\index{Update@{Update}!GeneralManager@{GeneralManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void General\+Manager.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Calle every frame. Main object logic. Allow to teleport between waypoints, pause game, go to main menu or quit 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_general_manager_a96fd85881bc05f066c7f567e3e171fc9}\label{class_general_manager_a96fd85881bc05f066c7f567e3e171fc9}} 
+\index{GeneralManager@{GeneralManager}!allowWaypointTeleportation@{allowWaypointTeleportation}}
+\index{allowWaypointTeleportation@{allowWaypointTeleportation}!GeneralManager@{GeneralManager}}
+\doxysubsubsection{\texorpdfstring{allowWaypointTeleportation}{allowWaypointTeleportation}}
+{\footnotesize\ttfamily bool General\+Manager.\+allow\+Waypoint\+Teleportation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that allows debug teleportation between waypoints 
+
+\mbox{\Hypertarget{class_general_manager_a3564244bca88e3805033d15d644ebee3}\label{class_general_manager_a3564244bca88e3805033d15d644ebee3}} 
+\index{GeneralManager@{GeneralManager}!player@{player}}
+\index{player@{player}!GeneralManager@{GeneralManager}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} General\+Manager.\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference of player controller used for debug teleportation 
+
+\mbox{\Hypertarget{class_general_manager_a0ebaf61628d4cee3127e1fce0de160a2}\label{class_general_manager_a0ebaf61628d4cee3127e1fce0de160a2}} 
+\index{GeneralManager@{GeneralManager}!waypoints@{waypoints}}
+\index{waypoints@{waypoints}!GeneralManager@{GeneralManager}}
+\doxysubsubsection{\texorpdfstring{waypoints}{waypoints}}
+{\footnotesize\ttfamily Transform \mbox{[}$\,$\mbox{]} General\+Manager.\+waypoints\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array of waypoints that player can teleport to 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+General/\mbox{\hyperlink{_general_manager_8cs}{General\+Manager.\+cs}}\end{DoxyCompactItemize}

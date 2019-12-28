@@ -1,0 +1,162 @@
+\hypertarget{class_attributes_controller}{}\doxysection{Attributes\+Controller Class Reference}
+\label{class_attributes_controller}\index{AttributesController@{AttributesController}}
+
+
+Class that is used by every object that can get damage or be killed  
+
+
+Inheritance diagram for Attributes\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_attributes_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attributes_controller_a60d8b20f8ef24431fc827ef9cec6054f}{Take\+Damage}} (int amount)
+\begin{DoxyCompactList}\small\item\em Lower health \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attributes_controller_af0a924ab463373b2c31f511d000f1a06}{Take\+Health}} (int amount)
+\begin{DoxyCompactList}\small\item\em Raise health \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_attributes_controller_a7a8836346ba553f7189464a0b211b965}{Health}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current health points \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_attributes_controller_ae43477d4ff51766afcd53e240cb34f37}{Is\+Alive}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if owner is alive \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_attributes_controller_ae045d5520ae726f69720005698e5e428}{Is\+Immortal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if owner can be damaged \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attributes_controller_af5a79ac55a010644f7329923cae98ca0}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialization of basic fields \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attributes_controller_ada8b88e61c4825328a4b8fb0084cbcc2}{Check\+If\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Checks if health is less or equal than 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attributes_controller_abbf213bde55d3fd5d8d07af80d419c6d}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called fixed number of times per second Tracking if object is still alive \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_attributes_controller_a156cbf04bfa8034f2fdb2d3cf974c2d0}{initial\+Health}}
+\begin{DoxyCompactList}\small\item\em Initial health points \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is used by every object that can get damage or be killed 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_attributes_controller_af5a79ac55a010644f7329923cae98ca0}\label{class_attributes_controller_af5a79ac55a010644f7329923cae98ca0}} 
+\index{AttributesController@{AttributesController}!Awake@{Awake}}
+\index{Awake@{Awake}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Attributes\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Initialization of basic fields 
+
+\mbox{\Hypertarget{class_attributes_controller_ada8b88e61c4825328a4b8fb0084cbcc2}\label{class_attributes_controller_ada8b88e61c4825328a4b8fb0084cbcc2}} 
+\index{AttributesController@{AttributesController}!CheckIfAlive@{CheckIfAlive}}
+\index{CheckIfAlive@{CheckIfAlive}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{CheckIfAlive()}{CheckIfAlive()}}
+{\footnotesize\ttfamily void Attributes\+Controller.\+Check\+If\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks if health is less or equal than 0 
+
+\mbox{\Hypertarget{class_attributes_controller_abbf213bde55d3fd5d8d07af80d419c6d}\label{class_attributes_controller_abbf213bde55d3fd5d8d07af80d419c6d}} 
+\index{AttributesController@{AttributesController}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Attributes\+Controller.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called fixed number of times per second Tracking if object is still alive 
+
+\mbox{\Hypertarget{class_attributes_controller_a60d8b20f8ef24431fc827ef9cec6054f}\label{class_attributes_controller_a60d8b20f8ef24431fc827ef9cec6054f}} 
+\index{AttributesController@{AttributesController}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Attributes\+Controller.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lower health 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & number of health points that will be taken\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_attributes_controller_af0a924ab463373b2c31f511d000f1a06}\label{class_attributes_controller_af0a924ab463373b2c31f511d000f1a06}} 
+\index{AttributesController@{AttributesController}!TakeHealth@{TakeHealth}}
+\index{TakeHealth@{TakeHealth}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{TakeHealth()}{TakeHealth()}}
+{\footnotesize\ttfamily void Attributes\+Controller.\+Take\+Health (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Raise health 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & number of health points that will be added\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_attributes_controller_a156cbf04bfa8034f2fdb2d3cf974c2d0}\label{class_attributes_controller_a156cbf04bfa8034f2fdb2d3cf974c2d0}} 
+\index{AttributesController@{AttributesController}!initialHealth@{initialHealth}}
+\index{initialHealth@{initialHealth}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{initialHealth}{initialHealth}}
+{\footnotesize\ttfamily int Attributes\+Controller.\+initial\+Health\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial health points 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_attributes_controller_a7a8836346ba553f7189464a0b211b965}\label{class_attributes_controller_a7a8836346ba553f7189464a0b211b965}} 
+\index{AttributesController@{AttributesController}!Health@{Health}}
+\index{Health@{Health}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{Health}{Health}}
+{\footnotesize\ttfamily int Attributes\+Controller.\+Health\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Current health points 
+
+\mbox{\Hypertarget{class_attributes_controller_ae43477d4ff51766afcd53e240cb34f37}\label{class_attributes_controller_ae43477d4ff51766afcd53e240cb34f37}} 
+\index{AttributesController@{AttributesController}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{IsAlive}{IsAlive}}
+{\footnotesize\ttfamily bool Attributes\+Controller.\+Is\+Alive\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Flag that determine if owner is alive 
+
+\mbox{\Hypertarget{class_attributes_controller_ae045d5520ae726f69720005698e5e428}\label{class_attributes_controller_ae045d5520ae726f69720005698e5e428}} 
+\index{AttributesController@{AttributesController}!IsImmortal@{IsImmortal}}
+\index{IsImmortal@{IsImmortal}!AttributesController@{AttributesController}}
+\doxysubsubsection{\texorpdfstring{IsImmortal}{IsImmortal}}
+{\footnotesize\ttfamily bool Attributes\+Controller.\+Is\+Immortal\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that determine if owner can be damaged 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+General/\mbox{\hyperlink{_attributes_controller_8cs}{Attributes\+Controller.\+cs}}\end{DoxyCompactItemize}

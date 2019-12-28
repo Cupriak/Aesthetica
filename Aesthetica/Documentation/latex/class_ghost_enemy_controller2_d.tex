@@ -1,0 +1,223 @@
+\hypertarget{class_ghost_enemy_controller2_d}{}\doxysection{Ghost\+Enemy\+Controller2D Class Reference}
+\label{class_ghost_enemy_controller2_d}\index{GhostEnemyController2D@{GhostEnemyController2D}}
+
+
+Class that controlls ghost enemy  
+
+
+Inheritance diagram for Ghost\+Enemy\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ghost_enemy_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_a3de50f3cce4d8aec3a5f9eb787f227a3}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Called on object creation. Initialize default values of some fields \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_ghost_enemy_controller2_d_a14e1c9898da626a94b5622acfc0c96c0}{controller}}
+\begin{DoxyCompactList}\small\item\em Used to be able to move ghost \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_ghost_enemy_controller2_d_a628f31d63f5e406cb3fd7c2c6e1eed78}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if crab is triggerd \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_ghost_enemy_controller2_d_a8478417c4b6dbbba27e9d5ddae67c83a}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Transform of target that crab is going to chase \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_a75825d2cbb1dc4b871b2a3d4cb487f06}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Main object logic that call animation and AI methods \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_af846bbdea328d716295abdf3c980f975}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Rotate ghost and play its animation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_a2ea515e858e29bc7b8e3d211f0478607}{Go\+Back\+To\+Position\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI method that is responsible for going back to start position if ghost loose its target \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_a7454f16e9130db1b188c82bc40f697ef}{Chase\+Target\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI method that is responsible for chasing target \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_enemy_controller2_d_a06e26bac31f7ca860fec7fdc7b5bc3ca}{Chase\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Main AI logic method. Call other AI methods basing on Is\+Triggered flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_ghost_enemy_controller2_d_a99a31d0a50f26783c9e3915956614558}{start\+Point}}
+\begin{DoxyCompactList}\small\item\em Start point of ghost \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ghost_enemy_controller2_d_a6ccf9603fc64bc6a37dc95acbcc0a8c0}{get\+Back\+To\+Start\+Point}}
+\begin{DoxyCompactList}\small\item\em Flag that determines if ghost is back on start position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_enemy_controller2_d_a0687d6a48bbeb6befdb6121f5951451d}{chase\+Horizontal\+Speed}}
+\begin{DoxyCompactList}\small\item\em Horizontal speed of ghost \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_enemy_controller2_d_a1378e0bd1b8dd055ea4e56de4e8e2175}{chase\+Vertical\+Speed}}
+\begin{DoxyCompactList}\small\item\em Vertical speed of ghost \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_enemy_controller2_d_aca8a6d12d11f8f315cfcc52b30d8f154}{back\+To\+Position\+Speed}}
+\begin{DoxyCompactList}\small\item\em Speed that ghost will use while going back to start position \end{DoxyCompactList}\item 
+Animator \mbox{\hyperlink{class_ghost_enemy_controller2_d_a68d62e9ac743911681aec0f192f4ab54}{animator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls ghost enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_af846bbdea328d716295abdf3c980f975}\label{class_ghost_enemy_controller2_d_af846bbdea328d716295abdf3c980f975}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Rotate ghost and play its animation 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a3de50f3cce4d8aec3a5f9eb787f227a3}\label{class_ghost_enemy_controller2_d_a3de50f3cce4d8aec3a5f9eb787f227a3}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called on object creation. Initialize default values of some fields 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a06e26bac31f7ca860fec7fdc7b5bc3ca}\label{class_ghost_enemy_controller2_d_a06e26bac31f7ca860fec7fdc7b5bc3ca}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!ChaseAI@{ChaseAI}}
+\index{ChaseAI@{ChaseAI}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ChaseAI()}{ChaseAI()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Chase\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Main AI logic method. Call other AI methods basing on Is\+Triggered flag 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a7454f16e9130db1b188c82bc40f697ef}\label{class_ghost_enemy_controller2_d_a7454f16e9130db1b188c82bc40f697ef}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!ChaseTargetAI@{ChaseTargetAI}}
+\index{ChaseTargetAI@{ChaseTargetAI}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ChaseTargetAI()}{ChaseTargetAI()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Chase\+Target\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI method that is responsible for chasing target 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a2ea515e858e29bc7b8e3d211f0478607}\label{class_ghost_enemy_controller2_d_a2ea515e858e29bc7b8e3d211f0478607}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!GoBackToPositionAI@{GoBackToPositionAI}}
+\index{GoBackToPositionAI@{GoBackToPositionAI}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{GoBackToPositionAI()}{GoBackToPositionAI()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Go\+Back\+To\+Position\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI method that is responsible for going back to start position if ghost loose its target 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a75825d2cbb1dc4b871b2a3d4cb487f06}\label{class_ghost_enemy_controller2_d_a75825d2cbb1dc4b871b2a3d4cb487f06}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!Update@{Update}}
+\index{Update@{Update}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called every frame. Main object logic that call animation and AI methods 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a68d62e9ac743911681aec0f192f4ab54}\label{class_ghost_enemy_controller2_d_a68d62e9ac743911681aec0f192f4ab54}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!animator@{animator}}
+\index{animator@{animator}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Ghost\+Enemy\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_aca8a6d12d11f8f315cfcc52b30d8f154}\label{class_ghost_enemy_controller2_d_aca8a6d12d11f8f315cfcc52b30d8f154}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!backToPositionSpeed@{backToPositionSpeed}}
+\index{backToPositionSpeed@{backToPositionSpeed}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{backToPositionSpeed}{backToPositionSpeed}}
+{\footnotesize\ttfamily float Ghost\+Enemy\+Controller2\+D.\+back\+To\+Position\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Speed that ghost will use while going back to start position 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a0687d6a48bbeb6befdb6121f5951451d}\label{class_ghost_enemy_controller2_d_a0687d6a48bbeb6befdb6121f5951451d}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!chaseHorizontalSpeed@{chaseHorizontalSpeed}}
+\index{chaseHorizontalSpeed@{chaseHorizontalSpeed}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{chaseHorizontalSpeed}{chaseHorizontalSpeed}}
+{\footnotesize\ttfamily float Ghost\+Enemy\+Controller2\+D.\+chase\+Horizontal\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Horizontal speed of ghost 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a1378e0bd1b8dd055ea4e56de4e8e2175}\label{class_ghost_enemy_controller2_d_a1378e0bd1b8dd055ea4e56de4e8e2175}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!chaseVerticalSpeed@{chaseVerticalSpeed}}
+\index{chaseVerticalSpeed@{chaseVerticalSpeed}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{chaseVerticalSpeed}{chaseVerticalSpeed}}
+{\footnotesize\ttfamily float Ghost\+Enemy\+Controller2\+D.\+chase\+Vertical\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vertical speed of ghost 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a14e1c9898da626a94b5622acfc0c96c0}\label{class_ghost_enemy_controller2_d_a14e1c9898da626a94b5622acfc0c96c0}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!controller@{controller}}
+\index{controller@{controller}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Ghost\+Enemy\+Controller2\+D.\+controller}
+
+
+
+Used to be able to move ghost 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a6ccf9603fc64bc6a37dc95acbcc0a8c0}\label{class_ghost_enemy_controller2_d_a6ccf9603fc64bc6a37dc95acbcc0a8c0}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!getBackToStartPoint@{getBackToStartPoint}}
+\index{getBackToStartPoint@{getBackToStartPoint}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{getBackToStartPoint}{getBackToStartPoint}}
+{\footnotesize\ttfamily bool Ghost\+Enemy\+Controller2\+D.\+get\+Back\+To\+Start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that determines if ghost is back on start position 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a99a31d0a50f26783c9e3915956614558}\label{class_ghost_enemy_controller2_d_a99a31d0a50f26783c9e3915956614558}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!startPoint@{startPoint}}
+\index{startPoint@{startPoint}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{startPoint}{startPoint}}
+{\footnotesize\ttfamily Transform Ghost\+Enemy\+Controller2\+D.\+start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start point of ghost 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a628f31d63f5e406cb3fd7c2c6e1eed78}\label{class_ghost_enemy_controller2_d_a628f31d63f5e406cb3fd7c2c6e1eed78}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Ghost\+Enemy\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that is used to check if crab is triggerd 
+
+\mbox{\Hypertarget{class_ghost_enemy_controller2_d_a8478417c4b6dbbba27e9d5ddae67c83a}\label{class_ghost_enemy_controller2_d_a8478417c4b6dbbba27e9d5ddae67c83a}} 
+\index{GhostEnemyController2D@{GhostEnemyController2D}!Target@{Target}}
+\index{Target@{Target}!GhostEnemyController2D@{GhostEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily Transform Ghost\+Enemy\+Controller2\+D.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Transform of target that crab is going to chase 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Ghost/\mbox{\hyperlink{_ghost_enemy_controller2_d_8cs}{Ghost\+Enemy\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+\hypertarget{class_plant_turret_enemy_controller2_d}{}\doxysection{Plant\+Turret\+Enemy\+Controller2D Class Reference}
+\label{class_plant_turret_enemy_controller2_d}\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+
+
+Class that controlls plant turret enemy  
+
+
+Inheritance diagram for Plant\+Turret\+Enemy\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plant_turret_enemy_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_af4313f710f4a343089602dcdd933c58a}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Called on object creation. Set can\+Shoot flag to true \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_ab1c879c0b8526e3811eb08a1c2ed6172}{Is\+Triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag that is used to check if plant is triggerd \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_a84b486cf7d160e0aa800d1f151fc9804}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Transform of target that plant is going to shoot \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_adbdd6fe3336b0b14ebc64327c518ae76}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame Main object logic \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_a2f8611786335d2b321453214defff8a4}{Shoot\+AI}} ()
+\begin{DoxyCompactList}\small\item\em AI Method that is responsible for shooting to target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_a09d7e4c26fab82d6398f089d61899d2c}{weapon}}
+\begin{DoxyCompactList}\small\item\em Reference to enemy weapon that is attached to game object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_ac15e7ae9c75e85377edc85837d691b4f}{shoot\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that controlls how fast plant can shoot \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_a67a0024ed96fc1c51b3c7c142c6e9ce9}{shoot\+Start\+Point}}
+\begin{DoxyCompactList}\small\item\em Point where bullets will be spawned when enemy shoot \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_plant_turret_enemy_controller2_d_aecc3d59542457b7a0525322a73eae0ae}{can\+Shoot}}
+\begin{DoxyCompactList}\small\item\em Flag that check if plant can shoot again \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that controlls plant turret enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_af4313f710f4a343089602dcdd933c58a}\label{class_plant_turret_enemy_controller2_d_af4313f710f4a343089602dcdd933c58a}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Plant\+Turret\+Enemy\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called on object creation. Set can\+Shoot flag to true 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_a2f8611786335d2b321453214defff8a4}\label{class_plant_turret_enemy_controller2_d_a2f8611786335d2b321453214defff8a4}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!ShootAI@{ShootAI}}
+\index{ShootAI@{ShootAI}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{ShootAI()}{ShootAI()}}
+{\footnotesize\ttfamily void Plant\+Turret\+Enemy\+Controller2\+D.\+Shoot\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+AI Method that is responsible for shooting to target 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_adbdd6fe3336b0b14ebc64327c518ae76}\label{class_plant_turret_enemy_controller2_d_adbdd6fe3336b0b14ebc64327c518ae76}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!Update@{Update}}
+\index{Update@{Update}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Plant\+Turret\+Enemy\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame Main object logic 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_aecc3d59542457b7a0525322a73eae0ae}\label{class_plant_turret_enemy_controller2_d_aecc3d59542457b7a0525322a73eae0ae}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!canShoot@{canShoot}}
+\index{canShoot@{canShoot}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{canShoot}{canShoot}}
+{\footnotesize\ttfamily bool Plant\+Turret\+Enemy\+Controller2\+D.\+can\+Shoot\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that check if plant can shoot again 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_a67a0024ed96fc1c51b3c7c142c6e9ce9}\label{class_plant_turret_enemy_controller2_d_a67a0024ed96fc1c51b3c7c142c6e9ce9}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!shootStartPoint@{shootStartPoint}}
+\index{shootStartPoint@{shootStartPoint}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootStartPoint}{shootStartPoint}}
+{\footnotesize\ttfamily Transform Plant\+Turret\+Enemy\+Controller2\+D.\+shoot\+Start\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Point where bullets will be spawned when enemy shoot 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_ac15e7ae9c75e85377edc85837d691b4f}\label{class_plant_turret_enemy_controller2_d_ac15e7ae9c75e85377edc85837d691b4f}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!shootTimer@{shootTimer}}
+\index{shootTimer@{shootTimer}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{shootTimer}{shootTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Plant\+Turret\+Enemy\+Controller2\+D.\+shoot\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that controlls how fast plant can shoot 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_a09d7e4c26fab82d6398f089d61899d2c}\label{class_plant_turret_enemy_controller2_d_a09d7e4c26fab82d6398f089d61899d2c}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!weapon@{weapon}}
+\index{weapon@{weapon}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{weapon}{weapon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_weapon}{Enemy\+Weapon}} Plant\+Turret\+Enemy\+Controller2\+D.\+weapon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to enemy weapon that is attached to game object 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_ab1c879c0b8526e3811eb08a1c2ed6172}\label{class_plant_turret_enemy_controller2_d_ab1c879c0b8526e3811eb08a1c2ed6172}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!IsTriggered@{IsTriggered}}
+\index{IsTriggered@{IsTriggered}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{IsTriggered}{IsTriggered}}
+{\footnotesize\ttfamily bool Plant\+Turret\+Enemy\+Controller2\+D.\+Is\+Triggered\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag that is used to check if plant is triggerd 
+
+\mbox{\Hypertarget{class_plant_turret_enemy_controller2_d_a84b486cf7d160e0aa800d1f151fc9804}\label{class_plant_turret_enemy_controller2_d_a84b486cf7d160e0aa800d1f151fc9804}} 
+\index{PlantTurretEnemyController2D@{PlantTurretEnemyController2D}!Target@{Target}}
+\index{Target@{Target}!PlantTurretEnemyController2D@{PlantTurretEnemyController2D}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily Transform Plant\+Turret\+Enemy\+Controller2\+D.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Transform of target that plant is going to shoot 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Plant\+Turret/\mbox{\hyperlink{_plant_turret_enemy_controller2_d_8cs}{Plant\+Turret\+Enemy\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

@@ -2,24 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that controlls plant turret enemy
+/// </summary>
 public class PlantTurretEnemyController2D : MonoBehaviour
 {
-    //TRIGGER ATTRIBUTES
-    //OctopusEnemyTrigger script sets that values
+    #region Trigger Attributes
+    /// <summary>
+    /// Flag that is used to check if plant is triggerd
+    /// </summary>
     public bool IsTriggered { get; set; }
+    /// <summary>
+    /// Transform of target that plant is going to shoot
+    /// </summary>
     public Transform Target { get; set; }
+    #endregion
 
-    //SHOOT AI ATTRIBUTES
+    #region Shoot AI Attributes
+    /// <summary>
+    /// Reference to enemy weapon that is attached to game object
+    /// </summary>
     [SerializeField] private EnemyWeapon weapon;
+    /// <summary>
+    /// Timer that controlls how fast plant can shoot
+    /// </summary>
     [SerializeField] private Timer shootTimer;
+    /// <summary>
+    /// Point where bullets will be spawned when enemy shoot
+    /// </summary>
     [SerializeField] private Transform shootStartPoint;
+    /// <summary>
+    /// Flag that check if plant can shoot again
+    /// </summary>
     private bool canShoot;
+    #endregion
 
+    /// <summary>
+    /// Called on object creation. 
+    /// Set canShoot flag to true
+    /// </summary>
     public void Awake()
     {
         canShoot = true;
     }
 
+    /// <summary>
+    /// Call every frame
+    /// Main object logic
+    /// </summary>
+    private void Update()
+    {
+        ShootAI();
+    }
+
+    /// <summary>
+    /// AI Method that is responsible for shooting to target
+    /// </summary>
     private void ShootAI()
     {
         if (IsTriggered)
@@ -39,10 +77,5 @@ public class PlantTurretEnemyController2D : MonoBehaviour
         {
             canShoot = true;
         }
-    }
-
-    private void Update()
-    {
-        ShootAI();
     }
 }

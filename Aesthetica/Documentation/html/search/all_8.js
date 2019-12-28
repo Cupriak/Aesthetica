@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['idleactiveness_83',['idleActiveness',['../class_jumper_enemy_controller2_d.html#a90ff10eba239a74c93b656b54a87b7a9',1,'JumperEnemyController2D']]],
+  ['idlescript_84',['idleScript',['../class_crab_enemy_controller2_d.html#a3127c3d124e6860026353697fc2ecd92',1,'CrabEnemyController2D']]],
+  ['immortaltime_85',['immortalTime',['../class_player_controller2_d.html#a127cc0b5cea585b540e7969d8636fdad',1,'PlayerController2D']]],
+  ['immortaltimer_86',['immortalTimer',['../class_player_controller2_d.html#a988ebd5124962a0a80dbc22a2cc7016c',1,'PlayerController2D']]],
+  ['impact_87',['Impact',['../class_bullet_controller2_d.html#a7553d96428de5aad9a0b4f52e6581889',1,'BulletController2D']]],
+  ['impactcontroller_88',['ImpactController',['../class_impact_controller.html',1,'']]],
+  ['impactcontroller_2ecs_89',['ImpactController.cs',['../_impact_controller_8cs.html',1,'']]],
+  ['impactprefab_90',['impactPrefab',['../class_bullet_controller2_d.html#a6d703f66873532b9fed3efc617dffb70',1,'BulletController2D']]],
+  ['impacttime_91',['impactTime',['../class_impact_controller.html#a2980f6de81869505b7fff43a85337772',1,'ImpactController']]],
+  ['initialhealth_92',['initialHealth',['../class_attributes_controller.html#a156cbf04bfa8034f2fdb2d3cf974c2d0',1,'AttributesController']]],
+  ['initialjumpspeed_93',['initialJumpSpeed',['../class_player_controller2_d.html#a984a1d3723ca2e0a9bf4d2153e216562',1,'PlayerController2D']]],
+  ['inputhelper_94',['InputHelper',['../class_input_helper.html',1,'']]],
+  ['inputhelper_2ecs_95',['InputHelper.cs',['../_input_helper_8cs.html',1,'']]],
+  ['isalive_96',['IsAlive',['../class_attributes_controller.html#ae43477d4ff51766afcd53e240cb34f37',1,'AttributesController']]],
+  ['ischasing_97',['isChasing',['../class_crab_enemy_controller2_d.html#a30ca50e653a141bf30cdb70d033c9d75',1,'CrabEnemyController2D']]],
+  ['isfacingright_98',['IsFacingRight',['../class_object_controller2_d.html#a357e513d485f3b3078cf4b5b1b35e1e2',1,'ObjectController2D']]],
+  ['isgamepaused_99',['isGamePaused',['../class_u_i_controller.html#adffebb716fc4e4b8abf79ece319a07ce',1,'UIController']]],
+  ['isgrounded_100',['IsGrounded',['../class_object_controller2_d.html#aa1bfe15a09d29b15a8f44f887dbed258',1,'ObjectController2D']]],
+  ['ishurt_101',['isHurt',['../class_crab_enemy_controller2_d.html#aeef857f40e87418bdcd7cb100126452c',1,'CrabEnemyController2D.isHurt()'],['../class_jumper_enemy_controller2_d.html#a6116e0ffc6b6f367b5230d1ab3afad7e',1,'JumperEnemyController2D.isHurt()'],['../class_octopus_enemy_controller2_d.html#ad1a27ce9e69877cb2f8451b593b8070b',1,'OctopusEnemyController2D.isHurt()']]],
+  ['isimmortal_102',['isImmortal',['../class_player_controller2_d.html#af748df0c61d74af01989bc56ca86e931',1,'PlayerController2D.isImmortal()'],['../class_attributes_controller.html#ae045d5520ae726f69720005698e5e428',1,'AttributesController.IsImmortal()']]],
+  ['isinwater_103',['isInWater',['../class_player_controller2_d.html#a3ba8fff2b6b3e6ce0eb9d0aae03ff5e2',1,'PlayerController2D']]],
+  ['islayerinlayermask_104',['IsLayerInLayerMask',['../class_layer_mask_helper.html#ac28878e6b01cee094262c3ea0b29e8e8',1,'LayerMaskHelper']]],
+  ['isstatic_105',['isStatic',['../class_camera_controller.html#ac0d5d927af1636cf49ac8626848d713b',1,'CameraController']]],
+  ['istriggered_106',['IsTriggered',['../class_gate_controller2_d.html#a2992d6ee824086f819d26a979a069102',1,'GateController2D.IsTriggered()'],['../class_crab_enemy_controller2_d.html#ac2a476412a98423ccce52f76c14a0cf9',1,'CrabEnemyController2D.IsTriggered()'],['../class_ghost_enemy_controller2_d.html#a628f31d63f5e406cb3fd7c2c6e1eed78',1,'GhostEnemyController2D.IsTriggered()'],['../class_jumper_enemy_controller2_d.html#ab90b9f1baca7acda9a53307b353967de',1,'JumperEnemyController2D.IsTriggered()'],['../class_octopus_enemy_controller2_d.html#ac9eb619e4ffdea5a896e14f13848a80f',1,'OctopusEnemyController2D.IsTriggered()'],['../class_plant_turret_enemy_controller2_d.html#ab1c879c0b8526e3811eb08a1c2ed6172',1,'PlantTurretEnemyController2D.IsTriggered()']]]
+];

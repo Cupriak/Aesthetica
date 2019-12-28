@@ -1,0 +1,96 @@
+\hypertarget{class_ghost_enemy_trigger}{}\doxysection{Ghost\+Enemy\+Trigger Class Reference}
+\label{class_ghost_enemy_trigger}\index{GhostEnemyTrigger@{GhostEnemyTrigger}}
+
+
+Class responsible for triggering ghost enemy  
+
+
+Inheritance diagram for Ghost\+Enemy\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ghost_enemy_trigger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ghost_enemy_controller2_d}{Ghost\+Enemy\+Controller2D}} \mbox{\hyperlink{class_ghost_enemy_trigger_a6c3c661e31b1cd59ea0c46530ddb3eb9}{ghost}}
+\begin{DoxyCompactList}\small\item\em Instance of ghost controller used to change its Is\+Trigger flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ghost_enemy_trigger_a8892d4faef77c759e13a2829ef604ff4}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when ghost enters trigger Set flag in ghost Is\+Trigger to true and plays aggro sound \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_enemy_trigger_ae750d2d0e6b6b1c497ebcbe25b7ff1aa}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Called when ghost exits trigger Set flag in ghost Is\+Trigger to false \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_ghost_enemy_trigger_ae46c28f9752438e996d0daddeafb7fda}{what\+Can\+Trigger}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask thet defines what can trigger ghost \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for triggering ghost enemy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ghost_enemy_trigger_a8892d4faef77c759e13a2829ef604ff4}\label{class_ghost_enemy_trigger_a8892d4faef77c759e13a2829ef604ff4}} 
+\index{GhostEnemyTrigger@{GhostEnemyTrigger}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!GhostEnemyTrigger@{GhostEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Trigger.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when ghost enters trigger Set flag in ghost Is\+Trigger to true and plays aggro sound 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ghost_enemy_trigger_ae750d2d0e6b6b1c497ebcbe25b7ff1aa}\label{class_ghost_enemy_trigger_ae750d2d0e6b6b1c497ebcbe25b7ff1aa}} 
+\index{GhostEnemyTrigger@{GhostEnemyTrigger}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!GhostEnemyTrigger@{GhostEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Ghost\+Enemy\+Trigger.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when ghost exits trigger Set flag in ghost Is\+Trigger to false 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ghost_enemy_trigger_a6c3c661e31b1cd59ea0c46530ddb3eb9}\label{class_ghost_enemy_trigger_a6c3c661e31b1cd59ea0c46530ddb3eb9}} 
+\index{GhostEnemyTrigger@{GhostEnemyTrigger}!ghost@{ghost}}
+\index{ghost@{ghost}!GhostEnemyTrigger@{GhostEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{ghost}{ghost}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ghost_enemy_controller2_d}{Ghost\+Enemy\+Controller2D}} Ghost\+Enemy\+Trigger.\+ghost}
+
+
+
+Instance of ghost controller used to change its Is\+Trigger flag 
+
+\mbox{\Hypertarget{class_ghost_enemy_trigger_ae46c28f9752438e996d0daddeafb7fda}\label{class_ghost_enemy_trigger_ae46c28f9752438e996d0daddeafb7fda}} 
+\index{GhostEnemyTrigger@{GhostEnemyTrigger}!whatCanTrigger@{whatCanTrigger}}
+\index{whatCanTrigger@{whatCanTrigger}!GhostEnemyTrigger@{GhostEnemyTrigger}}
+\doxysubsubsection{\texorpdfstring{whatCanTrigger}{whatCanTrigger}}
+{\footnotesize\ttfamily Layer\+Mask Ghost\+Enemy\+Trigger.\+what\+Can\+Trigger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask thet defines what can trigger ghost 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Enemies/\+Ghost/\mbox{\hyperlink{_ghost_enemy_trigger_8cs}{Ghost\+Enemy\+Trigger.\+cs}}\end{DoxyCompactItemize}

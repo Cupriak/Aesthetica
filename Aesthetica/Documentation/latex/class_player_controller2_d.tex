@@ -1,0 +1,452 @@
+\hypertarget{class_player_controller2_d}{}\doxysection{Player\+Controller2D Class Reference}
+\label{class_player_controller2_d}\index{PlayerController2D@{PlayerController2D}}
+
+
+Class that is responsible for controlling player  
+
+
+Inheritance diagram for Player\+Controller2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller2_d_ad5ab78ce73e6b726ae19a20f8608326b}{On\+Power\+Up\+Touch}} ()
+\begin{DoxyCompactList}\small\item\em Heal player by one health point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} \mbox{\hyperlink{class_player_controller2_d_a42d98313abb1aa8365f49a9062609cbf}{controller}}
+\begin{DoxyCompactList}\small\item\em Used to be able to move player \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} \mbox{\hyperlink{class_player_controller2_d_a3f1c8a150c9a55e3102896c9ac61da22}{attributes}}
+\begin{DoxyCompactList}\small\item\em Used to change health of player \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller2_d_a5f265fc659645ecf6d084c9ab3d8fd98}{can\+Be\+Controlled}}
+\begin{DoxyCompactList}\small\item\em Flag that determines if player can be controlled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller2_d_ad0639de7d44aa13e3a32bef3b6c9ab29}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Initialization of basic attributes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a027d39b074dfff0baf00a97d5bbd81f7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame. Get input from player and call animation function $<$/summary \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_add6283de3b1d50ed5cb293278a8c44b8}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Call fixed times per second. Movement and damage attributes are updated here \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_ab60f81a19277b17f02d0dd8a47f26ba4}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when player enters trigger. Detect if player is in water. In case of that call On\+Water\+Enter method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a0709d2d0337bacc6eca8c6358415f1ac}{On\+Trigger\+Stay2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when player stays in trigger. Detect if player touch enemy. In case of that call On\+Enemy\+Touch method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a02ce3dd5f19403a6e87faf78bac9e936}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\begin{DoxyCompactList}\small\item\em Call when player exits trigger. Detect if player is left water. In case of that call On\+Water\+Exit method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a38d63e705c84525c061838c14ec6f351}{Animate}} ()
+\begin{DoxyCompactList}\small\item\em Playing proper animation and blink red color if player is hurt Rotates object if necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a4dca933936b8249ee955f59abfa21015}{Movement\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Move player according to button that are pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a662abf352d00db782274177b69fb4886}{On\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Play death sound, spawn death prefab and destroy player game object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a3fc3ccd49a2c849a9cb7e8e5a784fce9}{Death\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Check if player is alive \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a35f582b54f67285af8e052b38e811cb3}{Hurt\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Check if player is hurt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_abe454eff3f14a72d1974c534f11e9ea5}{On\+Enemy\+Touch}} ()
+\begin{DoxyCompactList}\small\item\em Take hp, play hurt sound and push player away from enemy Also prevent player from controlling character for some time and turn on immortality \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a03cf05fc99bad67b6ec38e4e0d78ed54}{On\+Water\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em Set drag to 15, flag is\+In\+Water to true and multiply jump speed by 2.\+5 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller2_d_a0620ae107598244fd50c385780677f60}{On\+Water\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Set drag to 0, flag is\+In\+Water to false and set jump speed to initial jump speed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_controller2_d_af0ea37876e89186598f739d75454f469}{run\+Speed}}
+\begin{DoxyCompactList}\small\item\em Determines player run speed \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller2_d_a0e487b65345beca5cb0ec4f55d08a882}{jump\+Speed}}
+\begin{DoxyCompactList}\small\item\em Determines player jump speed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller2_d_a2c24e4c24d9fec9e129ab70967edeb23}{rotate}}
+\begin{DoxyCompactList}\small\item\em Flag that determine if player should rotate \end{DoxyCompactList}\item 
+Animator \mbox{\hyperlink{class_player_controller2_d_af61aa6c11637738fdc701b6a1e673e21}{animator}}
+\begin{DoxyCompactList}\small\item\em Reference to object animator \end{DoxyCompactList}\item 
+Sprite\+Renderer \mbox{\hyperlink{class_player_controller2_d_a76d7f0162e4130b8f6fb2f7df6213ad4}{sprite\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Reference to object sprite renderer \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_player_controller2_d_af09ee25f713eee11c7273fe9a830f84d}{basic\+Color}}
+\begin{DoxyCompactList}\small\item\em Start color of player \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_player_controller2_d_acd69ef115ff07c2c373d633c61acd8dc}{what\+Is\+Enemy}}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask that defines what can hurt player \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_player_controller2_d_a988ebd5124962a0a80dbc22a2cc7016c}{immortal\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that is used to track how long player should blink in red color when hurt and be immortal \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller2_d_a127cc0b5cea585b540e7969d8636fdad}{immortal\+Time}}
+\begin{DoxyCompactList}\small\item\em Amount of time that player should be immortal after getting hurt in seconds \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller2_d_af748df0c61d74af01989bc56ca86e931}{is\+Immortal}}
+\begin{DoxyCompactList}\small\item\em Flag that determines is player can take damage \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_player_controller2_d_a65cae94abf0f17fbaca9d92954af81ea}{death\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab that will be spawned upon death to make death effect \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller2_d_a3ba8fff2b6b3e6ce0eb9d0aae03ff5e2}{is\+In\+Water}}
+\begin{DoxyCompactList}\small\item\em Flag that determines if player is in water \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller2_d_a984a1d3723ca2e0a9bf4d2153e216562}{initial\+Jump\+Speed}}
+\begin{DoxyCompactList}\small\item\em Initial Jump speed. Need to be saved because jump speed is changing in water \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_player_controller2_d_adcb96f5348643af32f011e5767112c0b}{jump\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that calculates how much time must pass before player can jump again. \end{DoxyCompactList}\item 
+Collider2D \mbox{\hyperlink{class_player_controller2_d_a0896d17eb166c4f2e0c7764aaadda7f3}{ground\+Check}}
+\begin{DoxyCompactList}\small\item\em Collider that checks if player is grounded \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is responsible for controlling player 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_controller2_d_a38d63e705c84525c061838c14ec6f351}\label{class_player_controller2_d_a38d63e705c84525c061838c14ec6f351}} 
+\index{PlayerController2D@{PlayerController2D}!Animate@{Animate}}
+\index{Animate@{Animate}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{Animate()}{Animate()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Animate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Playing proper animation and blink red color if player is hurt Rotates object if necessary. 
+
+\mbox{\Hypertarget{class_player_controller2_d_ad0639de7d44aa13e3a32bef3b6c9ab29}\label{class_player_controller2_d_ad0639de7d44aa13e3a32bef3b6c9ab29}} 
+\index{PlayerController2D@{PlayerController2D}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Initialization of basic attributes. 
+
+\mbox{\Hypertarget{class_player_controller2_d_a3fc3ccd49a2c849a9cb7e8e5a784fce9}\label{class_player_controller2_d_a3fc3ccd49a2c849a9cb7e8e5a784fce9}} 
+\index{PlayerController2D@{PlayerController2D}!DeathHandler@{DeathHandler}}
+\index{DeathHandler@{DeathHandler}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{DeathHandler()}{DeathHandler()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Death\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if player is alive 
+
+\mbox{\Hypertarget{class_player_controller2_d_add6283de3b1d50ed5cb293278a8c44b8}\label{class_player_controller2_d_add6283de3b1d50ed5cb293278a8c44b8}} 
+\index{PlayerController2D@{PlayerController2D}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call fixed times per second. Movement and damage attributes are updated here 
+
+\mbox{\Hypertarget{class_player_controller2_d_a35f582b54f67285af8e052b38e811cb3}\label{class_player_controller2_d_a35f582b54f67285af8e052b38e811cb3}} 
+\index{PlayerController2D@{PlayerController2D}!HurtHandler@{HurtHandler}}
+\index{HurtHandler@{HurtHandler}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{HurtHandler()}{HurtHandler()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Hurt\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Check if player is hurt 
+
+\mbox{\Hypertarget{class_player_controller2_d_a4dca933936b8249ee955f59abfa21015}\label{class_player_controller2_d_a4dca933936b8249ee955f59abfa21015}} 
+\index{PlayerController2D@{PlayerController2D}!MovementControl@{MovementControl}}
+\index{MovementControl@{MovementControl}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{MovementControl()}{MovementControl()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Movement\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Move player according to button that are pressed 
+
+\mbox{\Hypertarget{class_player_controller2_d_a662abf352d00db782274177b69fb4886}\label{class_player_controller2_d_a662abf352d00db782274177b69fb4886}} 
+\index{PlayerController2D@{PlayerController2D}!OnDeath@{OnDeath}}
+\index{OnDeath@{OnDeath}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnDeath()}{OnDeath()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Play death sound, spawn death prefab and destroy player game object 
+
+\mbox{\Hypertarget{class_player_controller2_d_abe454eff3f14a72d1974c534f11e9ea5}\label{class_player_controller2_d_abe454eff3f14a72d1974c534f11e9ea5}} 
+\index{PlayerController2D@{PlayerController2D}!OnEnemyTouch@{OnEnemyTouch}}
+\index{OnEnemyTouch@{OnEnemyTouch}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnEnemyTouch()}{OnEnemyTouch()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Enemy\+Touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Take hp, play hurt sound and push player away from enemy Also prevent player from controlling character for some time and turn on immortality 
+
+\mbox{\Hypertarget{class_player_controller2_d_ad5ab78ce73e6b726ae19a20f8608326b}\label{class_player_controller2_d_ad5ab78ce73e6b726ae19a20f8608326b}} 
+\index{PlayerController2D@{PlayerController2D}!OnPowerUpTouch@{OnPowerUpTouch}}
+\index{OnPowerUpTouch@{OnPowerUpTouch}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnPowerUpTouch()}{OnPowerUpTouch()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Power\+Up\+Touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Heal player by one health point 
+
+\mbox{\Hypertarget{class_player_controller2_d_ab60f81a19277b17f02d0dd8a47f26ba4}\label{class_player_controller2_d_ab60f81a19277b17f02d0dd8a47f26ba4}} 
+\index{PlayerController2D@{PlayerController2D}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when player enters trigger. Detect if player is in water. In case of that call On\+Water\+Enter method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller2_d_a02ce3dd5f19403a6e87faf78bac9e936}\label{class_player_controller2_d_a02ce3dd5f19403a6e87faf78bac9e936}} 
+\index{PlayerController2D@{PlayerController2D}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when player exits trigger. Detect if player is left water. In case of that call On\+Water\+Exit method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller2_d_a0709d2d0337bacc6eca8c6358415f1ac}\label{class_player_controller2_d_a0709d2d0337bacc6eca8c6358415f1ac}} 
+\index{PlayerController2D@{PlayerController2D}!OnTriggerStay2D@{OnTriggerStay2D}}
+\index{OnTriggerStay2D@{OnTriggerStay2D}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay2D()}{OnTriggerStay2D()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Trigger\+Stay2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call when player stays in trigger. Detect if player touch enemy. In case of that call On\+Enemy\+Touch method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider of touched object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller2_d_a03cf05fc99bad67b6ec38e4e0d78ed54}\label{class_player_controller2_d_a03cf05fc99bad67b6ec38e4e0d78ed54}} 
+\index{PlayerController2D@{PlayerController2D}!OnWaterEnter@{OnWaterEnter}}
+\index{OnWaterEnter@{OnWaterEnter}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnWaterEnter()}{OnWaterEnter()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Water\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Set drag to 15, flag is\+In\+Water to true and multiply jump speed by 2.\+5 
+
+\mbox{\Hypertarget{class_player_controller2_d_a0620ae107598244fd50c385780677f60}\label{class_player_controller2_d_a0620ae107598244fd50c385780677f60}} 
+\index{PlayerController2D@{PlayerController2D}!OnWaterExit@{OnWaterExit}}
+\index{OnWaterExit@{OnWaterExit}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{OnWaterExit()}{OnWaterExit()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+On\+Water\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Set drag to 0, flag is\+In\+Water to false and set jump speed to initial jump speed 
+
+\mbox{\Hypertarget{class_player_controller2_d_a027d39b074dfff0baf00a97d5bbd81f7}\label{class_player_controller2_d_a027d39b074dfff0baf00a97d5bbd81f7}} 
+\index{PlayerController2D@{PlayerController2D}!Update@{Update}}
+\index{Update@{Update}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Controller2\+D.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame. Get input from player and call animation function $<$/summary 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_controller2_d_af61aa6c11637738fdc701b6a1e673e21}\label{class_player_controller2_d_af61aa6c11637738fdc701b6a1e673e21}} 
+\index{PlayerController2D@{PlayerController2D}!animator@{animator}}
+\index{animator@{animator}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Player\+Controller2\+D.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object animator 
+
+\mbox{\Hypertarget{class_player_controller2_d_a3f1c8a150c9a55e3102896c9ac61da22}\label{class_player_controller2_d_a3f1c8a150c9a55e3102896c9ac61da22}} 
+\index{PlayerController2D@{PlayerController2D}!attributes@{attributes}}
+\index{attributes@{attributes}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} Player\+Controller2\+D.\+attributes}
+
+
+
+Used to change health of player 
+
+\mbox{\Hypertarget{class_player_controller2_d_af09ee25f713eee11c7273fe9a830f84d}\label{class_player_controller2_d_af09ee25f713eee11c7273fe9a830f84d}} 
+\index{PlayerController2D@{PlayerController2D}!basicColor@{basicColor}}
+\index{basicColor@{basicColor}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{basicColor}{basicColor}}
+{\footnotesize\ttfamily Color Player\+Controller2\+D.\+basic\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start color of player 
+
+\mbox{\Hypertarget{class_player_controller2_d_a5f265fc659645ecf6d084c9ab3d8fd98}\label{class_player_controller2_d_a5f265fc659645ecf6d084c9ab3d8fd98}} 
+\index{PlayerController2D@{PlayerController2D}!canBeControlled@{canBeControlled}}
+\index{canBeControlled@{canBeControlled}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{canBeControlled}{canBeControlled}}
+{\footnotesize\ttfamily bool Player\+Controller2\+D.\+can\+Be\+Controlled}
+
+
+
+Flag that determines if player can be controlled 
+
+\mbox{\Hypertarget{class_player_controller2_d_a42d98313abb1aa8365f49a9062609cbf}\label{class_player_controller2_d_a42d98313abb1aa8365f49a9062609cbf}} 
+\index{PlayerController2D@{PlayerController2D}!controller@{controller}}
+\index{controller@{controller}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_controller2_d}{Object\+Controller2D}} Player\+Controller2\+D.\+controller}
+
+
+
+Used to be able to move player 
+
+\mbox{\Hypertarget{class_player_controller2_d_a65cae94abf0f17fbaca9d92954af81ea}\label{class_player_controller2_d_a65cae94abf0f17fbaca9d92954af81ea}} 
+\index{PlayerController2D@{PlayerController2D}!deathPrefab@{deathPrefab}}
+\index{deathPrefab@{deathPrefab}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{deathPrefab}{deathPrefab}}
+{\footnotesize\ttfamily Game\+Object Player\+Controller2\+D.\+death\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab that will be spawned upon death to make death effect 
+
+\mbox{\Hypertarget{class_player_controller2_d_a0896d17eb166c4f2e0c7764aaadda7f3}\label{class_player_controller2_d_a0896d17eb166c4f2e0c7764aaadda7f3}} 
+\index{PlayerController2D@{PlayerController2D}!groundCheck@{groundCheck}}
+\index{groundCheck@{groundCheck}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{groundCheck}{groundCheck}}
+{\footnotesize\ttfamily Collider2D Player\+Controller2\+D.\+ground\+Check\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Collider that checks if player is grounded 
+
+\mbox{\Hypertarget{class_player_controller2_d_a127cc0b5cea585b540e7969d8636fdad}\label{class_player_controller2_d_a127cc0b5cea585b540e7969d8636fdad}} 
+\index{PlayerController2D@{PlayerController2D}!immortalTime@{immortalTime}}
+\index{immortalTime@{immortalTime}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{immortalTime}{immortalTime}}
+{\footnotesize\ttfamily float Player\+Controller2\+D.\+immortal\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of time that player should be immortal after getting hurt in seconds 
+
+\mbox{\Hypertarget{class_player_controller2_d_a988ebd5124962a0a80dbc22a2cc7016c}\label{class_player_controller2_d_a988ebd5124962a0a80dbc22a2cc7016c}} 
+\index{PlayerController2D@{PlayerController2D}!immortalTimer@{immortalTimer}}
+\index{immortalTimer@{immortalTimer}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{immortalTimer}{immortalTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Player\+Controller2\+D.\+immortal\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that is used to track how long player should blink in red color when hurt and be immortal 
+
+\mbox{\Hypertarget{class_player_controller2_d_a984a1d3723ca2e0a9bf4d2153e216562}\label{class_player_controller2_d_a984a1d3723ca2e0a9bf4d2153e216562}} 
+\index{PlayerController2D@{PlayerController2D}!initialJumpSpeed@{initialJumpSpeed}}
+\index{initialJumpSpeed@{initialJumpSpeed}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{initialJumpSpeed}{initialJumpSpeed}}
+{\footnotesize\ttfamily float Player\+Controller2\+D.\+initial\+Jump\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial Jump speed. Need to be saved because jump speed is changing in water 
+
+\mbox{\Hypertarget{class_player_controller2_d_af748df0c61d74af01989bc56ca86e931}\label{class_player_controller2_d_af748df0c61d74af01989bc56ca86e931}} 
+\index{PlayerController2D@{PlayerController2D}!isImmortal@{isImmortal}}
+\index{isImmortal@{isImmortal}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{isImmortal}{isImmortal}}
+{\footnotesize\ttfamily bool Player\+Controller2\+D.\+is\+Immortal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that determines is player can take damage 
+
+\mbox{\Hypertarget{class_player_controller2_d_a3ba8fff2b6b3e6ce0eb9d0aae03ff5e2}\label{class_player_controller2_d_a3ba8fff2b6b3e6ce0eb9d0aae03ff5e2}} 
+\index{PlayerController2D@{PlayerController2D}!isInWater@{isInWater}}
+\index{isInWater@{isInWater}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{isInWater}{isInWater}}
+{\footnotesize\ttfamily bool Player\+Controller2\+D.\+is\+In\+Water\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that determines if player is in water 
+
+\mbox{\Hypertarget{class_player_controller2_d_a0e487b65345beca5cb0ec4f55d08a882}\label{class_player_controller2_d_a0e487b65345beca5cb0ec4f55d08a882}} 
+\index{PlayerController2D@{PlayerController2D}!jumpSpeed@{jumpSpeed}}
+\index{jumpSpeed@{jumpSpeed}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{jumpSpeed}{jumpSpeed}}
+{\footnotesize\ttfamily float Player\+Controller2\+D.\+jump\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines player jump speed 
+
+\mbox{\Hypertarget{class_player_controller2_d_adcb96f5348643af32f011e5767112c0b}\label{class_player_controller2_d_adcb96f5348643af32f011e5767112c0b}} 
+\index{PlayerController2D@{PlayerController2D}!jumpTimer@{jumpTimer}}
+\index{jumpTimer@{jumpTimer}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{jumpTimer}{jumpTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Player\+Controller2\+D.\+jump\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that calculates how much time must pass before player can jump again. 
+
+\mbox{\Hypertarget{class_player_controller2_d_a2c24e4c24d9fec9e129ab70967edeb23}\label{class_player_controller2_d_a2c24e4c24d9fec9e129ab70967edeb23}} 
+\index{PlayerController2D@{PlayerController2D}!rotate@{rotate}}
+\index{rotate@{rotate}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily bool Player\+Controller2\+D.\+rotate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag that determine if player should rotate 
+
+\mbox{\Hypertarget{class_player_controller2_d_af0ea37876e89186598f739d75454f469}\label{class_player_controller2_d_af0ea37876e89186598f739d75454f469}} 
+\index{PlayerController2D@{PlayerController2D}!runSpeed@{runSpeed}}
+\index{runSpeed@{runSpeed}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{runSpeed}{runSpeed}}
+{\footnotesize\ttfamily float Player\+Controller2\+D.\+run\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines player run speed 
+
+\mbox{\Hypertarget{class_player_controller2_d_a76d7f0162e4130b8f6fb2f7df6213ad4}\label{class_player_controller2_d_a76d7f0162e4130b8f6fb2f7df6213ad4}} 
+\index{PlayerController2D@{PlayerController2D}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Player\+Controller2\+D.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to object sprite renderer 
+
+\mbox{\Hypertarget{class_player_controller2_d_acd69ef115ff07c2c373d633c61acd8dc}\label{class_player_controller2_d_acd69ef115ff07c2c373d633c61acd8dc}} 
+\index{PlayerController2D@{PlayerController2D}!whatIsEnemy@{whatIsEnemy}}
+\index{whatIsEnemy@{whatIsEnemy}!PlayerController2D@{PlayerController2D}}
+\doxysubsubsection{\texorpdfstring{whatIsEnemy}{whatIsEnemy}}
+{\footnotesize\ttfamily Layer\+Mask Player\+Controller2\+D.\+what\+Is\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer\+Mask that defines what can hurt player 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Player/\mbox{\hyperlink{_player_controller2_d_8cs}{Player\+Controller2\+D.\+cs}}\end{DoxyCompactItemize}

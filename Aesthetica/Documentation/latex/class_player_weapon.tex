@@ -1,0 +1,107 @@
+\hypertarget{class_player_weapon}{}\doxysection{Player\+Weapon Class Reference}
+\label{class_player_weapon}\index{PlayerWeapon@{PlayerWeapon}}
+
+
+Class that is responsible for player shooting  
+
+
+Inheritance diagram for Player\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_weapon_a8805975eea0b8123cf3c9bae01fb404d}{Shoot}} ()
+\begin{DoxyCompactList}\small\item\em If player pressed shoot button and can controll character spawn bullet and set shoot timer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_weapon_a252290cdb860550703a2fdb54d0605fd}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call every frame. Call shoot method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_player_weapon_ab181693deaf0122fda8365bed0accd3e}{starting\+Point}}
+\begin{DoxyCompactList}\small\item\em Point where bullet would be spawned \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_player_weapon_a85371a91ad162b7e7aef038671944ed3}{bullet\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Bullet prefab that would be spawned \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_timer}{Timer}} \mbox{\hyperlink{class_player_weapon_a69d553a4c955957777ffabe3f56841c6}{shoot\+Timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_timer}{Timer}} that determines how often player can shoot \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_controller2_d}{Player\+Controller2D}} \mbox{\hyperlink{class_player_weapon_a19a6e5402a6ee3c3bdc97a12472ffc4b}{player}}
+\begin{DoxyCompactList}\small\item\em Player controller reference to check if player can shoot \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is responsible for player shooting 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_weapon_a8805975eea0b8123cf3c9bae01fb404d}\label{class_player_weapon_a8805975eea0b8123cf3c9bae01fb404d}} 
+\index{PlayerWeapon@{PlayerWeapon}!Shoot@{Shoot}}
+\index{Shoot@{Shoot}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{Shoot()}{Shoot()}}
+{\footnotesize\ttfamily void Player\+Weapon.\+Shoot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+If player pressed shoot button and can controll character spawn bullet and set shoot timer 
+
+\mbox{\Hypertarget{class_player_weapon_a252290cdb860550703a2fdb54d0605fd}\label{class_player_weapon_a252290cdb860550703a2fdb54d0605fd}} 
+\index{PlayerWeapon@{PlayerWeapon}!Update@{Update}}
+\index{Update@{Update}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Weapon.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call every frame. Call shoot method 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_weapon_a85371a91ad162b7e7aef038671944ed3}\label{class_player_weapon_a85371a91ad162b7e7aef038671944ed3}} 
+\index{PlayerWeapon@{PlayerWeapon}!bulletPrefab@{bulletPrefab}}
+\index{bulletPrefab@{bulletPrefab}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{bulletPrefab}{bulletPrefab}}
+{\footnotesize\ttfamily Game\+Object Player\+Weapon.\+bullet\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bullet prefab that would be spawned 
+
+\mbox{\Hypertarget{class_player_weapon_a19a6e5402a6ee3c3bdc97a12472ffc4b}\label{class_player_weapon_a19a6e5402a6ee3c3bdc97a12472ffc4b}} 
+\index{PlayerWeapon@{PlayerWeapon}!player@{player}}
+\index{player@{player}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_controller2_d}{Player\+Controller2D}} Player\+Weapon.\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player controller reference to check if player can shoot 
+
+\mbox{\Hypertarget{class_player_weapon_a69d553a4c955957777ffabe3f56841c6}\label{class_player_weapon_a69d553a4c955957777ffabe3f56841c6}} 
+\index{PlayerWeapon@{PlayerWeapon}!shootTimer@{shootTimer}}
+\index{shootTimer@{shootTimer}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{shootTimer}{shootTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} Player\+Weapon.\+shoot\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_timer}{Timer}} that determines how often player can shoot 
+
+\mbox{\Hypertarget{class_player_weapon_ab181693deaf0122fda8365bed0accd3e}\label{class_player_weapon_ab181693deaf0122fda8365bed0accd3e}} 
+\index{PlayerWeapon@{PlayerWeapon}!startingPoint@{startingPoint}}
+\index{startingPoint@{startingPoint}!PlayerWeapon@{PlayerWeapon}}
+\doxysubsubsection{\texorpdfstring{startingPoint}{startingPoint}}
+{\footnotesize\ttfamily Transform Player\+Weapon.\+starting\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Point where bullet would be spawned 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+Player/\mbox{\hyperlink{_player_weapon_8cs}{Player\+Weapon.\+cs}}\end{DoxyCompactItemize}

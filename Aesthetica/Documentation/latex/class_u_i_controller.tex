@@ -1,0 +1,185 @@
+\hypertarget{class_u_i_controller}{}\doxysection{U\+I\+Controller Class Reference}
+\label{class_u_i_controller}\index{UIController@{UIController}}
+
+
+Class that is controlling ingame UI  
+
+
+Inheritance diagram for U\+I\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_controller_a14cc3296877e8aba7104ae966cec587a}{Open\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads scene with main menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_controller_af5c8ac28fe58d1a52194c9f192d3ba39}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em Pause or Unpause the game depends of current game state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_controller_af9c6fb716760c408b7591198fa5204f7}{Quit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Closes application \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_u_i_controller_adffebb716fc4e4b8abf79ece319a07ce}{is\+Game\+Paused}}
+\begin{DoxyCompactList}\small\item\em Flag that check if the game is paused \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_controller_ab1853922923ea143f0e27d10425a3adb}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Call on object creation. Set initial values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_controller_adc5b0854a26bbcd71cc33274960bd0a9}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called every frame. Updates health value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_controller_a60e98927402fbe1bf457af93b8916146}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Called when object is destroyed. By default when scene is destroyed. Turn off pause and set time to default value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} \mbox{\hyperlink{class_u_i_controller_ac30db84ad26b92c63552d25fc977cb73}{player\+Attributes}}
+\begin{DoxyCompactList}\small\item\em Attributes of player that will be displayed \end{DoxyCompactList}\item 
+T\+M\+P\+\_\+\+Text \mbox{\hyperlink{class_u_i_controller_ae575d6eb5b0de27d1397dd398f57d696}{health\+Text}}
+\begin{DoxyCompactList}\small\item\em Text that will display health \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_u_i_controller_a6a5d70a0db5697b45abd7d5737893941}{start\+Health\+Text}}
+\begin{DoxyCompactList}\small\item\em String that will be displayed before number of current HP \end{DoxyCompactList}\item 
+Image \mbox{\hyperlink{class_u_i_controller_a21e5b33b36b322949cc5cc94846b1fe3}{pause\+Background}}
+\begin{DoxyCompactList}\small\item\em Background image that will be display when game is paused \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_u_i_controller_a9393161935129544531f9f389ea8479d}{pause\+Sign}}
+\begin{DoxyCompactList}\small\item\em Pause sign that will be display when game is paused \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is controlling ingame UI 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_controller_ab1853922923ea143f0e27d10425a3adb}\label{class_u_i_controller_ab1853922923ea143f0e27d10425a3adb}} 
+\index{UIController@{UIController}!Awake@{Awake}}
+\index{Awake@{Awake}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Call on object creation. Set initial values. 
+
+\mbox{\Hypertarget{class_u_i_controller_a60e98927402fbe1bf457af93b8916146}\label{class_u_i_controller_a60e98927402fbe1bf457af93b8916146}} 
+\index{UIController@{UIController}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when object is destroyed. By default when scene is destroyed. Turn off pause and set time to default value 
+
+\mbox{\Hypertarget{class_u_i_controller_a14cc3296877e8aba7104ae966cec587a}\label{class_u_i_controller_a14cc3296877e8aba7104ae966cec587a}} 
+\index{UIController@{UIController}!OpenMainMenu@{OpenMainMenu}}
+\index{OpenMainMenu@{OpenMainMenu}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{OpenMainMenu()}{OpenMainMenu()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+Open\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads scene with main menu 
+
+\mbox{\Hypertarget{class_u_i_controller_af5c8ac28fe58d1a52194c9f192d3ba39}\label{class_u_i_controller_af5c8ac28fe58d1a52194c9f192d3ba39}} 
+\index{UIController@{UIController}!Pause@{Pause}}
+\index{Pause@{Pause}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pause or Unpause the game depends of current game state 
+
+\mbox{\Hypertarget{class_u_i_controller_af9c6fb716760c408b7591198fa5204f7}\label{class_u_i_controller_af9c6fb716760c408b7591198fa5204f7}} 
+\index{UIController@{UIController}!QuitGame@{QuitGame}}
+\index{QuitGame@{QuitGame}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{QuitGame()}{QuitGame()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+Quit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes application 
+
+\mbox{\Hypertarget{class_u_i_controller_adc5b0854a26bbcd71cc33274960bd0a9}\label{class_u_i_controller_adc5b0854a26bbcd71cc33274960bd0a9}} 
+\index{UIController@{UIController}!Update@{Update}}
+\index{Update@{Update}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void U\+I\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called every frame. Updates health value 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_controller_ae575d6eb5b0de27d1397dd398f57d696}\label{class_u_i_controller_ae575d6eb5b0de27d1397dd398f57d696}} 
+\index{UIController@{UIController}!healthText@{healthText}}
+\index{healthText@{healthText}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{healthText}{healthText}}
+{\footnotesize\ttfamily T\+M\+P\+\_\+\+Text U\+I\+Controller.\+health\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Text that will display health 
+
+\mbox{\Hypertarget{class_u_i_controller_adffebb716fc4e4b8abf79ece319a07ce}\label{class_u_i_controller_adffebb716fc4e4b8abf79ece319a07ce}} 
+\index{UIController@{UIController}!isGamePaused@{isGamePaused}}
+\index{isGamePaused@{isGamePaused}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{isGamePaused}{isGamePaused}}
+{\footnotesize\ttfamily bool U\+I\+Controller.\+is\+Game\+Paused\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Flag that check if the game is paused 
+
+\mbox{\Hypertarget{class_u_i_controller_a21e5b33b36b322949cc5cc94846b1fe3}\label{class_u_i_controller_a21e5b33b36b322949cc5cc94846b1fe3}} 
+\index{UIController@{UIController}!pauseBackground@{pauseBackground}}
+\index{pauseBackground@{pauseBackground}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{pauseBackground}{pauseBackground}}
+{\footnotesize\ttfamily Image U\+I\+Controller.\+pause\+Background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Background image that will be display when game is paused 
+
+\mbox{\Hypertarget{class_u_i_controller_a9393161935129544531f9f389ea8479d}\label{class_u_i_controller_a9393161935129544531f9f389ea8479d}} 
+\index{UIController@{UIController}!pauseSign@{pauseSign}}
+\index{pauseSign@{pauseSign}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{pauseSign}{pauseSign}}
+{\footnotesize\ttfamily Game\+Object U\+I\+Controller.\+pause\+Sign\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pause sign that will be display when game is paused 
+
+\mbox{\Hypertarget{class_u_i_controller_ac30db84ad26b92c63552d25fc977cb73}\label{class_u_i_controller_ac30db84ad26b92c63552d25fc977cb73}} 
+\index{UIController@{UIController}!playerAttributes@{playerAttributes}}
+\index{playerAttributes@{playerAttributes}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{playerAttributes}{playerAttributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attributes_controller}{Attributes\+Controller}} U\+I\+Controller.\+player\+Attributes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Attributes of player that will be displayed 
+
+\mbox{\Hypertarget{class_u_i_controller_a6a5d70a0db5697b45abd7d5737893941}\label{class_u_i_controller_a6a5d70a0db5697b45abd7d5737893941}} 
+\index{UIController@{UIController}!startHealthText@{startHealthText}}
+\index{startHealthText@{startHealthText}!UIController@{UIController}}
+\doxysubsubsection{\texorpdfstring{startHealthText}{startHealthText}}
+{\footnotesize\ttfamily string U\+I\+Controller.\+start\+Health\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+String that will be displayed before number of current HP 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cupriak/\+Documents/\+Git\+Hub/\+Aesthetica/\+Aesthetica/\+Assets/\+Scripts/\+General/\mbox{\hyperlink{_u_i_controller_8cs}{U\+I\+Controller.\+cs}}\end{DoxyCompactItemize}
